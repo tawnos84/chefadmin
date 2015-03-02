@@ -17,9 +17,10 @@
         <td><%= chef.age %></td>
         <td><%= chef.location %></td>
         <td><%= chef.styles %></td>
-        <td><%= link_to 'Show', chef_path(chef) %></td>
+        <td><%= link_to 'Details', chef_path(chef) %></td>
         <td><%= link_to 'Edit', edit_chef_path(chef) %></td>
         <td><%= link_to 'Delete', chef_path(chef), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show menus', chef_menus_path(chef) %></td> <!--Add a link to the chef in here!-->
       </tr>
   <% end %>
 </table>

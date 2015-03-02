@@ -1,11 +1,29 @@
 Rails.application.routes.draw do
+  get 'menus/index'
+
+  get 'menus/edit'
+
+  get 'menus/new'
+
+  get 'menus/show'
+
+  get 'menu/index'
+
+  get 'menu/new'
+
+  get 'menu/edit'
+
+  get 'menu/shot'
+
   get 'chefs/new'
 
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  resources :chefs
+  resources :chefs do
+    resources :menus
+  end
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'
