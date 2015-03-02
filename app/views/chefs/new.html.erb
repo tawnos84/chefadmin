@@ -1,0 +1,45 @@
+<h2>New chef</h2>
+
+<%= form_for :chef, url: chefs_path do |f| %>
+
+<% if @chef.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@chef.errors.count, "error") %> prohibited
+        this chef from being saved:
+      </h2>
+      <ul>
+        <% @chef.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+<% end %>
+
+
+    <p>
+      <%= f.label :'Name'  %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :'Age' %><br>
+      <%= f.text_field :age %>
+    </p>
+
+    <p>
+      <%= f.label :'Location' %><br>
+      <%= f.text_field :location %>
+    </p>
+
+    <p>
+      <%= f.label :'Food styles' %><br>
+      <%= f.text_area :styles %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+<%= link_to 'Back', chefs_path %>

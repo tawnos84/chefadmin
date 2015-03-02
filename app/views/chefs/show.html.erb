@@ -1,0 +1,23 @@
+<h2>View chef</h2>
+<p>
+  <strong>Name:</strong>
+  <%= @chef.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @chef.age %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @chef.location %>
+</p>
+
+<p>
+  <strong>Styles:</strong>
+  <%= @chef.styles %>
+</p>
+
+<%= link_to 'Edit', edit_chef_path(@chef) %>
+<%= link_to 'Back', chefs_path %>

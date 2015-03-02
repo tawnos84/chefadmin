@@ -1,0 +1,25 @@
+<h1>Chef overview</h1>
+
+<%= link_to 'To main menu', welcome_index_path %><br>
+<%= link_to 'Add chef', new_chef_path %>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Location</th>
+    <th>Styles</th>
+  </tr>
+
+  <% @chefs.each do |chef| %>
+      <tr>
+        <td><%= chef.name %></td>
+        <td><%= chef.age %></td>
+        <td><%= chef.location %></td>
+        <td><%= chef.styles %></td>
+        <td><%= link_to 'Show', chef_path(chef) %></td>
+        <td><%= link_to 'Edit', edit_chef_path(chef) %></td>
+        <td><%= link_to 'Delete', chef_path(chef), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
