@@ -1,0 +1,20 @@
+<h1>Menus of Chef <%= @chef.name %></h1>
+
+<%= link_to 'Back', chefs_path %> |
+<%= link_to 'Add menu', new_chef_menu_path(@chef) %> |
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <% @chef.menus.each do |menu| %>
+      <tr>
+        <td><%= menu.name %></td>
+        <td><%= menu.price %></td>
+        <td>Edit</td>
+        <td><%= link_to 'Delete', [menu.chef, menu], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+</table>
+
