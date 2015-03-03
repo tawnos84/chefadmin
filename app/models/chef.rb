@@ -1,5 +1,5 @@
 class Chef < ActiveRecord::Base
-  has_many :menus
+  has_many :menus, dependent: :destroy
 
   validates :name, presence: true
   validates :styles, presence: true

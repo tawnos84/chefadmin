@@ -12,7 +12,7 @@
       <tr>
         <td><%= menu.name %></td>
         <td><%= menu.price %></td>
-        <td>Edit</td>
+        <td><%= link_to 'Edit', edit_chef_menu_path(menu.chef, menu) %></td>
         <td><%= link_to 'Delete', [menu.chef, menu], method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>

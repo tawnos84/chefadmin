@@ -9,7 +9,19 @@ class MenusController < ApplicationController
   end
 
   def edit
-    @menu = Menu.find(params[:id])
+    @chef = Chef.find(params[:chef_id])
+    @menu = @chef.menus.find(params[:id])
+  end
+
+  def update
+    @chef = Chef.find(params[:chef_id])
+    @menu = @chef.menus.find(params[:id])
+
+    if @menu.update(menu_params)
+      redirect_to chef_menus_url
+    else
+      render 'new'
+    end
   end
 
   def create
