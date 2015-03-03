@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'courses/index/:menu_id', to: 'courses#index', as: 'courses/index' #review this change on Wednesday! <3
+
+  get 'courses/edit'
+
+  get 'courses/new'
+
+  get 'courses/show'
+
   get 'menus/index'
 
   get 'menus/edit'
@@ -24,6 +32,8 @@ Rails.application.routes.draw do
   resources :chefs do
     resources :menus
   end
+
+  resources :courses
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'

@@ -1,5 +1,6 @@
 class Menu < ActiveRecord::Base
   belongs_to :chef
+  has_many :courses, dependent: :destroy
 
   validates :name, presence: true
   validates :price, presence: true
