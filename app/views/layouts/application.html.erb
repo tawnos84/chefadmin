@@ -1,14 +1,36 @@
+<!-- app/views/layouts/application.html.erb -->
+
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SibaritasChefs</title>
+  <title>BootstrapBlogSeriesTodoApp</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">LoSibaritas - Administration</a>
+    </div>
+  </div>
+</nav>
+
+
+<div id="main-container" class="container">
+  <div class="row">
+    <div class="col-xs-12">
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= yield %>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
