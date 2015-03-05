@@ -13,6 +13,7 @@ class Chef < ActiveRecord::Base
 
   private
   def chef_params
-    params.require(:chef).permit(:name, :age, :location, :styles)
+    params.require(:chef).permit(:name, :age, :location, :styles, :biography, :culinarytraining, :picture, :video, :family_dinner,
+                                 :informal_reunion, :number_of_helpers, :last_minute, :teaching, :min_size, :max_size, :facebook)
   end
 end

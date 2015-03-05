@@ -42,7 +42,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @course.destroy
 
-    redirect_to courses_url
+    redirect_to chef_menu_courses_path
   end
 
   private

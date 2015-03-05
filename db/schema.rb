@@ -11,17 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305114444) do
+ActiveRecord::Schema.define(version: 20150305180804) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
-    t.string   "age"
+    t.integer  "age"
     t.string   "location"
     t.text     "styles"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
     t.text     "biography"
     t.text     "culinarytraining"
+    t.string   "picture"
+    t.string   "video"
+    t.boolean  "family_dinner"
+    t.boolean  "informal_reunion"
+    t.integer  "number_of_helpers"
+    t.boolean  "last_minute"
+    t.boolean  "teaching"
+    t.integer  "min_size"
+    t.integer  "max_size"
+    t.string   "facebook"
   end
 
   create_table "courses", force: :cascade do |t|
