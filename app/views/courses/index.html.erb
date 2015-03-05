@@ -1,11 +1,15 @@
-<h1>Courses of menu <%= @menu.name %></h1>
-<%= link_to 'Back', chef_menus_path %> |
-<%= link_to 'Add course', new_chef_menu_course_path(@menu.chef_id, @menu) %>
-<table>
+<h1>Courses for menu: <%= @menu.name %></h1>
+<p>
+<%= link_to 'Back', chef_menus_path, class: 'btn btn-primary' %>
+<%= link_to 'Add course', new_chef_menu_course_path(@menu.chef_id, @menu), class: 'btn btn-success' %>
+</p>
+
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Position</th>
     <th>Description</th>
+    <th colspan="3">Actions</th>
   </tr>
   <% @courses.each do |course| %>
       <tr>

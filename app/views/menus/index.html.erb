@@ -1,12 +1,14 @@
-<h1>Menus of Chef <%= @chef.name %></h1>
+<h1>Menus of chef <%= @chef.name %></h1>
+<p>
+<%= link_to 'Back', chefs_path, class: 'btn btn-primary' %>
+<%= link_to 'Add menu', new_chef_menu_path(@chef), class: 'btn btn-success' %>
+</p>
 
-<%= link_to 'Back', chefs_path %> |
-<%= link_to 'Add menu', new_chef_menu_path(@chef) %> |
-
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Price</th>
+    <th colspan="4">Actions</th>
   </tr>
   <% @chef.menus.each do |menu| %>
       <tr>

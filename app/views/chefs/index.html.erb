@@ -1,14 +1,17 @@
 <h1>Chef overview</h1>
 
-<%= link_to 'To main menu', welcome_index_path %><br>
-<%= link_to 'Add chef', new_chef_path %>
+<p>
+<%= link_to 'Back to main menu', welcome_index_path, class: 'btn btn-primary' %>
+<%= link_to 'Add chef', new_chef_path, class: 'btn btn-success' %>
+</p>
 
-<table>
+<table class="table table-striped">
   <tr>
     <th>Name</th>
     <th>Age</th>
     <th>Location</th>
     <th>Styles</th>
+    <th colspan="4">Actions</th>
   </tr>
 
   <% @chefs.each do |chef| %>
