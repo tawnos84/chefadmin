@@ -1,5 +1,6 @@
-<h1>Courses of menu </h1>
-<%= link_to 'Add course', new_course_path %>
+<h1>Courses of menu <%= @menu.name %></h1>
+<%= link_to 'Back', chef_menus_path %> |
+<%= link_to 'Add course', new_chef_menu_course_path(@menu.chef_id, @menu) %>
 <table>
   <tr>
     <th>Name</th>
@@ -10,8 +11,10 @@
       <tr>
         <td><%= course.name %></td>
         <td><%= course.position %></td>
-        <td><%= course.description %></td>
-        <td><%= link_to 'Delete', course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= course.description %>
+        <td><%= link_to 'Details', chef_menu_course_path(@menu.chef_id, @menu, course) %></td>
+        <td><%= link_to 'Edit', edit_chef_menu_course_path(@menu.chef_id, @menu, course) %></td>
+        <td><%= link_to 'Delete', chef_menu_course_path(@menu.chef_id, @menu, course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
   <% end %>
 </table>

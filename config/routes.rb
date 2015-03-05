@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get 'courses/index/:menu_id', to: 'courses#index', as: 'courses/index' #review this change on Wednesday! <3
+  get 'courses/index'
 
   get 'courses/edit'
 
@@ -30,10 +30,10 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :chefs do
-    resources :menus
+    resources :menus do
+      resources :courses
+    end
   end
-
-  resources :courses
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'

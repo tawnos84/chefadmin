@@ -1,6 +1,6 @@
 <h1>Add new course</h1>
 
-<%= form_for :course, url: courses_path do |f| %>
+<%= form_for :course, url: chef_menu_courses_path do |f| %>
 
     <% if @course.errors.any? %>
         <div id="error_explanation">
@@ -36,4 +36,4 @@
     </p>
 <% end %>
 
-<%= link_to 'Back', courses_path %>
+<%= link_to 'Back', chef_menu_courses_path %>

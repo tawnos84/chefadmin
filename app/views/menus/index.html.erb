@@ -12,8 +12,10 @@
       <tr>
         <td><%= menu.name %></td>
         <td><%= menu.price %></td>
+        <td><%= link_to 'Details', chef_menu_path(menu.chef, menu) %></td>
         <td><%= link_to 'Edit', edit_chef_menu_path(menu.chef, menu) %></td>
         <td><%= link_to 'Delete', [menu.chef, menu], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Manage courses', chef_menu_courses_path(@chef, menu) %></td>
       </tr>
   <% end %>
 </table>
