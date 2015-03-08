@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150305180804) do
+ActiveRecord::Schema.define(version: 20150308195710) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
@@ -42,16 +42,47 @@ ActiveRecord::Schema.define(version: 20150305180804) do
     t.integer  "menu_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "course_type"
   end
 
   add_index "courses", ["menu_id"], name: "index_courses_on_menu_id"
 
   create_table "menus", force: :cascade do |t|
     t.string   "name"
-    t.string   "price"
+    t.float    "price"
     t.integer  "chef_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.string   "photo1"
+    t.string   "photo2"
+    t.string   "photo3"
+    t.string   "photo4"
+    t.string   "photo5"
+    t.string   "currency"
+    t.text     "description"
+    t.boolean  "cuisine_italian"
+    t.boolean  "cuisine_peruvian"
+    t.boolean  "cuisine_mediterranean"
+    t.boolean  "cuisine_spanish"
+    t.boolean  "cuisine_american"
+    t.boolean  "cuisine_japanese"
+    t.boolean  "cuisine_fusion"
+    t.boolean  "cuisine_thai"
+    t.boolean  "cuisine_vietnamese"
+    t.boolean  "cuisine_latinamerican"
+    t.boolean  "cuisine_indian"
+    t.boolean  "cuisine_persian"
+    t.boolean  "cuisine_bbq"
+    t.boolean  "cuisine_argentinian"
+    t.boolean  "cuisine_anticuchos"
+    t.boolean  "cuisine_patisserie"
+    t.boolean  "cuisine_exotic"
+    t.boolean  "cuisine_german"
+    t.boolean  "cuisine_brazilian"
+    t.boolean  "option_alcohol"
+    t.boolean  "option_change"
+    t.boolean  "hashtags"
+    t.boolean  "partysize"
   end
 
   add_index "menus", ["chef_id"], name: "index_menus_on_chef_id"

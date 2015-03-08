@@ -12,6 +12,6 @@ class Course < ActiveRecord::Base
 
   private
   def course_params
-    params.require(:course).permit(:name, :position, :description, :menu_id)
+    params.require(:course).permit(:name, :position, :description, :menu_id, :course_type)
   end
 end
