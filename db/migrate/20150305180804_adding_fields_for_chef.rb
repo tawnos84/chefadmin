@@ -11,7 +11,7 @@ class AddingFieldsForChef < ActiveRecord::Migration
     add_column :chefs, :max_size, :integer
     add_column :chefs, :facebook, :string
 
-    change_column :chefs, :age, :integer
+    add_column :chefs, :age, :integer
 
   end
 end
