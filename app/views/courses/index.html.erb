@@ -16,7 +16,6 @@
         <td><%= course.name %></td>
         <td><%= course.position %></td>
         <td><%= course.description %>
-        <td><%= link_to 'Details', chef_menu_course_path(@menu.chef_id, @menu, course) %></td>
         <td><%= link_to 'Edit', edit_chef_menu_course_path(@menu.chef_id, @menu, course) %></td>
         <td><%= link_to 'Delete', chef_menu_course_path(@menu.chef_id, @menu, course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

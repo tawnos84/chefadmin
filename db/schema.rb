@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150309102318) do
+ActiveRecord::Schema.define(version: 20150309132207) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
@@ -82,9 +82,11 @@ ActiveRecord::Schema.define(version: 20150309102318) do
     t.boolean  "cuisine_brazilian"
     t.boolean  "option_alcohol"
     t.boolean  "option_change"
-    t.boolean  "hashtags"
-    t.boolean  "partysize"
+    t.boolean  "hashtags_boolean"
+    t.boolean  "partysize_boolean"
     t.integer  "price"
+    t.string   "hashtags"
+    t.string   "partysize"
   end
 
   add_index "menus", ["chef_id"], name: "index_menus_on_chef_id"

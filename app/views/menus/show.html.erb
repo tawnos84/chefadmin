@@ -1,2 +1,11 @@
-<h1>Menus#show</h1>
-<p>Find me in app/views/menus/show.html.erb</p>
+<h1><%= @menu.name %></h1>
+<p><%= @menu.description %></p>
+<p>Price: <%= @menu.currency %> <%=@menu.price%> - Party size: <%= @menu.partysize %> </p>
+
+<% @menu.courses.each do |course| %>
+    <p>
+      <strong><%= course.name %></strong><br>
+      <%= course.course_type %><br>
+      <%= course.description %><br>
+    </p>
+<% end %>
