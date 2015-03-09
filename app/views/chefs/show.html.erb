@@ -28,24 +28,37 @@
               </p>
             </div>
             <!--/col-->
-            <div class="clearfix"></div>
-            <div class="col-xs-12 col-sm-4">
-              <h2><strong> 20,7K </strong></h2>
-              <p><small>Followers</small></p>
-              <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+            <% @chef.menus.each do |menu| %>
+            <div class="container">
+              <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6">
+                  <div class="well well-sm">
+                    <div class="row">
+                      <div class="col-sm-6 col-md-4">
+                        <img src="<%=menu.photo1%>" alt="" class="img-rounded img-responsive" />
+                      </div>
+                      <div class="col-sm-6 col-md-8">
+                        <h4><%= menu.name %></h4>
+                        <p><small>Price: <%=menu.currency%> <%=menu.price%> - Recommended party size: <%=menu.partysize%></small></p>
+                        <p><%=menu.description%></p>
+                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          See courses
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                          <div class="well">
+                            <% menu.courses.each do |course| %>
+                                <p><strong><%= course.course_type %> - <%= course.name %></strong><br>
+                                <%= course.description %></p>
+                            <% end %>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <!--/col-->
-            <div class="col-xs-12 col-sm-4">
-              <h2><strong>245</strong></h2>
-              <p><small>Following</small></p>
-              <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
-            </div>
-            <!--/col-->
-            <div class="col-xs-12 col-sm-4">
-              <h2><strong>43</strong></h2>
-              <p><small>Snippets</small></p>
-              <button type="button" class="btn btn-primary btn-block"><span class="fa fa-gear"></span> Options </button>
-            </div>
+            <% end %>
             <!--/col-->
           </div>
           <!--/row-->
