@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150308195710) do
+ActiveRecord::Schema.define(version: 20150309102318) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
-    t.integer  "age"
+    t.integer  "age_string"
     t.string   "location"
     t.text     "styles"
     t.datetime "created_at",        null: false
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150308195710) do
     t.integer  "min_size"
     t.integer  "max_size"
     t.string   "facebook"
+    t.integer  "age"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -49,7 +50,7 @@ ActiveRecord::Schema.define(version: 20150308195710) do
 
   create_table "menus", force: :cascade do |t|
     t.string   "name"
-    t.float    "price"
+    t.float    "price_string"
     t.integer  "chef_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
@@ -83,6 +84,7 @@ ActiveRecord::Schema.define(version: 20150308195710) do
     t.boolean  "option_change"
     t.boolean  "hashtags"
     t.boolean  "partysize"
+    t.integer  "price"
   end
 
   add_index "menus", ["chef_id"], name: "index_menus_on_chef_id"

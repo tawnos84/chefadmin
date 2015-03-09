@@ -1,23 +1,64 @@
-<h2>View chef</h2>
-<p>
-  <strong>Name:</strong>
-  <%= @chef.name %>
-</p>
 
-<p>
-  <strong>Age:</strong>
-  <%= @chef.age %>
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-xs-10">
+      <div class="well panel panel-default">
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 text-center">
+              <img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive">
+              <ul class="list-inline ratings text-center" title="Ratings">
+                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+              </ul>
+            </div>
+            <!--/col-->
+            <div class="col-xs-12 col-sm-8">
+              <h2><%= @chef.name %></h2>
+              <p><strong>Location: </strong> <%= @chef.location %> </p>
+              <p><strong>Age: </strong> <%= @chef.age %> </p>
+              <p><strong>Styles: </strong>
+                <span class="label label-info tags"><%= @chef.styles %></span>
+             <p><strong>Biography: </strong> <%= @chef.biography %></p>
+             <p><strong>Culinary Training: </strong> <%= @chef.culinarytraining %></p>
 
-<p>
-  <strong>Location:</strong>
-  <%= @chef.location %>
-</p>
+              </p>
+            </div>
+            <!--/col-->
+            <div class="clearfix"></div>
+            <div class="col-xs-12 col-sm-4">
+              <h2><strong> 20,7K </strong></h2>
+              <p><small>Followers</small></p>
+              <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Follow </button>
+            </div>
+            <!--/col-->
+            <div class="col-xs-12 col-sm-4">
+              <h2><strong>245</strong></h2>
+              <p><small>Following</small></p>
+              <button class="btn btn-info btn-block"><span class="fa fa-user"></span> View Profile </button>
+            </div>
+            <!--/col-->
+            <div class="col-xs-12 col-sm-4">
+              <h2><strong>43</strong></h2>
+              <p><small>Snippets</small></p>
+              <button type="button" class="btn btn-primary btn-block"><span class="fa fa-gear"></span> Options </button>
+            </div>
+            <!--/col-->
+          </div>
+          <!--/row-->
+        </div>
+        <!--/panel-body-->
+      </div>
+      <!--/panel-->
+    </div>
+    <!--/col-->
+  </div>
+  <!--/row-->
+</div>
+<!--/container-->
 
-<p>
-  <strong>Styles:</strong>
-  <%= @chef.styles %>
-</p>
-
-<%= link_to 'Edit', edit_chef_path(@chef) %>
-<%= link_to 'Back', chefs_path %>
+<%= link_to 'Edit', edit_chef_path(@chef), class: 'btn btn-success' %>
+<%= link_to 'Back', chefs_path, class: 'btn btn-primary' %>

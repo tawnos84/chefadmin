@@ -30,6 +30,6 @@ class AddFieldsForMenu < ActiveRecord::Migration
     add_column :menus, :option_change, :boolean
     add_column :menus, :hashtags, :boolean
     add_column :menus, :partysize, :boolean
-    change_column :menus, :price, :float
+
   end
 end

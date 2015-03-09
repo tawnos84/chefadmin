@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1b93802-6dd9-4337-9b6b-ad8d4911a0d2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20150302172623_create_chefs.rb" afterPath="$PROJECT_DIR$/db/migrate/20150302172623_create_chefs.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20150302185559_create_menus.rb" afterPath="$PROJECT_DIR$/db/migrate/20150302185559_create_menus.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20150305180804_adding_fields_for_chef.rb" afterPath="$PROJECT_DIR$/db/migrate/20150305180804_adding_fields_for_chef.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20150308190402_add_fields_for_menu.rb" afterPath="$PROJECT_DIR$/db/migrate/20150308190402_add_fields_for_menu.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/chefs/show.html.erb" afterPath="$PROJECT_DIR$/app/views/chefs/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SibaritasChefs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -19,7 +22,7 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/SibaritasChefs@Rails_console__SibaritasChefs.coverage" NAME="Rails console: SibaritasChefs Coverage Results" MODIFIED="1425321199846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SibaritasChefs" />
-    <SUITE FILE_PATH="coverage/SibaritasChefs@db_migrate__SibaritasChefs.coverage" NAME="db:migrate: SibaritasChefs Coverage Results" MODIFIED="1425846042833" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SibaritasChefs" />
+    <SUITE FILE_PATH="coverage/SibaritasChefs@db_migrate__SibaritasChefs.coverage" NAME="db:migrate: SibaritasChefs Coverage Results" MODIFIED="1425896738181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SibaritasChefs" />
     <SUITE FILE_PATH="coverage/SibaritasChefs@db_reset__SibaritasChefs.coverage" NAME="db:reset: SibaritasChefs Coverage Results" MODIFIED="1425555768936" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SibaritasChefs" />
     <SUITE FILE_PATH="coverage/SibaritasChefs@routes__SibaritasChefs.coverage" NAME="routes: SibaritasChefs Coverage Results" MODIFIED="1425567822377" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="SibaritasChefs" />
   </component>
@@ -35,16 +38,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20150308190402_add_fields_for_menu.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20150308190402_add_fields_for_menu.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="615">
-              <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="20150305114444_add_fields_to_chefs.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20150305114444_add_fields_to_chefs.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -55,31 +48,71 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="20150308195710_add_fields_for_courses.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20150308195710_add_fields_for_courses.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20150308190402_add_fields_for_menu.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20150308190402_add_fields_for_menu.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="615">
+              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="20150305180804_adding_fields_for_chef.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20150305180804_adding_fields_for_chef.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="course.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/course.rb">
+      <file leaf-file-name="20150309102318_adopting_table_for_heroku.rb" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20150309102318_adopting_table_for_heroku.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-              <caret line="14" column="89" selection-start-line="14" selection-start-column="89" selection-end-line="14" selection-end-column="89" />
+            <state vertical-scroll-proportion="0.1626898" vertical-offset="0" max-vertical-offset="461">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="courses_controller.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/courses_controller.rb">
+      <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/chefs/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="870">
-              <caret line="49" column="96" selection-start-line="49" selection-start-column="96" selection-end-line="49" selection-end-column="96" />
+            <state vertical-scroll-proportion="3.75" vertical-offset="570" max-vertical-offset="1035">
+              <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/chefs/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.erb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -95,41 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20150302185559_create_menus.rb" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20150302185559_create_menus.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13015184" vertical-offset="0" max-vertical-offset="461">
-              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20150303215545_create_courses.rb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20150303215545_create_courses.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-              <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="edit.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/courses/edit.html.erb">
+        <entry file="file://$PROJECT_DIR$/app/views/chefs/edit.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.0833335" vertical-offset="238" max-vertical-offset="750">
-              <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/courses/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375" vertical-offset="120" max-vertical-offset="720">
-              <caret line="23" column="6" selection-start-line="23" selection-start-column="6" selection-end-line="24" selection-end-column="64" />
+            <state vertical-scroll-proportion="-11.333333" vertical-offset="1213" max-vertical-offset="1650">
+              <caret line="99" column="65" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -146,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/views/chefs/show.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150305114444_add_fields_to_chefs.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
@@ -156,14 +158,12 @@
         <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.sass" />
         <option value="$PROJECT_DIR$/app/views/courses/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/menus/index.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/welcome/index.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/chefs_controller.rb" />
         <option value="$PROJECT_DIR$/app/models/chef.rb" />
         <option value="$PROJECT_DIR$/app/views/chefs/edit.html.erb" />
         <option value="$PROJECT_DIR$/app/views/chefs/index.html.erb" />
         <option value="$PROJECT_DIR$/app/views/chefs/new.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20150308190402_add_fields_for_menu.rb" />
         <option value="$PROJECT_DIR$/app/models/menu.rb" />
         <option value="$PROJECT_DIR$/app/controllers/menus_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/menus/edit.html.erb" />
@@ -173,9 +173,14 @@
         <option value="$PROJECT_DIR$/app/controllers/courses_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/courses/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/courses/edit.html.erb" />
-        <option value="$PROJECT_DIR$/db/migrate/20150305180804_adding_fields_for_chef.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150302172623_create_chefs.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20150302185559_create_menus.rb" />
+        <option value="$PROJECT_DIR$/vendor/assets/stylesheets/fb-profile.css" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/chefs/show.html.erb" />
+        <option value="$PROJECT_DIR$/db/migrate/20150305180804_adding_fields_for_chef.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20150308190402_add_fields_for_menu.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20150309102318_adopting_table_for_heroku.rb" />
       </list>
     </option>
   </component>
@@ -482,6 +487,50 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SibaritasChefs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SibaritasChefs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SibaritasChefs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SibaritasChefs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -549,6 +598,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="RailsGeneratorsPopup.hiddenIncluded" value="false" />
     <property name="RakeTaksPopup.undocumentedIncluded" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/assets/images" />
+    </key>
   </component>
   <component name="RunManager" selected="Rake.db:migrate: SibaritasChefs">
     <configuration default="false" name="routes: SibaritasChefs" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
@@ -809,20 +863,20 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32784638" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496318" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24928571" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32921812" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921812" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -852,14 +906,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/courses/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="315" max-vertical-offset="405">
-          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20150305114444_add_fields_to_chefs.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="180">
@@ -970,13 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chefs/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="420">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/menus/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
@@ -1015,14 +1054,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/chefs.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Ruby/Gems/2.0.0/gems/turbolinks-2.5.3/lib/turbolinks.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.26898047" vertical-offset="124" max-vertical-offset="585">
@@ -1054,34 +1085,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="390">
-          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/menus/index.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="450">
           <caret line="0" column="14" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="645">
-          <caret line="8" column="102" selection-start-line="8" selection-start-column="102" selection-end-line="8" selection-end-column="102" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1098,14 +1105,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
           <caret line="16" column="129" selection-start-line="16" selection-start-column="129" selection-end-line="16" selection-end-column="129" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chefs/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.583333" vertical-offset="34" max-vertical-offset="510">
-          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -1142,34 +1141,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/chefs/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="795" max-vertical-offset="1650">
-          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="69" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/menus/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="2235">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="135" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/menus/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.958334" vertical-offset="1618" max-vertical-offset="2220">
           <caret line="135" column="10" selection-start-line="135" selection-start-column="10" selection-end-line="135" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150308195710_add_fields_for_courses.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1206,7 +1181,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150302172623_create_chefs.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150303215545_create_courses.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150302185559_create_menus.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
@@ -1214,10 +1197,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150303215545_create_courses.rb">
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/chefs.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="461">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.5" vertical-offset="0" max-vertical-offset="390">
+          <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="90" max-vertical-offset="660">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/menus/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="45" max-vertical-offset="2235">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="135" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/chefs/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.333333" vertical-offset="1213" max-vertical-offset="1650">
+          <caret line="99" column="65" selection-start-line="99" selection-start-column="6" selection-end-line="99" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/chefs/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/welcome/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="150">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/chefs/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.75" vertical-offset="570" max-vertical-offset="1035">
+          <caret line="32" column="30" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -1230,26 +1269,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150302172623_create_chefs.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20150305180804_adding_fields_for_chef.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150308195710_add_fields_for_courses.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="37" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20150308190402_add_fields_for_menu.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
-          <caret line="2" column="4" selection-start-line="2" selection-start-column="4" selection-end-line="2" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="615">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20150302185559_create_menus.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20150309102318_adopting_table_for_heroku.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13015184" vertical-offset="0" max-vertical-offset="461">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.1626898" vertical-offset="0" max-vertical-offset="461">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
