@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'searches/index'
+
+  get 'searches/ask'
+
+  get 'searches/result'
+
   get 'courses/index'
 
   get 'courses/edit'
@@ -34,6 +40,8 @@ Rails.application.routes.draw do
       resources :courses
     end
   end
+
+  resources :searches
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'

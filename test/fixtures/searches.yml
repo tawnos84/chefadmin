@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cook_date: MyString
+  : 
+  cook_time: MyString
+  : 
+  cook_location: MyString
+  : MyString
+
+two:
+  cook_date: MyString
+  : 
+  cook_time: MyString
+  : 
+  cook_location: MyString
+  : MyString

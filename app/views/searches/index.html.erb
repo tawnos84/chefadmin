@@ -1,0 +1,21 @@
+<%= link_to 'New Search', searches_ask_path, class: 'btn btn-primary' %><br>
+
+<p>
+<table class="table table-hover">
+<% @menus.each do |menu| %>
+    <tr>
+      <td><strong>Menu Name</strong> <%= menu.name %></td>
+      <td><strong>Menu Price</strong> <%= menu.price %></td>
+    </tr>
+      <tr>
+      <td><strong>Chef Name</strong> <%= menu.chef.name %></td>
+      <td><strong>Chef Location</strong> <%= menu.chef.location %> </td>
+      </tr>
+      <tr>
+      <td><%= link_to 'Chef Infos', chef_path(menu.chef) %></td>
+      <td><%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu) %></td>
+      </tr>
+      <tr><td></td><td></td></tr>
+<% end %>
+</table>
+</p>

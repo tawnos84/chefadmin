@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails SibaritasChefs: development" uuid="d6404c83-a4d6-4662-aeed-5debc14e99d7">
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails SibaritasChefs: test" uuid="fccaa921-c53f-4d40-a443-f9ff5800b3e8">
+      <first-sync>true</first-sync>
+    </data-source>
+  </component>
+</project>
