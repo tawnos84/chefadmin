@@ -1,21 +1,33 @@
-<%= link_to 'New Search', searches_ask_path, class: 'btn btn-primary' %><br>
+<p><%= link_to 'New Search', searches_ask_path, class: 'btn btn-primary' %></p>
 
-<p>
-<table class="table table-hover">
+<div class="container">
+  <div class="row">
 <% @menus.each do |menu| %>
-    <tr>
-      <td><strong>Menu Name</strong> <%= menu.name %></td>
-      <td><strong>Menu Price</strong> <%= menu.price %></td>
-    </tr>
-      <tr>
-      <td><strong>Chef Name</strong> <%= menu.chef.name %></td>
-      <td><strong>Chef Location</strong> <%= menu.chef.location %> </td>
-      </tr>
-      <tr>
-      <td><%= link_to 'Chef Infos', chef_path(menu.chef) %></td>
-      <td><%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu) %></td>
-      </tr>
-      <tr><td></td><td></td></tr>
+
+
+      <div class="col-sm-6 col-md-4">
+        <div class="panel panel-default panel-card">
+          <div class="panel-heading">
+            <img src="<%=menu.photo1%>" />
+            <button class="btn btn-primary btn-sm" role="button">£<%=menu.price%></button>
+          </div>
+          <div class="panel-figure">
+            <img class="img-responsive img-circle" src="<%=menu.chef.picture%>" />
+          </div>
+          <div class="panel-body text-center">
+            <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn"><%=menu.name%></a></h4>
+            <small>by <%=menu.chef.name%></small>
+          </div>
+          <div class="panel-thumbnails">
+            <div class="row">
+            <p class="panel-body text-center"><%= menu.description %><br>
+              <%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %>
+              <%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %>
+            </p>
+            </div>
+          </div>
+        </div>
+      </div>
 <% end %>
-</table>
-</p>
+  </div>
+</div>
