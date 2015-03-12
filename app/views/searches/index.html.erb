@@ -17,14 +17,8 @@
             <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn"><%=menu.name%></a></h4>
             <small>by <%=menu.chef.name%></small>
             <p><%= menu.description %></p>
-          </div>
-          <div class="panel-thumbnails">
-            <div class="row">
-            <p class="panel-body text-center">
-              <%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %>
-              <%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %>
-            </p>
-            </div>
+            <%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %>
+            <%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %>
           </div>
         </div>
       </div>
