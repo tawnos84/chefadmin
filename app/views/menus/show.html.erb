@@ -1,12 +1,37 @@
-<h1><%= @menu.name %></h1>
-<p><%= @menu.description %></p>
-<p>Price: <%= @menu.currency %> <%=@menu.price%> - Party size: <%= @menu.partysize %> </p>
 
-<% @menu.courses.each do |course| %>
-    <p>
-      <strong><%= course.name %></strong><br>
-      <%= course.course_type %><br>
-      <%= course.description %><br>
+<div class="jumbotron text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col col-lg-12 col-sm-12">
+        <h1><%= @menu.name %></h1>
+        <p>by chef <%= @menu.chef.name %></p>
+        <img src="<%= @menu.photo2 %>" class="img-responsive img-rounded">
+        <p><strong><%= @menu.description %></strong></p>
+        <p>Price: <%= @menu.currency %> £<%=@menu.price%> - Party size: <%= @menu.partysize %> guests</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /header container-->
+
+<!-- CONTENT
+=================================-->
+<div class="container">
+  <% @menu.courses.each do |course| %>
+  <div class="row">
+    <div class="col-lg-12"><div class="well text-center">
+      <p>
+        <h4><strong><%= course.name %></strong></h4>
+        <%= course.course_type %><br>
+        <%= course.description %>
+      </p>
+    </div></div>
+  </div>
+  <% end %>
+  <div class="row">
+    <p class="panel-body text-center">
+      <%= link_to 'Chef Infos', chef_path(@menu.chef), class: 'btn btn-primary' %>
+      <%= link_to 'Book now', chef_menu_path(@menu.chef, @menu), class: 'btn btn-success' %>
     </p>
-<% end %>
-
+  </div>
+</div>
