@@ -1,10 +1,9 @@
 <p><%= link_to 'New Search', searches_ask_path, class: 'btn btn-primary' %></p>
 <p><small>We found a total of <strong><%= @menus.count %> menus </strong>matching your tastes.</small></p>
 <div class="container">
+
   <div class="row">
 <% @menus.each do |menu| %>
-
-
       <div class="col-sm-6 col-md-4">
         <div class="panel panel-default panel-card">
           <div class="panel-heading">

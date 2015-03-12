@@ -1,6 +1,6 @@
 <h1>Edit menu</h1>
 
-<%= form_for :menu, url: chef_menu_path, method: :patch do |f| %>
+<%= bootstrap_form_for :menu, url: chef_menu_path, method: :patch do |f| %>
 
     <% if @menu.errors.any? %>
         <div class="alert alert-danger" role="alert">
@@ -19,120 +19,109 @@
     <div class="page-header"><h3>Basics</h3></div>
 
     <div class="form-group">
-      <%= f.label :'Name'  %><br>
       <%= f.text_field :name, :class => 'form-control' %>
     </div>
 
     <div class="form-group">
-      <%= f.label :'Currency' %><br>
       <%= select_tag(:currency, options_for_select([['GBP', 1], ['USD', 2], ['EUR', 3], ['PEN', 4]]), :class => 'form-control') %>
     </div>
 
     <div class="form-group">
-      <%= f.label :'Price' %>
       <%= f.text_field :price, :class => 'form-control'  %>
     </div>
 
     <div class="form-group">
-      <%= f.label :'description' %>
       <%= f.text_area :description, :class => 'form-control'  %>
     </div>
 
     <div class="page-header"><h3>Images</h3></div>
     <div class="form-group">
-      <%= f.label :'photo1' %>
       <%= f.text_field :photo1, :class => 'form-control'  %>
     </div>
     <div class="form-group">
-      <%= f.label :'photo2' %>
       <%= f.text_field :photo2, :class => 'form-control'  %>
     </div>
     <div class="form-group">
-      <%= f.label :'photo3' %>
       <%= f.text_field :photo3, :class => 'form-control'  %>
     </div>
     <div class="form-group">
-      <%= f.label :'photo4' %>
       <%= f.text_field :photo4, :class => 'form-control'  %>
     </div>
     <div class="form-group">
-      <%= f.label :'photo5' %>
       <%= f.text_field :photo5, :class => 'form-control'  %>
     </div>
 
 
     <div class="page-header"><h3>Additional information</h3></div>
     <div class="form-group">
-      <%= f.check_box :option_alcohol%> <%= f.label :'option_alcohol' %>
+      <%= f.check_box :option_alcohol%>
     </div>
     <div class="form-group">
-      <%= f.check_box :option_change%> <%= f.label :'option_change' %>
+      <%= f.check_box :option_change%>
     </div>
     <div class="form-group">
-      <%= f.label :'partysize' %>
       <%= f.text_field :partysize, :class => 'form-control'  %>
     </div>
     <div class="form-group">
-      <%= f.label :'hashtags' %>
       <%= f.text_field :hashtags, :class => 'form-control'  %>
     </div>
 
     <div class="form-group">
-      <%= f.check_box :cuisine_italian%> <%= f.label :'cuisine_italian' %>
+      <%= f.check_box :cuisine_italian%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_peruvian %> <%= f.label :'cuisine_peruvian' %>
+      <%= f.check_box :cuisine_peruvian %>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_mediterranean%> <%= f.label :'cuisine_mediterranean' %>
+      <%= f.check_box :cuisine_mediterranean%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_spanish%> <%= f.label :'cuisine_spanish' %>
+      <%= f.check_box :cuisine_spanish%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_american%> <%= f.label :'cuisine_american' %>
+      <%= f.check_box :cuisine_american%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_japanese%> <%= f.label :'cuisine_japanese' %>
+      <%= f.check_box :cuisine_japanese%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_fusion%> <%= f.label :'cuisine_fusion' %>
+      <%= f.check_box :cuisine_fusion%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_thai%> <%= f.label :'cuisine_thai' %>
+      <%= f.check_box :cuisine_thai%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_vietnamese%> <%= f.label :'cuisine_vietnamese' %>
+      <%= f.check_box :cuisine_vietnamese%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_latinamerican%> <%= f.label :'cuisine_latinamerican' %>
+      <%= f.check_box :cuisine_latinamerican%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_indian%> <%= f.label :'cuisine_indian' %>
+      <%= f.check_box :cuisine_indian%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_persian%> <%= f.label :'cuisine_persian' %>
+      <%= f.check_box :cuisine_persian%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_bbq%> <%= f.label :'cuisine_bbq' %>
+      <%= f.check_box :cuisine_bbq%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_argentinian%> <%= f.label :'cuisine_argentinian' %>
+      <%= f.check_box :cuisine_argentinian%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_anticuchos%> <%= f.label :'cuisine_anticuchos' %>
+      <%= f.check_box :cuisine_anticuchos%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_patisserie%> <%= f.label :'cuisine_patisserie' %>
+      <%= f.check_box :cuisine_patisserie%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_exotic%> <%= f.label :'cuisine_exotic' %>
+      <%= f.check_box :cuisine_exotic%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_german%> <%= f.label :'cuisine_german' %>
+      <%= f.check_box :cuisine_german%>
     </div>
     <div class="form-group">
-      <%= f.check_box :cuisine_brazilian%> <%= f.label :'cuisine_brazilian' %>
+      <%= f.check_box :cuisine_brazilian%>
     </div>
     <div class="form-group">
       <%= link_to 'Back', chef_menus_path, class: "btn btn-primary" %>
