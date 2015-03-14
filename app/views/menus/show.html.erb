@@ -31,7 +31,7 @@
   <div class="row">
     <p class="panel-body text-center">
       <%= link_to 'Chef Infos', chef_path(@menu.chef), class: 'btn btn-primary' %>
-      <%= link_to 'Book now', chef_menu_path(@menu.chef, @menu), class: 'btn btn-success' %>
+      <%= link_to 'Book now', orders_new_path(menu_id: @menu.id), class: 'btn btn-success' %>
     </p>
   </div>
 </div>

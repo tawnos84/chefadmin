@@ -1,2 +1,57 @@
-<h1>Orders#new</h1>
-<p>Find me in app/views/orders/new.html.erb</p>
+<h2>Order menu</h2>
+
+<div class="col-lg-12"><div class="well text-center">
+  <p>
+  <h4><strong><%= @menu.name %></strong></h4>
+  £<%= @menu.price %><br>
+  </p>
+</div></div>
+
+<%= bootstrap_form_for :order, url: orders_path do |f| %>
+    <input type="hidden" id="menu_id" name="menu_id" value="<%= @menu.id %>">
+
+    <% if @order.errors.any? %>
+        <div class="alert alert-danger" role="alert">
+          <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+          <%= pluralize(@order.errors.count, "error") %> prohibited
+          this chef from being saved:
+          <ul>
+            <% @order.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <!--Menu forms-->
+
+    <div class="form-group">
+
+      <%= f.select :no_of_guests, [4, 5, 6, 7, 8, 9, 10, 11, 12], :class => 'form-control' %>
+    </div>
+
+    <div class="page-header"><h3>Contact information</h3></div>
+    <div class="form-group">
+      <%= f.text_field :name, :class => 'form-control' %>
+      <%= f.email_field :email, :class => 'form-control' %>
+      <%= f.telephone_field :phone, :class => 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.text_field :street, :class => 'form-control' %>
+      <%= f.text_field :city, :class => 'form-control' %>
+      <%= f.text_field :postalcode, :class => 'form-control' %>
+      <%= f.select :country, ['Peru', 'United Kingdom', 'France'], :class => 'form-control' %>
+    </div>
+
+    <h3>Your message to our chefs and us</h3>
+    <div class="form-group">
+      <%= f.text_area :remarks_chef, :class => 'form-control' %>
+      <%= f.text_area :remarks_sibaritas, :class => 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= link_to 'Back', chef_menu_path(@menu.chef, @menu), class: 'btn btn-primary' %>
+      <%= f.submit class: 'btn btn-success' %>
+    </div>
+<% end %>

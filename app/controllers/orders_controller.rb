@@ -1,14 +1,51 @@
 class OrdersController < ApplicationController
   def index
-  end
-
-  def new
-  end
-
-  def edit
+    @orders = Order.all
   end
 
   def show
+    @order = Order.find(params[:id])
+  end
+
+  def new
+    @order = Order.new
+    @menu = Menu.find(params[:menu_id])
+  end
+
+  def edit
+    @order = Order.find(params[:id])
+  end
+
+  def update
+    @order = Order.find(params[:id])
+
+    if @order.update(order_params)
+      redirect_to @order
+    else
+      render 'edit'
+    end
+  end
+
+  def create
+    @order = Order.new(order_params)
+
+    @menu = Menu.find(params[:menu_id])
+    @order.net_price = @order.no_of_guests * @menu.price
+    @order.currency = @menu.currency
+    @order.vat_amount = @order.net_price * 0.18
+
+    if @order.save
+      redirect_to @order
+    else
+      render 'new'
+    end
+  end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+
+    redirect_to orders_path
   end
 
   private
