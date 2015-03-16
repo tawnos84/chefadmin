@@ -35,8 +35,9 @@ class OrdersController < ApplicationController
     @order.currency = @menu.currency
     @order.vat_amount = @order.net_price * 0.18
     @order.menu_id = @menu.id
-
+    
     if @order.save
+      UserMailer.order_mail(@order.email, @menu.id, @order.id).deliver_later
       redirect_to @order
     else
       render 'new'

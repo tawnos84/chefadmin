@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+
+
+<div class="alert alert-success" role="alert">
+  <strong><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+    Thank you for your order with LoSibaritas! A chef will be in touch with you shortly.</strong>
+</div>
+
+<div>
+  <table class="table table-striped">
+    <tr>
+      <td>Menu:</td>
+      <td><%= @menu.name %></td>
+    </tr>
+    <tr>
+      <td>Chef:</td>
+      <td><%= @menu.chef.name %></td>
+    </tr>
+    <tr>
+      <td>Number of guests:</td>
+      <td><%= @order.no_of_guests %></td>
+    </tr>
+    <tr>
+      <td>Net Price:</td>
+      <td><%= @order.net_price %></td>
+    </tr>
+    <tr>
+      <td>VAT:</td>
+      <td><%= @order.vat_amount %></td>
+    </tr>
+  </table>
+</div>
+
+<div>
+  <table class="table table-striped">
+    <tr>
+      <td>Name:</td>
+      <td><%= @order.name %></td>
+    </tr>
+    <tr>
+      <td>E-Mail:</td>
+      <td><%= @order.email %></td>
+    </tr>
+    <tr>
+      <td>Phone</td>
+      <td><%= @order.phone %></td>
+    </tr>
+    <tr>
+      <td>Street</td>
+      <td><%= @order.street %></td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td><%= @order.city %></td>
+    </tr>
+    <tr>
+      <td>Postalcode</td>
+      <td><%= @order.postalcode %></td>
+    </tr>
+    <tr>
+      <td>Country</td>
+      <td><%= @order.country %></td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+</body>
+</html>
