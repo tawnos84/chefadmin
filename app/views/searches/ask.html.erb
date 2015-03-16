@@ -1,8 +1,65 @@
-<h3>Search Parameters</h3>
-<!--Change searches_index_path to searches_results_path to pass parameter on and allow filtering -->
-<%= bootstrap_form_for :search, url: searches_path do |f| %>
-    <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'] %>
-    <%= f.date_select :cook_date %>
-    <%= f.time_select :cook_time %>
-    <%= f.submit "Search" %>
-<% end %>
+
+
+<!-- Full Width Image Header -->
+<header class="header-image">
+  <div class="headline">
+    <div class="container">
+      <h2>loSibaritas</h2>
+      <p><strong><i>A chef is transformed into an artist when he has something to tell through his food, like a painter with his paintings - Joan Miró</i></strong></p>
+
+
+        <%= bootstrap_form_for :search, url: searches_path, layout: :inline do |f| %>
+            <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'], hide_label: true %>
+            <%= f.date_select :cook_date, hide_label: true %>
+            <%= f.time_select :cook_time, hide_label: true %>
+            <%= f.submit "Search", class: 'btn btn-primary' %>
+        <% end %>
+
+    </div>
+  </div>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+  <hr class="featurette-divider">
+
+  <!-- First Featurette -->
+  <div class="featurette" id="about">
+    <img class="featurette-image img-circle img-responsive pull-right" src="https://s3-sa-east-1.amazonaws.com/losibaritas/background1.jpg">
+    <h2 class="featurette-heading">Why book at
+      <span class="text-muted">loSibaritas</span>
+    </h2>
+    <p class="lead">Many reasons come to mind. For us food is more than a dish, it is a whole concept of lifestyle and unique experience. We want bring our passion for food alive. Has it happened that you want to host a rendez-vous, but something stops you? OH! Grocery shopping, cooking, cleaning. LoSibaritas give you the opportunity to not think about logistic anymore, book your private chef. Give yourself the opportunity to bring a culinary experience at your table.</p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- Second Featurette -->
+  <div class="featurette" id="services">
+    <img class="featurette-image img-circle img-responsive pull-left" src="https://s3-sa-east-1.amazonaws.com/losibaritas/background2.jpg">
+    <h2 class="featurette-heading">How
+      <span class="text-muted">does it work?</span>
+    </h2>
+    <p class="lead">It is a simple process; pick your location, date and time. A selection of chefs with their menus will be available. You are free to choose the best fit for you. Once decision has been made, select your party size and review your order.<br>
+    <ul>
+      <li>Ingredients</li>
+      <li>Quality chefs</li>
+      <li>In-home cooking</li>
+      <li>Setting up and cleaning</li>
+    </ul></p>
+  </div>
+
+  <hr class="featurette-divider">
+
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; LoSibaritas 2015</p>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<!-- /.container -->
