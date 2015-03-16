@@ -1,7 +1,7 @@
 <h3>Search Parameters</h3>
 <!--Change searches_index_path to searches_results_path to pass parameter on and allow filtering -->
 <%= bootstrap_form_for :search, url: searches_path do |f| %>
-    <%= f.text_field :cook_location %>
+    <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'] %>
     <%= f.date_select :cook_date %>
     <%= f.time_select :cook_time %>
     <%= f.submit "Search" %>

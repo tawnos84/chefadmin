@@ -8,6 +8,7 @@ class SearchesController < ApplicationController
   end
 
   def create
+
     redirect_to searches_path
   end
 
