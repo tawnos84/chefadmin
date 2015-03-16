@@ -1,5 +1,8 @@
-<p><%= link_to 'New Search', searches_ask_path, class: 'btn btn-primary' %></p>
-<p><small>We found a total of <strong><%= @menus.count %> menus </strong>matching your tastes.</small></p>
+<p class="well">
+  <%= link_to 'New Search', searches_ask_path, class: 'btn btn-primary' %>
+    You were looking for a chef in <strong><%= @search.cook_location %></strong> on
+    <strong><%= @search.cook_date.to_time.strftime('%e %B %Y')%></strong> at <strong><%= @search.cook_time.to_time.strftime('%H:%M') %></strong>:
+We found a total of <strong><%= @menus.count %> menus </strong>matching your tastes.</p>
 <div class="container">
 
   <div class="row">
