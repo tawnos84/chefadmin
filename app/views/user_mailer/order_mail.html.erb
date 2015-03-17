@@ -1,75 +1,150 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>LoSibaritas - Prototype</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
+
   <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
 </head>
 <body>
 
-
-<div class="alert alert-success" role="alert">
-  <strong><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
-    Thank you for your order with LoSibaritas! A chef will be in touch with you shortly.</strong>
+<div class="container">
+<!-- Full Width Image Header with Logo -->
+<!-- Image backgrounds are set within the full-width-pics.css file. -->
+<div class="row">
+  <div class="col-lg-12">
+    <h3>
+      <div class="alert alert-success" role="alert">
+        <strong><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+          Thank you for your order with LoSibaritas! A chef will be in touch with you shortly.</strong>
+      </div></h3>
+  </div>
 </div>
 
-<div>
-  <table class="table table-striped">
-    <tr>
-      <td>Menu:</td>
-      <td><%= @menu.name %></td>
-    </tr>
-    <tr>
-      <td>Chef:</td>
-      <td><%= @menu.chef.name %></td>
-    </tr>
-    <tr>
-      <td>Number of guests:</td>
-      <td><%= @order.no_of_guests %></td>
-    </tr>
-    <tr>
-      <td>Net Price:</td>
-      <td><%= @order.net_price %></td>
-    </tr>
-    <tr>
-      <td>VAT:</td>
-      <td><%= @order.vat_amount %></td>
-    </tr>
-  </table>
+<header class="image-bg-fluid-height">
+  <img class="img-responsive img-center img-circle" src="<%= @menu.chef.picture %>" alt="">
+</header>
+
+<!-- Content Section -->
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="section-heading">Your Menu</h1>
+      <p class="lead section-lead">
+      <table class="table table-striped">
+        <tr>
+          <td>Menu:</td>
+          <td><%= @menu.name %></td>
+        </tr>
+        <tr>
+          <td>Chef:</td>
+          <td><%= @menu.chef.name %></td>
+        </tr>
+        <tr>
+          <td>Number of guests:</td>
+          <td><%= @order.no_of_guests %></td>
+        </tr>
+        <tr>
+          <td>Price per menu:</td>
+          <td><%=@order.currency%> <%= @order.net_price %></td>
+        </tr>
+        <tr>
+          <td>Total Price:</td>
+          <td><%=@order.currency%> <%= @order.net_price*@order.no_of_guests %></td>
+        </tr>
+      </table>
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="section-heading">Date and Time</h1>
+      <p class="lead section-lead">
+      <table class="table table-striped">
+        <tr>
+          <td>Location:</td>
+          <td><%= @order.cook_location %></td>
+        </tr>
+        <tr>
+          <td>Date:</td>
+          <td><%= @order.cook_date %></td>
+        </tr>
+        <tr>
+          <td>Time:</td>
+          <td><%= @order.cook_time %></td>
+        </tr>
+      </table>
+      </p>
+    </div>
+  </div>
+
+
+  <!-- /.row -->
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="section-heading">Address and Billing</h1>
+      <p class="lead section-lead">
+      <table class="table table-striped">
+        <tr>
+          <td>Name:</td>
+          <td><%= @order.name %></td>
+        </tr>
+        <tr>
+          <td>E-Mail:</td>
+          <td><%= @order.email %></td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+          <td><%= @order.phone %></td>
+        </tr>
+        <tr>
+          <td>Street</td>
+          <td><%= @order.street %></td>
+        </tr>
+        <tr>
+          <td>City</td>
+          <td><%= @order.city %></td>
+        </tr>
+        <tr>
+          <td>Postalcode</td>
+          <td><%= @order.postalcode %></td>
+        </tr>
+        <tr>
+          <td>Country</td>
+          <td><%= @order.country %></td>
+        </tr>
+      </table>
+      </p>
+    </div>
+  </div>
+  <!-- /.row -->
 </div>
+<!-- /.container -->
 
-<div>
-  <table class="table table-striped">
-    <tr>
-      <td>Name:</td>
-      <td><%= @order.name %></td>
-    </tr>
-    <tr>
-      <td>E-Mail:</td>
-      <td><%= @order.email %></td>
-    </tr>
-    <tr>
-      <td>Phone</td>
-      <td><%= @order.phone %></td>
-    </tr>
-    <tr>
-      <td>Street</td>
-      <td><%= @order.street %></td>
-    </tr>
-    <tr>
-      <td>City</td>
-      <td><%= @order.city %></td>
-    </tr>
-    <tr>
-      <td>Postalcode</td>
-      <td><%= @order.postalcode %></td>
-    </tr>
-    <tr>
-      <td>Country</td>
-      <td><%= @order.country %></td>
-    </tr>
-  </table>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; LoSibaritas 2015</p>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div>
+  <!-- /.container -->
+</footer>
+
+
+
+
+
 </div>
-
-
 
 
 </body>
