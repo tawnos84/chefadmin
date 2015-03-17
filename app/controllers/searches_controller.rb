@@ -1,12 +1,25 @@
 class SearchesController < ApplicationController
   def index
+    #The Menus + Menus_found_chefs is used to ensure that only the menus for the selected location are found!
+    #Optimize that code later on
+
     @menus = Menu.all
+    @menus_found_chefs = Menu.all
 
     #save search parameters
     @search = Search.new
     @search.cook_location = params[:search_location]
     @search.cook_date = params[:search_date]
     @search.cook_time = params[:search_time]
+
+    @chefs = Chef.all.where(location: @search.cook_location)
+
+    @chefs.each do |chef|
+      @menus_found_chefs -= chef.menus.all
+    end
+
+    @menus -= @menus_found_chefs
+
   end
 
   def new

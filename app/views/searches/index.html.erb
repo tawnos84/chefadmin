@@ -5,13 +5,18 @@
 We found a total of <strong><%= @menus.count %> menus </strong>matching your tastes.</p>
 <div class="container">
 
+  <% @chefs.each do |chef|%>
+      <%= chef.name %>
+      <% end %>
+
   <div class="row">
 <% @menus.each do |menu| %>
+
       <div class="col-sm-6 col-md-4">
         <div class="panel panel-default panel-card">
           <div class="panel-heading">
             <img src="<%=menu.photo1%>" />
-            <button class="btn btn-primary btn-sm" role="button">£<%=menu.price%></button>
+            <button class="btn btn-primary btn-sm" role="button"><%=menu.currency%> <%=menu.price%></button>
           </div>
           <div class="panel-figure">
             <img class="img-responsive img-circle" src="<%=menu.chef.picture%>" />

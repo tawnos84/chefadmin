@@ -1,8 +1,13 @@
 class Order < ActiveRecord::Base
 #  validates :name, presence: true
-#  validates :email, presence: true
-#  validates :phone, presence: true
-#  Review the validations later -> render 'new' in Model must pass menu id !
+
+  validates :no_of_guests, presence: true
+  validates :email, presence: true
+  validates :phone, presence: true
+  validates :street, presence: true
+  validates :city, presence: true
+  validates :postalcode, presence: true
+  validates :country, presence: true
 
   def create
     order = Order.new(order_params)
