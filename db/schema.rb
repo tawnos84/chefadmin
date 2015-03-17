@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150317171656) do
+ActiveRecord::Schema.define(version: 20150317213523) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20150317171656) do
     t.integer  "max_size"
     t.string   "facebook"
     t.integer  "age"
+    t.string   "email"
   end
 
   create_table "courses", force: :cascade do |t|

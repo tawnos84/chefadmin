@@ -18,8 +18,8 @@ We found a total of <strong><%= @menus.count %> menus </strong>matching your tas
             <img class="img-responsive img-circle" src="<%=menu.chef.picture%>" />
           </div>
           <div class="panel-body text-center">
-            <h4 class="panel-header"><a href="https://twitter.com/maridlcrmn"><%=menu.name%></a></h4>
-            <small>by <%=menu.chef.name%></small>
+            <h4 class="panel-header"><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h4>
+            <small>by <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></small>
             <p><%= menu.description %></p>
             <%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %>
             <%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %>
