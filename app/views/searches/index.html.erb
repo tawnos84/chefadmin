@@ -5,10 +5,6 @@
 We found a total of <strong><%= @menus.count %> menus </strong>matching your tastes.</p>
 <div class="container">
 
-  <% @chefs.each do |chef|%>
-      <%= chef.name %>
-      <% end %>
-
   <div class="row">
 <% @menus.each do |menu| %>
 
