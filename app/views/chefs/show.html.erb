@@ -46,25 +46,22 @@
 
 
   <div class="row">
-    <% @chef.menus.each do |menu| %>
-    <div class="col-sm-4">
-      <img class="img-circle img-responsive img-center" src="<%=menu.photo1%>"" alt="">
-      <h2><%=menu.name%></h2>
-      <p><%=menu.description%></p>
-      <a class="btn btn-default" data-toggle="collapse" href="#collapseExample_<%=menu.id%>" aria-expanded="false" aria-controls="collapseExample_<%=menu.id%>">
-        See courses
-      </a>
-      <%= link_to 'Book now', orders_new_path(menu_id: menu.id), class: 'btn btn-success' %>
-      <div class="collapse" id="collapseExample_<%=menu.id%>">
-        <div class="well">
-          <% menu.courses.each do |course| %>
-              <p><strong><%= course.course_type %> - <%= course.name %></strong><br>
-                <%= course.description %></p>
-          <% end %>
-        </div>
+    <h2>The menus</h2>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <h3 style="color:white;font-family:verdana;">Snap Tight Image Tiles (Responisve)</h3>
+      </div>
+      <div class="row">
+        <% @chef.menus.each_with_index do |menu, index| %>
+            <% if index < 2 then @tilesize=6 end %>
+            <% if index > 1 && index < 6 then @tilesize=3 end %>
+            <%= link_to chef_menu_path(menu.chef, menu) do %>
+            <div class="cover-card col-sm-<%=@tilesize%>" style="background: url(<%=menu.photo1%>) no-repeat center top;background-size:cover;">
+          <p><strong><%=menu.name%></strong></p>
+        </div><% end %>
+        <% end %>
       </div>
     </div>
-    <% end %>
   </div>
 
   <hr>
@@ -78,6 +75,5 @@
     </div>
     <!-- /.row -->
   </footer>
-
-
+</div>
 
