@@ -30,6 +30,7 @@
   <% end %>
   <div class="row">
     <p class="panel-body text-center">
+      <%= link_to "Back", :back, class: 'btn btn-primary' %>
       <%= link_to 'Chef Infos', chef_path(@menu.chef), class: 'btn btn-primary' %>
       <%= link_to 'Book now', orders_new_path(menu_id: @menu.id), class: 'btn btn-success' %>
     </p>

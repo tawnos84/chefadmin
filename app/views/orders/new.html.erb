@@ -29,6 +29,10 @@
 
     <div class="form-group">
 
+      <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom']%>
+      <%= f.date_select :cook_date%>
+      <%= f.time_select :cook_time%>
+
       <%= f.select :no_of_guests, [4, 5, 6, 7, 8, 9, 10, 11, 12], :class => 'form-control' %>
     </div>
 

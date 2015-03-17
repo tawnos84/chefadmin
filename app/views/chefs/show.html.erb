@@ -1,77 +1,83 @@
+<header class="business-header">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-xs-10">
-      <div class="well panel panel-default">
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-xs-12 col-sm-4 text-center">
-              <img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive">
-              <ul class="list-inline ratings text-center" title="Ratings">
-                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-                <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-              </ul>
-            </div>
-            <!--/col-->
-            <div class="col-xs-12 col-sm-8">
-              <h2><%= @chef.name %></h2>
-              <p><strong>Location: </strong> <%= @chef.location %> </p>
-              <p><strong>Age: </strong> <%= @chef.age %> </p>
-              <p><strong>Styles: </strong>
-                <span class="label label-info tags"><%= @chef.styles %></span>
-             <p><strong>Biography: </strong> <%= @chef.biography %></p>
-             <p><strong>Culinary Training: </strong> <%= @chef.culinarytraining %></p>
-
-              </p>
-            </div>
-            <!--/col-->
-            <% @chef.menus.each do |menu| %>
-            <div class="container">
-              <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                  <div class="well well-sm">
-                    <div class="row">
-                      <div class="col-sm-6 col-md-4">
-                        <img src="<%=menu.photo1%>" alt="" class="img-rounded img-responsive" />
-                      </div>
-                      <div class="col-sm-6 col-md-8">
-                        <h4><%= menu.name %></h4>
-                        <p><small>Price: <%=menu.currency%> <%=menu.price%> - Recommended party size: <%=menu.partysize%></small></p>
-                        <p><%=menu.description%></p>
-                        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample_<%=menu.id%>" aria-expanded="false" aria-controls="collapseExample_<%=menu.id%>">
-                          See courses
-                        </a>
-                        <div class="collapse" id="collapseExample_<%=menu.id%>">
-                          <div class="well">
-                            <% menu.courses.each do |course| %>
-                                <p><strong><%= course.course_type %> - <%= course.name %></strong><br>
-                                <%= course.description %></p>
-                            <% end %>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <% end %>
-            <!--/col-->
-          </div>
-          <!--/row-->
-        </div>
-        <!--/panel-body-->
       </div>
-      <!--/panel-->
     </div>
-    <!--/col-->
   </div>
-  <!--/row-->
-</div>
-<!--/container-->
+</header>
 
-<%= link_to 'Edit', edit_chef_path(@chef), class: 'btn btn-success' %>
-<%= link_to 'Back', chefs_path, class: 'btn btn-primary' %>
+<!-- Page Content -->
+<div class="container">
+
+  <hr>
+
+  <div class="row">
+    <div class="col-sm-8">
+      <h2><%=@chef.name%></h2>
+      <p><strong>Location: </strong> <%= @chef.location %> <strong>Age: </strong> <%= @chef.age %> <strong>Styles: </strong>
+        <%= @chef.styles %>
+      <p><strong>Biography: </strong> <%= @chef.biography %></p>
+
+      <a class="btn btn-default" data-toggle="collapse" href="#collapseExample_chef_<%=@chef.id%>" aria-expanded="false" aria-controls="collapseExample_chef_<%=@chef.id%>">
+        Learn more &raquo;
+      </a>
+
+      <div class="collapse" id="collapseExample_chef_<%=@chef.id%>">
+          <p><strong>Culinary Training: </strong> <%= @chef.culinarytraining %></p>
+      </div>
+    </div>
+    <div class="col-sm-4 text-center">
+      <img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive">
+      Ratings:
+      <ul class="list-inline ratings text-center" title="Ratings">
+        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
+      </ul>
+    </div>
+  </div>
+  <!-- /.row -->
+
+  <hr>
+
+
+  <div class="row">
+    <% @chef.menus.each do |menu| %>
+    <div class="col-sm-4">
+      <img class="img-circle img-responsive img-center" src="<%=menu.photo1%>"" alt="">
+      <h2><%=menu.name%></h2>
+      <p><%=menu.description%></p>
+      <a class="btn btn-default" data-toggle="collapse" href="#collapseExample_<%=menu.id%>" aria-expanded="false" aria-controls="collapseExample_<%=menu.id%>">
+        See courses
+      </a>
+      <%= link_to 'Book now', orders_new_path(menu_id: menu.id), class: 'btn btn-success' %>
+      <div class="collapse" id="collapseExample_<%=menu.id%>">
+        <div class="well">
+          <% menu.courses.each do |course| %>
+              <p><strong><%= course.course_type %> - <%= course.name %></strong><br>
+                <%= course.description %></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+
+  <hr>
+  <%= link_to "Back", :back, class: 'btn btn-primary' %>
+  <!-- Footer -->
+  <footer>
+    <div class="row">
+      <div class="col-lg-12">
+        <p>Copyright &copy; LoSibaritas 2015</p>
+      </div>
+    </div>
+    <!-- /.row -->
+  </footer>
+
+
+
