@@ -58,11 +58,11 @@
           </tr>
           <tr>
             <td>Date:</td>
-            <td><%= @order.cook_date %></td>
+            <td><%= @order.cook_date.to_time.strftime('%e %B %Y') %></td>
           </tr>
           <tr>
             <td>Time:</td>
-            <td><%= @order.cook_time %></td>
+            <td><%= @order.cook_time.to_time.strftime('%H:%M') %></td>
           </tr>
         </table>
         </p>

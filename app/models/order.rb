@@ -20,6 +20,6 @@ class Order < ActiveRecord::Base
   def order_params
     params.require(:order).permit(
         :menu_id, :no_of_guests, :name, :email, :phone, :street, :city, :postalcode, :country, :remarks_sibaritas, :remarks_chef,
-        :net_price, :vat_amount, :currency)
+        :net_price, :vat_amount, :currency, :cook_date, :cook_time, :cook_location)
   end
 end
