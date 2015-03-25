@@ -39,8 +39,8 @@ class OrdersController < ApplicationController
     @order.menu_id = @menu.id
 
     if @order.save
-      UserMailer.order_mail(@order.email, @menu.id, @order.id).deliver_later
-      UserMailer.chef_mail(@order.email, @menu.id, @order.id).deliver_later
+      UserMailer.order_mail(@order.email, @menu.id, @order.id).deliver!
+      UserMailer.chef_mail(@order.email, @menu.id, @order.id).deliver!
       redirect_to @order
     else
       render 'new'
