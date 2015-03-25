@@ -20,7 +20,7 @@ We found a total of <strong><%= @menus.count %> menus </strong>matching your tas
           <div class="panel-body text-center">
             <h4 class="panel-header"><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h4>
             <small>by <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></small>
-            <p><%= menu.description %></p>
+            <p><%= menu.description[0,150] %></p>
             <%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %>
             <%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %>
           </div>
