@@ -3,8 +3,10 @@
     You were looking for a chef in <strong><%= @search.cook_location %></strong> on
     <strong><%= @search.cook_date.to_time.strftime('%e %B %Y')%></strong> at <strong><%= @search.cook_time.to_time.strftime('%H:%M') %></strong>:
 We found a total of <strong><%= @menus.count %> menus </strong>matching your tastes.</p>
-<div class="container">
+<p>Sort by <%= link_to "price", :sort=>"price", :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></p>
+<p>Sort by <%= link_to "name", :sort=>"name", :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></p>
 
+<div class="container">
   <div class="row">
 <% @menus.each do |menu| %>
 

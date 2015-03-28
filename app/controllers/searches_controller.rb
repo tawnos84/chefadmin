@@ -3,8 +3,8 @@ class SearchesController < ApplicationController
     #The Menus + Menus_found_chefs is used to ensure that only the menus for the selected location are found!
     #Optimize that code later on
 
-    @menus = Menu.all
-    @menus_found_chefs = Menu.all
+    @menus = Menu.all.order(params[:sort])
+    @menus_found_chefs = Menu.all.order(params[:sort])
 
     #save search parameters
     @search = Search.new
@@ -19,7 +19,6 @@ class SearchesController < ApplicationController
     end
 
     @menus -= @menus_found_chefs
-
   end
 
   def new

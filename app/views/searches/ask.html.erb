@@ -12,6 +12,7 @@
             <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'], hide_label: true %>
             - <%= f.date_select :cook_date, hide_label: true %>
             - <%= f.time_select :cook_time, hide_label: true %>
+          <%= f.hidden_field :sort, :value => "name" %>
             <%= f.submit "Search", class: 'btn btn-primary' %>
         <% end %>
 
