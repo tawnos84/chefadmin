@@ -37,7 +37,8 @@ We found a total of <strong><%= @menus.count %> menus </strong>matching your tas
                 Max. Price <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Any Price", :max_price => "99999", :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><strong><%= link_to "Any Price", :max_price => "99999", :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></strong></li>
+                <li class="divider"></li>
                 <li><%= link_to "100", :max_price => "100",  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
                 <li><%= link_to "50", :max_price => "50",  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
                 <li><%= link_to "20", :max_price => "20", :cuisine_type => @search.cuisine_type,  :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
@@ -50,9 +51,26 @@ We found a total of <strong><%= @menus.count %> menus </strong>matching your tas
               </a>
               <ul class="dropdown-menu">
                 <li><%= link_to "Any cuisine", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li class="divider"></li>
                 <li><%= link_to "Thai", :cuisine_type => "cuisine_thai", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
                 <li><%= link_to "Peruvian", :cuisine_type => "cuisine_peruvian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "Italian", :cuisine_type => "cuisine_italian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Mediterranean", :cuisine_type => "cuisine_mediterranean", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Spanish", :cuisine_type => "cuisine_spanish", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "American", :cuisine_type => "cuisine_american", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Japanese", :cuisine_type => "cuisine_japanese", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Fusion", :cuisine_type => "cuisine_fusion", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Vietnamese", :cuisine_type => "cuisine_vietnamese", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Latinamerican", :cuisine_type => "cuisine_latinamerican", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Indian", :cuisine_type => "cuisine_indian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Persian", :cuisine_type => "cuisine_persian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "BBQ", :cuisine_type => "cuisine_bbq", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Argentinian", :cuisine_type => "cuisine_argentinian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Anticuchos", :cuisine_type => "cuisine_anticuchos", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Patisserie", :cuisine_type => "cuisine_patisserie", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Exotic", :cuisine_type => "cuisine_exotic", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "German", :cuisine_type => "cuisine_german", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "Brazilian", :cuisine_type => "cuisine_brazilian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+
               </ul>
             </li>
           </ul>
@@ -99,6 +117,10 @@ We found a total of <strong><%= @menus.count %> menus </strong>matching your tas
         </div>
       </div>
 <% end %>
+      <% if @menus.count == 0 %>
+      <h1>:(</h1>
+          <h2>No menus match your filtering criteria</h2>
+      <% end %>
   </div>
   </div>
 </div>

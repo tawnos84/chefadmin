@@ -26,20 +26,11 @@ class SearchesController < ApplicationController
 
     #Filter the menus based on the price
     if(@search.max_price)
-      @menus = @menus.select{ |menu| menu.price <=  @search.max_price}
+      @menus.select! { |menu| menu.price <=  @search.max_price}
     end
 
-    #Filter for Thai cuisine
-    if(@search.cuisine_type == "cuisine_thai")
-      @menus = @menus.select{ |menu| menu.cuisine_thai == true}
-    end
-    #Filter for French cuisine
-    if(@search.cuisine_type == "cuisine_italian")
-      @menus = @menus.select{ |menu| menu.cuisine_italian == true}
-    end
-    #Filter for Peruvian cuisine
-    if(@search.cuisine_type == "cuisine_peruvian")
-      @menus = @menus.select{ |menu| menu.cuisine_peruvian == true}
+    if @search.cuisine_type.present?
+      @menus.select! { |m| m.attributes[@search.cuisine_type] }
     end
 
   end
