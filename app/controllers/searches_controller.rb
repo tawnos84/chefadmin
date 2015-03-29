@@ -29,7 +29,18 @@ class SearchesController < ApplicationController
       @menus = @menus.select{ |menu| menu.price <=  @search.max_price}
     end
 
-
+    #Filter for Thai cuisine
+    if(@search.cuisine_type == "cuisine_thai")
+      @menus = @menus.select{ |menu| menu.cuisine_thai == true}
+    end
+    #Filter for French cuisine
+    if(@search.cuisine_type == "cuisine_italian")
+      @menus = @menus.select{ |menu| menu.cuisine_italian == true}
+    end
+    #Filter for Peruvian cuisine
+    if(@search.cuisine_type == "cuisine_peruvian")
+      @menus = @menus.select{ |menu| menu.cuisine_peruvian == true}
+    end
 
   end
 
