@@ -8,9 +8,13 @@ class SearchesController < ApplicationController
 
     #save search parameters
     @search = Search.new
+
+
     @search.cook_location = params[:search_location]
     @search.cook_date = params[:search_date]
     @search.cook_time = params[:search_time]
+    @search.max_price = params[:max_price]
+    @search.cuisine_type = params[:cuisine_type]
 
     @chefs = Chef.all.where(location: @search.cook_location)
 
@@ -19,6 +23,11 @@ class SearchesController < ApplicationController
     end
 
     @menus -= @menus_found_chefs
+
+    #Filter the menus based on the price
+    @menus = @menus.select{ |menu| menu.price <=  @search.max_price}
+
+
   end
 
   def new
