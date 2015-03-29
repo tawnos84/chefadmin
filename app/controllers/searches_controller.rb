@@ -25,7 +25,10 @@ class SearchesController < ApplicationController
     @menus -= @menus_found_chefs
 
     #Filter the menus based on the price
-    @menus = @menus.select{ |menu| menu.price <=  @search.max_price}
+    if(@search.max_price)
+      @menus = @menus.select{ |menu| menu.price <=  @search.max_price}
+    end
+
 
 
   end
