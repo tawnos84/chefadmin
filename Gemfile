@@ -59,3 +59,4 @@ gem 'seed_dump'
 gem 'bootstrap_form'
 gem 'bootstrap-datepicker-rails'
 
+gem 'rails-i18n', '~> 4.0.0'

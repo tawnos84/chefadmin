@@ -51,4 +51,7 @@ Rails.application.configure do
       :enable_starttls_auto => true
   }
 
+  #Locales
+  config.i18n.available_locales = ['es-PE', :es, :en]
+
 end

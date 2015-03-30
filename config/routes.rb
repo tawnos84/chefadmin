@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   get 'orders/index'
 
   get 'orders/new'
@@ -104,4 +105,12 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+  #Locale
+  # config/routes.rb
+  scope "(:locale)", locale: /en|es/ do
+    resources :chefs
+    resources :orders
+    resources :searches
+  end
 end

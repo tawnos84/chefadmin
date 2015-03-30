@@ -18,6 +18,15 @@
     <div class="navbar-header">
       <%= link_to "LoSibaritas", searches_ask_path, class: "navbar-brand", style: "font-family: 'Handlee'" %>
     </div>
+    <!--Locale switch-->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+
+          <li><%=link_to 'English', url_for( :locale => 'en' )%></li>
+          <li><%=link_to 'Castellano', url_for( :locale => 'es' )%></li>
+
+      </ul>
+    </div>
   </div>
 </nav>
 

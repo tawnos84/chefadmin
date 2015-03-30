@@ -1,4 +1,5 @@
 class SearchesController < ApplicationController
+
   def index
     #The Menus + Menus_found_chefs is used to ensure that only the menus for the selected location are found!
     #Optimize that code later on

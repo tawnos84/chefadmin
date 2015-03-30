@@ -1,4 +1,5 @@
 class WelcomeController < ApplicationController
+
   def index
     @chefs = Chef.all
     @menus = Menu.all
