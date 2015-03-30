@@ -35,6 +35,17 @@ es:
 
   searchsubmit: Buscar
 
+  NewSearch: New search
+  RefineYourSearch: Refine your search
+  Location: Location
+  MaxPrice: Max. Price
+  AnyPrice: Any price
+  SelectCuisine: Select cuisine
+  AnyCuisine: Any cuisine
+  Sorting: Sorting
+  SortByPrice: Sort by price
+  SortByName: Sort by name
+
   date:
     abbr_day_names:
     - dom
