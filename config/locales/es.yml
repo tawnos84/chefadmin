@@ -1,3 +1,4 @@
+# encoding: utf-8
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
@@ -21,6 +22,7 @@
 
 ---
 es:
+  #Start translation here
   quote: Un cocinero se convierte en artista cuando tiene cosas que decir a través de sus platos, como un pintor en un cuadro - Joan Miró
 
   WhyLoSibaritasTitle: ¿Por que escoger a ‘LoSibaritas’?
@@ -35,16 +37,30 @@ es:
 
   searchsubmit: Buscar
 
-  NewSearch: New search
-  RefineYourSearch: Refine your search
-  Location: Location
-  MaxPrice: Max. Price
-  AnyPrice: Any price
-  SelectCuisine: Select cuisine
-  AnyCuisine: Any cuisine
-  Sorting: Sorting
-  SortByPrice: Sort by price
-  SortByName: Sort by name
+  #Search results
+  NewSearch: Nueva búsqueda
+  RefineYourSearch: Opciones avanzadas
+  Location: Lugar
+  MaxPrice: Precio máximo
+  AnyPrice: Cualquier precio
+  SelectCuisine: Seleccione tipo de cocina
+  AnyCuisine: Cualquier tipo de cocina
+  Sorting: Ordenar
+  SortByPrice: Ordenar por precio
+  SortByName: Order por nombre
+  by: por
+
+  #Chef Infos
+  ChefLocation: Lugar
+  ChefAge: Edad
+  ChefStyles: Estilos
+  ChefBiography: Biografía
+  ChefLearnMore: Conoce más
+  ChefRatings: Puntajes
+  ChefTheMenus: Los menús
+  ChefBack: Atrás
+
+  #End translation here
 
   date:
     abbr_day_names:

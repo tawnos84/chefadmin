@@ -16,21 +16,21 @@
   <div class="row">
     <div class="col-sm-8">
       <h2><%=@chef.name%></h2>
-      <p><strong>Location: </strong> <%= @chef.location %> <strong>Age: </strong> <%= @chef.age %> <strong>Styles: </strong>
+      <p><strong><%=t :ChefLocation%> </strong> <%= @chef.location %> <strong>Age: </strong> <%= @chef.age %> <strong><%=t :ChefStyles%> </strong>
         <%= @chef.styles %>
-      <p><strong>Biography: </strong> <%= @chef.biography %></p>
+      <p><strong><%=t :ChefBiography%> </strong> <%= @chef.biography %></p>
 
       <a class="btn btn-default" data-toggle="collapse" href="#collapseExample_chef_<%=@chef.id%>" aria-expanded="false" aria-controls="collapseExample_chef_<%=@chef.id%>">
-        Learn more &raquo;
+        <%=t :LearnMore %> &raquo;
       </a>
 
       <div class="collapse" id="collapseExample_chef_<%=@chef.id%>">
-          <p><strong>Culinary Training: </strong> <%= @chef.culinarytraining %></p>
+          <p><strong><%=t :CulinaryTraining%> </strong> <%= @chef.culinarytraining %></p>
       </div>
     </div>
     <div class="col-sm-4 text-center">
       <img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive">
-      Ratings:
+      <%=t :ChefRatings%>:
       <ul class="list-inline ratings text-center" title="Ratings">
         <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
         <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
@@ -46,7 +46,7 @@
 
 
   <div class="row">
-    <h2>The menus</h2>
+    <h2><%=t :ChefTheMenus%></h2>
     <div class="container-fluid">
       <div class="row text-center">
         <h3 style="color:white;font-family:verdana;">Snap Tight Image Tiles (Responisve)</h3>
