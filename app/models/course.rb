@@ -1,6 +1,8 @@
 class Course < ActiveRecord::Base
   belongs_to :menu
 
+  default_scope -> { order(position: :asc) }
+
   validates :name, presence: true
 
   def create

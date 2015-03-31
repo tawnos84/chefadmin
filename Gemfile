@@ -60,3 +60,9 @@ gem 'bootstrap_form'
 gem 'bootstrap-datepicker-rails'
 
 gem 'rails-i18n', '~> 4.0.0'
+
+#image processing
+gem 'carrierwave',             '0.10.0'
+gem 'mini_magick',             '3.8.0'
+gem 'fog',                     '1.23.0'
+

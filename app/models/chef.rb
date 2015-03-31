@@ -1,6 +1,8 @@
 class Chef < ActiveRecord::Base
   has_many :menus, dependent: :destroy
 
+  mount_uploader :picture, ChefPictureUploader
+
   validates :name, presence: true
   validates :email, presence: true
 
