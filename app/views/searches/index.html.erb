@@ -119,7 +119,7 @@ We found a total of <strong><%= @menus.count %> menus </strong>matching your tas
 <% end %>
       <% if @menus.count == 0 %>
       <h1>:(</h1>
-          <h2>No menus match your filtering criteria</h2>
+          <h2><%=t :NoSearchResults %>></h2>
       <% end %>
   </div>
   </div>

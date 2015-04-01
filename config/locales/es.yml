@@ -48,6 +48,9 @@ es:
   Sorting: Ordenar
   SortByPrice: Ordenar por precio
   SortByName: Order por nombre
+  NoSearchResults: No menus match your filtering criteria
+  SearchHeadline: You were looking for a chef in Perú on 16 Mar 2015 at 15:14 - We found a total of 6 menus matching your tastes
+
   by: por
 
   #Chef Infos
@@ -60,6 +63,108 @@ es:
   ChefTheMenus: Los menús
   ChefBack: Atrás
 
+  #FoodTypes
+  Thai: Thai
+  Peruvian: Peruvian
+  Mediterranean: Mediterranean
+  Spanish: Spanish
+  American: American
+  Japanese: Japanese
+  Fusion: Fusion
+  Vietnamese: Vietnamese
+  Latinamerican: Latinamerican
+  Indian: Indian
+  Persian: Persian
+  BBQ: BBQ
+  Argentinian: Argentinian
+  Anticuchos: Anticuchos
+  Patisserie: Patisserie
+  Exotic: Exotic
+  German: German
+  Brazilian: Brazilian
+
+  #MenuOverview
+  MenuByChef: by chef
+  MenuPrice: Price
+  MenuPartySize: Party size
+  MenuGuests: guests
+  MenuBack: Back
+  MenuChefInfos: Chef Infos
+  MenuBookNow: Book Now
+
+  #OrderForm
+  OrderOrderMenu: Order Menu
+  OrderCookLocation: Cook location
+  OrderCookDate: Cook date
+  OrderCookTime: Cook time
+  OrderNoOfGuests: Number of guests
+  OrderContactInformation: Contact Information
+  OrderName: Name
+  OrderEMail: E-Mail
+  OrderPhone: Phone
+  OrderStreet: Street
+  OrderCity: City
+  OrderPostalcode: Postalcode
+  OrderCountry: Country
+  OrderMessage: Your message to our chefs and us
+  OrderRemarksChef: Remarks to chef
+  OrderRemarksSibaritas: Remarks to LoSibaritas.com
+
+  #OrderConfirmation
+  OrderConfirmationMessage: Thank you for your order with LoSibaritas! A chef will be in touch with you shortly.
+  OrderConfirmationMenu: Your menu
+  OrderConfirmationDateTime: Daten and Time
+  OrderConfirmationAddressBilling: Address and Billling
+
+  #AdminChef
+  AdminName: Name
+  AdminEmail: E-Mail
+  AdminAge: Age
+  AdminLocation: Location
+  AdminBibliography: Bibliography
+  AdminCulinaryTraining: Culinary Training
+  AdminStyles: Styles
+  AdminPicture: Picture
+  AdminVideo: Video
+  AdminFacebook: Facebook
+  AdminServices: Services
+  AdminFamilyDinner: Family Dinner
+  AdminInformalReunion: Informal reunion
+  AdminLastMinute: Last minute
+  AdminTeaching: Teaching
+  AdminNumberOfHelpers: Number of helpers
+  AdminMinSize: Min. size
+  AdminMaxSize: MAx. size
+  AdminBack: Back
+  AdminSaveChef: Save Chef
+
+  #AdminMenu
+  AdminEditMenu: Edit Menu
+  AdminMenuName: Name
+  AdminMenuCurrency: Currency
+  AdminMenuPrice: Price
+  AdminMenuDescription: Description
+  AdminMenuImages: Images
+  AdminMenuPhoto1: Photo 1
+  AdminMenuPhoto2: Photo 2
+  AdminMenuPhoto3: Photo 3
+  AdminMenuPhoto4: Photo 4
+  AdminMenuPhoto5: Photo 5
+  AdminMenuAdditionalInformation: Additional Information
+  AdminMenuOptionAlcohol: Option Alcohol
+  AdminMenuOptionChange: Option Change
+  AdminMenuPartysize: Partysize
+  AdminMenuTags: Tags
+  AdminMenuBack: Back
+  AdminMenuSave: Save menu
+
+  #AdminCourse
+  AdminCourseName: Name
+  AdminCourseType: Course type
+  AdminCoursePosition: Position
+  AdminCourseDescription: Description
+  AdminCourseBack: Back
+  AdminCourseSave: Save course
   #End translation here
 
   date:

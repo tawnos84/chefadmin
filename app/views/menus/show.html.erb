@@ -4,13 +4,13 @@
     <div class="row">
       <div class="col col-lg-12 col-sm-12">
         <h1><%= @menu.name %></h1>
-        <p>by chef <%= link_to chef_path(@menu.chef) do %>
+        <p><%=t :MenuByChef %> <%= link_to chef_path(@menu.chef) do %>
           <%= @menu.chef.name %>
           <% end %>
               </p>
         <img src="<%= @menu.photo2 %>" class="img-responsive img-rounded">
         <p><strong><%= @menu.description %></strong></p>
-        <p>Price: <%= @menu.currency %> <%=@menu.price%> - Party size: <%= @menu.partysize %> guests</p>
+        <p><%=t :MenuPrice %>: <%= @menu.currency %> <%=@menu.price%> - <%=t :MenuPartySize%>: <%= @menu.partysize %> <%=t :MenuGuests %></p>
       </div>
     </div>
   </div>
