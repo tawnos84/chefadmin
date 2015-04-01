@@ -2,6 +2,12 @@ class Menu < ActiveRecord::Base
   belongs_to :chef
   has_many :courses, dependent: :destroy
 
+  mount_uploader :photo1, ChefPictureUploader
+  mount_uploader :photo2, ChefPictureUploader
+  mount_uploader :photo3, ChefPictureUploader
+  mount_uploader :photo4, ChefPictureUploader
+  mount_uploader :photo5, ChefPictureUploader
+
   validates :name, presence: true
   validates :price, presence: true
 
