@@ -1,4 +1,4 @@
-<h2>Order menu</h2>
+<h2><%=t :OrderOrderMenu %></h2>
 
 <div class="col-lg-12"><div class="well text-center">
   <p>
@@ -36,7 +36,7 @@
       <%= f.select :no_of_guests, [4, 5, 6, 7, 8, 9, 10, 11, 12], :class => 'form-control' %>
     </div>
 
-    <div class="page-header"><h3>Contact information</h3></div>
+    <div class="page-header"><h3><%=t :OrderContactInformation%></h3></div>
     <div class="form-group">
       <%= f.text_field :name, :class => 'form-control' %>
       <%= f.email_field :email, :class => 'form-control' %>
@@ -50,7 +50,7 @@
       <%= f.select :country, ['Peru', 'United Kingdom', 'France'], :class => 'form-control' %>
     </div>
 
-    <h3>Your message to our chefs and us</h3>
+    <h3><%=t :OrderMessage %></h3>
     <div class="form-group">
       <%= f.text_area :remarks_chef, :class => 'form-control' %>
       <%= f.text_area :remarks_sibaritas, :class => 'form-control' %>

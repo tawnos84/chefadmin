@@ -25,15 +25,15 @@ es:
   #Start translation here
   quote: Un cocinero se convierte en artista cuando tiene cosas que decir a través de sus platos, como un pintor en un cuadro - Joan Miró
 
-  WhyLoSibaritasTitle: ¿Por que escoger a ‘LoSibaritas’?
-  WhyLoSibaritasExpl: Un sin numero de razones vienen a la mente. Para nosotros la comida es un concepto que incluye un estilo de vida y una experiencia única. Queremos que nuestra pasión por la comida cobre vida. Les ha pasado que quieren organizar un reunión con amigos o familia y de repente algo les detiene? Ir de compras, cocinar y después limpiar ‘Los Sibaritas’ te da la oportunidad de no preocuparse por los detalles sino solo disfrutar de la reunión, reserva un chef privado.‘Los Sibaritas’ da la oportunidad de llegar una experiencia culinaria única a su mesa.
+  WhyLoSibaritasTitle: ¿Por qué escoger ‘LoSibaritas’?
+  WhyLoSibaritasExpl: Un sin número de razones vienen a la mente. Para nosotros la comida es un concepto que incluye un estilo de vida y una experiencia única. Queremos que nuestra pasión por la comida cobre vida. ¿Te ha pasado que quieres organizar una reunión con amigos o familia y de repente algo te detiene? Ir de compras, cocinar y después limpiar… ‘Los Sibaritas’ te da la oportunidad de no preocuparte por los detalles sino solo disfrutar de la reunión. Reserva un chef privado y disfruta la oportunidad de tener una experiencia culinaria única en tu mesa.
 
-  HowDoesItWorkTitle: ¿Como funciona?
-  HowDoesItWorkExpl: Es un proceso simple. Escoge el lugar, la fecha y la hora. Una selección de chef con sus respectivos menus estarán a su disposición. Usted es libre de escoger el chef que se acomode a sus preferencias y necesidades. Una vez que la decisión a sido tomada seleccione el numero de invitados y reserve.
-  HowDoesItWorkReason1: Seleccione lugar
-  HowDoesItWorkReason2: Seleccione fechar y hora
-  HowDoesItWorkReason3: Seleccione su chef privado
-  HowDoesItWorkReason4: Reserve
+  HowDoesItWorkTitle: ¿Cómo funciona?
+  HowDoesItWorkExpl: Es un proceso simple. Escoge el lugar, la fecha y la hora. Una selección de chef con sus respectivos menús estarán a tu disposición. Puedes escoger el chef que quieras de acuerdo a tus preferencias y necesidades. Una vez que lo escojas, selecciona el número de invitados y reserva.
+  HowDoesItWorkReason1: Selecciona el lugar
+  HowDoesItWorkReason2: Selecciona la fecha y hora
+  HowDoesItWorkReason3: Selecciona al chef
+  HowDoesItWorkReason4: Reserva
 
   searchsubmit: Buscar
 
@@ -48,12 +48,12 @@ es:
   Sorting: Ordenar
   SortByPrice: Ordenar por precio
   SortByName: Order por nombre
-  NoSearchResults: No menus match your filtering criteria
-  SearchHeadline: You were looking for a chef in Perú on 16 Mar 2015 at 15:14 - We found a total of 6 menus matching your tastes
+  NoSearchResults: No se han encontrado resultados para tu búsqueda
+  SearchHeadline: Estás buscando un chef en Perú el 16 de Marzo 2015 a las 15:14 - Hemos encontrado un total de 6 menús que coinciden con tus gustos
 
   by: por
 
-  #Chef Infos
+  #Chef Infos (Perfil del chef)
   ChefLocation: Lugar
   ChefAge: Edad
   ChefStyles: Estilos
@@ -63,108 +63,108 @@ es:
   ChefTheMenus: Los menús
   ChefBack: Atrás
 
-  #FoodTypes
+  #FoodTypes (Tipos de comida)
   Thai: Thai
-  Peruvian: Peruvian
-  Mediterranean: Mediterranean
-  Spanish: Spanish
-  American: American
-  Japanese: Japanese
-  Fusion: Fusion
-  Vietnamese: Vietnamese
-  Latinamerican: Latinamerican
-  Indian: Indian
-  Persian: Persian
-  BBQ: BBQ
-  Argentinian: Argentinian
+  Peruvian: Peruana
+  Mediterranean: Mediterránea
+  Spanish: Española
+  American: Americana
+  Japanese: Japonesa
+  Fusion: Fusión
+  Vietnamese: Vietnamita
+  Latinamerican: Latinoamericana
+  Indian: India
+  Persian: Persa
+  BBQ: Parrilla
+  Argentinian: Argentina
   Anticuchos: Anticuchos
-  Patisserie: Patisserie
-  Exotic: Exotic
-  German: German
-  Brazilian: Brazilian
+  Patisserie: Pastelería
+  Exotic: Exótica
+  German: Alemana
+  Brazilian: Brasilera
 
-  #MenuOverview
-  MenuByChef: by chef
-  MenuPrice: Price
-  MenuPartySize: Party size
-  MenuGuests: guests
-  MenuBack: Back
-  MenuChefInfos: Chef Infos
-  MenuBookNow: Book Now
+  #MenuOverview (Vista general del menú)
+  MenuByChef: Por chef
+  MenuPrice: Precio
+  MenuPartySize: Número de comensales
+  MenuGuests: Invitados
+  MenuBack: Atrás
+  MenuChefInfos: Perfil del cheff
+  MenuBookNow: Reserva ahora
 
-  #OrderForm
-  OrderOrderMenu: Order Menu
-  OrderCookLocation: Cook location
-  OrderCookDate: Cook date
-  OrderCookTime: Cook time
-  OrderNoOfGuests: Number of guests
-  OrderContactInformation: Contact Information
-  OrderName: Name
-  OrderEMail: E-Mail
-  OrderPhone: Phone
-  OrderStreet: Street
-  OrderCity: City
-  OrderPostalcode: Postalcode
-  OrderCountry: Country
-  OrderMessage: Your message to our chefs and us
-  OrderRemarksChef: Remarks to chef
-  OrderRemarksSibaritas: Remarks to LoSibaritas.com
+  #OrderForm (Formulario de pedido)
+  OrderOrderMenu: Menú de la orden
+  OrderCookLocation: Lugar del evento
+  OrderCookDate: Fecha del evento
+  OrderCookTime: Hora del evento
+  OrderNoOfGuests: Número de invitados
+  OrderContactInformation: Información de contacto
+  OrderName: Nombre
+  OrderEMail: Correo electrónico
+  OrderPhone: Teléfono
+  OrderStreet: Calle
+  OrderCity: Ciudad
+  OrderPostalcode: Código Postal (in Perú we don’t use this as much as here)
+  OrderCountry: País
+  OrderMessage: Tu mensaje al chef y a nosotros
+  OrderRemarksChef: Comentarios para el chef
+  OrderRemarksSibaritas: Comentarios para LoSibaritas.com
 
-  #OrderConfirmation
-  OrderConfirmationMessage: Thank you for your order with LoSibaritas! A chef will be in touch with you shortly.
-  OrderConfirmationMenu: Your menu
-  OrderConfirmationDateTime: Daten and Time
-  OrderConfirmationAddressBilling: Address and Billling
+  #OrderConfirmation (Confirmación de orden)
+  OrderConfirmationMessage: Muchas gracias por tu orden con LoSibaritas! El chef se contactará contigo lo antes posible.
+  OrderConfirmationMenu: Tu menú
+  OrderConfirmationDateTime: Fecha y hora
+  OrderConfirmationAddressBilling: Dirección y envío
 
   #AdminChef
-  AdminName: Name
-  AdminEmail: E-Mail
-  AdminAge: Age
-  AdminLocation: Location
-  AdminBibliography: Bibliography
-  AdminCulinaryTraining: Culinary Training
-  AdminStyles: Styles
-  AdminPicture: Picture
+  AdminName: Nombre
+  AdminEmail: Correo electrónico
+  AdminAge: Edad
+  AdminLocation: Lugar
+  AdminBibliography: Biografía (I guess you meant biography?)
+  AdminCulinaryTraining: Formación
+  AdminStyles: Estilos
+  AdminPicture: Foto
   AdminVideo: Video
   AdminFacebook: Facebook
-  AdminServices: Services
-  AdminFamilyDinner: Family Dinner
-  AdminInformalReunion: Informal reunion
-  AdminLastMinute: Last minute
-  AdminTeaching: Teaching
-  AdminNumberOfHelpers: Number of helpers
-  AdminMinSize: Min. size
-  AdminMaxSize: MAx. size
-  AdminBack: Back
-  AdminSaveChef: Save Chef
+  AdminServices: Servicios
+  AdminFamilyDinner: Cena familiar
+  AdminInformalReunion: Reunión informal
+  AdminLastMinute: Último minuto
+  AdminTeaching: Enseñar
+  AdminNumberOfHelpers: Número de ayudantes
+  AdminMinSize: Número mínimo de comensales
+  AdminMaxSize: Número máximo de comensales
+  AdminBack: Atrás
+  AdminSaveChef: Guardar chef
 
   #AdminMenu
-  AdminEditMenu: Edit Menu
-  AdminMenuName: Name
-  AdminMenuCurrency: Currency
-  AdminMenuPrice: Price
-  AdminMenuDescription: Description
-  AdminMenuImages: Images
-  AdminMenuPhoto1: Photo 1
-  AdminMenuPhoto2: Photo 2
-  AdminMenuPhoto3: Photo 3
-  AdminMenuPhoto4: Photo 4
-  AdminMenuPhoto5: Photo 5
-  AdminMenuAdditionalInformation: Additional Information
-  AdminMenuOptionAlcohol: Option Alcohol
-  AdminMenuOptionChange: Option Change
-  AdminMenuPartysize: Partysize
-  AdminMenuTags: Tags
-  AdminMenuBack: Back
-  AdminMenuSave: Save menu
+  AdminEditMenu: Editar menú
+  AdminMenuName: Nombre
+  AdminMenuCurrency: Moneda
+  AdminMenuPrice: Precio
+  AdminMenuDescription: Descripción
+  AdminMenuImages: Imágenes
+  AdminMenuPhoto1: Foto 1
+  AdminMenuPhoto2: Foto 2
+  AdminMenuPhoto3: Foto 3
+  AdminMenuPhoto4: Foto 4
+  AdminMenuPhoto5: Foto 5
+  AdminMenuAdditionalInformation: Información adicional
+  AdminMenuOptionAlcohol: Alcohol opcional
+  AdminMenuOptionChange: Cambio opcional
+  AdminMenuPartysize: Número de comensales
+  AdminMenuTags: Etiquetas
+  AdminMenuBack: Atrás
+  AdminMenuSave: Guardar menú
 
-  #AdminCourse
-  AdminCourseName: Name
-  AdminCourseType: Course type
-  AdminCoursePosition: Position
-  AdminCourseDescription: Description
-  AdminCourseBack: Back
-  AdminCourseSave: Save course
+  #AdminCourse (Plato)
+  AdminCourseName: Nombre
+  AdminCourseType: Tipo de plato
+  AdminCoursePosition: Posición
+  AdminCourseDescription: Descripción
+  AdminCourseBack: Atrás
+  AdminCourseSave: Guardar plato
   #End translation here
 
   date:
