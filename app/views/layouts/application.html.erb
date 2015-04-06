@@ -21,9 +21,18 @@
     <!--Locale switch-->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'Sign Up', signup_path, class: 'btn btn-default' %></li>
-          <li><%=link_to 'English', params.merge( locale: "en" )%></li>
-          <li><%=link_to 'Castellano', params.merge( locale: "es" )%></li>
+
+
+        <% if logged_in? %>
+                <li><p class="navbar-text"><strong>Hi, <%=current_user.name%></strong></p></li>
+                <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <% else %>
+            <li><%= link_to 'Sign up', signup_path%></li>
+            <li><%= link_to 'Login', login_path %></li>
+        <% end %>
+
+        <li><%=link_to 'English', params.merge( locale: "en" )%></li>
+        <li><%=link_to 'Castellano', params.merge( locale: "es" )%></li>
 
       </ul>
     </div>
