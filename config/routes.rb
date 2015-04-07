@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'password_resets/new'
+
+  get 'password_resets/edit'
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
@@ -65,6 +69,9 @@ Rails.application.routes.draw do
   resources :users
 
   resources :account_activations, only: [:edit]
+
+  resources :password_resets, only: [:new, :create, :edit, :update]
+
 
   # You can have the root of your site routed with "root"
   root 'welcome#index'

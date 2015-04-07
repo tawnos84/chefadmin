@@ -90,7 +90,7 @@ Rails.application.configure do
   }
 
   #Sending Activation Mails
-  host = 'test.losibaritas.com'
+  host = 'shielded-fortress-9689.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
 
   #Locales
