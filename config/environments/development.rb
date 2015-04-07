@@ -52,7 +52,7 @@ Rails.application.configure do
   }
 
   #Sending Activation Mails
-  
+
   host = 'localhost:3000'
   config.action_mailer.default_url_options = { host: host }
 
