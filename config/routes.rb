@@ -64,6 +64,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :account_activations, only: [:edit]
+
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 

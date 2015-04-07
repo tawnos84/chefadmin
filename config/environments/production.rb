@@ -89,6 +89,10 @@ Rails.application.configure do
       :enable_starttls_auto => true
   }
 
+  #Sending Activation Mails
+  host = 'test.losibaritas.com'
+  config.action_mailer.default_url_options = { host: host }
+
   #Locales
   config.i18n.available_locales = ['es-PE', :es, :en]
 
