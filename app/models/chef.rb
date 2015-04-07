@@ -1,11 +1,11 @@
 class Chef < ActiveRecord::Base
+  belongs_to :user
   has_many :menus, dependent: :destroy
 
   mount_uploader :picture, ChefPictureUploader
   mount_uploader :video, ChefPictureUploader
 
   validates :name, presence: true
-  validates :email, presence: true
 
   def create
     chef = Chef.new(chef_params)

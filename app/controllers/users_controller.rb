@@ -10,6 +10,14 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+
+      @chef = Chef.new do |c|
+        c.name = @user.name
+        c.email = @user.email
+        c.picture = "https://s3-sa-east-1.amazonaws.com/losibaritas/placeholder.png"
+        c.save
+      end
+
       @user.send_activation_email
       flash[:info] = "Please check your email to activate your account."
       redirect_to searches_ask_url
