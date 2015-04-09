@@ -37,6 +37,7 @@ class OrdersController < ApplicationController
     @order.currency = @menu.currency
     @order.vat_amount = @order.net_price * 0.18
     @order.menu_id = @menu.id
+    @order.chef_id = @menu.chef_id
 
     if @order.save
       UserMailer.order_mail(@order.email, @menu.id, @order.id).deliver!
@@ -52,6 +53,34 @@ class OrdersController < ApplicationController
     @order.destroy
 
     redirect_to orders_path
+  end
+
+  #view all pending orders
+  def pending
+    @chef = Chef.find_by_email(current_user.email)
+    @orders = Order.all.where(:chef_id => @chef.id).where(:status => 'PENDING').paginate(page: params[:page], :per_page => 20).order(:created_at).reverse_order
+  end
+
+  #view all orders of one chef
+  def overview
+    @chef = Chef.find_by_email(current_user.email)
+    @orders = Order.all.where(:chef_id => @chef.id).paginate(page: params[:page], :per_page => 20).order(:created_at).reverse_order
+  end
+
+  #accept an order
+  def accept
+    @order = Order.find(params[:orderid])
+    @order.update(:status => 'ACCEPTED')
+    flash[:success] = "Order accepted"
+    redirect_to pending_path
+  end
+
+  #decline an order
+  def decline
+    @order = Order.find(params[:orderid])
+    @order.update(:status => 'DECLINED')
+    flash[:danger] = "Order declined"
+    redirect_to pending_path
   end
 
   private

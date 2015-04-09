@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="col-sm-4 text-center">
-      <img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive">
+      <% if @chef.picture %><img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive"><% end %>
       <%=t :ChefRatings%>:
       <ul class="list-inline ratings text-center" title="Ratings">
         <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>

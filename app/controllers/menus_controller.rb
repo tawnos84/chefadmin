@@ -6,6 +6,7 @@ class MenusController < ApplicationController
 
   def new
     @menu = Menu.new
+    @chef = Chef.find_by_email(current_user.email)
   end
 
   def edit

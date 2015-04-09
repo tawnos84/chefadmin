@@ -69,3 +69,8 @@ gem 'fog',                     '1.23.0'
 #password management
 gem 'bcrypt',               '3.1.7'
 
+#pagination
+gem 'will_paginate',           '3.0.7'
+gem 'bootstrap-will_paginate', '0.0.10'
+
+

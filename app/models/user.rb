@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save   :downcase_email
   before_create :create_activation_digest
@@ -14,7 +13,7 @@ class User < ActiveRecord::Base
             uniqueness: { case_sensitive: false }
   #user password saved as a hash
   has_secure_password
-  validates :password, length: { minimum: 6 }
+  #validates :password, length: { minimum: 6 }
 
   # Returns the hash digest of the given string.
   def User.digest(string)

@@ -1,3 +1,17 @@
+<% if(session[:admin]) %>
+    <div class="row">
+      <h3><i class="fa fa-street-view"></i> Manage your menus</h3>
+      <ul class="nav nav-tabs">
+        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
+        <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
+        <li role="presentation" class="active"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
+        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
+        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+      </ul>
+    </div>
+<% end %>
+
 <h1>Add new menu</h1>
 
 <%= bootstrap_form_for :menu, url: chef_menus_path do |f| %>

@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150407134425) do
+ActiveRecord::Schema.define(version: 20150409114401) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
     t.integer  "age_string"
     t.string   "location"
     t.text     "styles"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
     t.text     "biography"
     t.text     "culinarytraining"
     t.string   "picture"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20150407134425) do
     t.string   "facebook"
     t.integer  "age"
     t.string   "email"
+    t.boolean  "active",            default: true
   end
 
   create_table "courses", force: :cascade do |t|
@@ -106,12 +107,15 @@ ActiveRecord::Schema.define(version: 20150407134425) do
     t.text     "remarks_chef"
     t.float    "net_price"
     t.float    "vat_amount"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                            null: false
+    t.datetime "updated_at",                            null: false
     t.string   "currency"
     t.date     "cook_date"
     t.time     "cook_time"
     t.string   "cook_location"
+    t.string   "status",            default: "PENDING"
+    t.string   "chefid"
+    t.string   "chef_id"
   end
 
   create_table "searches", force: :cascade do |t|
@@ -136,6 +140,12 @@ ActiveRecord::Schema.define(version: 20150407134425) do
     t.datetime "activated_at"
     t.string   "reset_digest"
     t.datetime "reset_sent_at"
+    t.string   "company"
+    t.string   "addressline1"
+    t.string   "addressline2"
+    t.string   "postalcode"
+    t.string   "city"
+    t.string   "country"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

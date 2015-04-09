@@ -25,6 +25,7 @@
 
         <% if logged_in? %>
                 <li><p class="navbar-text"><strong>Hi, <%=current_user.name%></strong></p></li>
+                <li><%= link_to "Administration", welcome_index_path%></li>
                 <li><%= link_to "Log out", logout_path, method: "delete" %></li>
         <% else %>
             <li><%= link_to 'Sign up', signup_path%></li>

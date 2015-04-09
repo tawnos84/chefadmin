@@ -27,12 +27,27 @@ class UsersController < ApplicationController
   end
 
   def edit
+    @user = User.find(current_user.id)
+  end
+
+  def update
+    @user = User.find(params[:id])
+
+    if @user.update(user_details_params)
+      redirect_to welcome_index_path
+    else
+      render 'edit'
+    end
   end
 
   private
 
   def user_params
     params.require(:user).permit(:name, :email, :password,
-                                 :password_confirmation)
+                                 :password_confirmation,)
+  end
+
+  def user_details_params
+    params.require(:user).permit(:company, :addressline1, :addressline2, :postalcode, :city, :country)
   end
 end

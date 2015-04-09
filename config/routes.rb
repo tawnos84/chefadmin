@@ -4,6 +4,10 @@ Rails.application.routes.draw do
 
   get 'password_resets/edit'
 
+  get 'pending' => 'orders#pending'
+
+  get 'overview' => 'orders#overview'
+
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
@@ -19,6 +23,10 @@ Rails.application.routes.draw do
   get 'orders/edit'
 
   get 'orders/show'
+
+  get 'orders/accept'
+
+  get 'orders/decline'
 
   get 'searches/index'
 

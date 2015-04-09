@@ -2,19 +2,21 @@
 <h3><i class="fa fa-tachometer"></i> Dashboard</h3>
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-  <li role="presentation"><a href="#"><i class="fa fa-user"></i> Account Settings</a></li>
-  <li role="presentation"><a href="#"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
-  <li role="presentation"><a href="#"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
-  <li role="presentation"><a href="#"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
-  <li role="presentation"><a href="#"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
-  <li role="presentation"><a href="#"><i class="fa fa-money"></i> Billing overview</a></li>
+  <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
+  <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
+  <li role="presentation"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
+  <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
+  <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
 </ul>
 </div>
 
 <div class="row">
-    <p>Your chef: <%= @chef.name %> - <%= link_to 'Edit chef', edit_chef_path(@chef) %></p>
-    <p>You have <%= @menus.count %> menus - <%= link_to 'Edit menus', chef_menus_path(@chef) %></p>
-    <p>You have 0 pending orders</p>
-    <p>You have 0 total orders</p>
-    <p>Your revenue so far is S./ 0</p>
+  <p></p>
+  <p><%= link_to 'Edit your account', edit_user_path(current_user) %></p>
+  <p>Your chef: <%= @chef.name %> - <%= link_to 'Edit chef', edit_chef_path(@chef) %></p>
+  <p>You have <%= @menus.count %> menus - <%= link_to 'Edit menus', chef_menus_path(@chef) %></p>
+  <p>You have <%= @orders.where(:status => 'PENDING').count %> pending orders - <%= link_to 'View pending', pending_path %></p>
+  <p>You have <%= @orders.count %> total orders - <%= link_to 'View all orders', overview_path %></p>
+  <p>Your revenue so far is S./ 0</p>
+  <p>Your session mode is: <%= session[:admin] %></p>
 </div>

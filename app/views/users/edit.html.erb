@@ -1,2 +1,64 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<div class="row">
+  <h3><i class="fa fa-user"></i> Account settings</h3>
+  <ul class="nav nav-tabs">
+    <li role="presentation"><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
+    <li role="presentation" class="active"><a href="#"><i class="fa fa-user"></i> Account Settings</a></li>
+    <li role="presentation"><a href="#"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
+    <li role="presentation"><a href="#"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
+    <li role="presentation"><a href="#"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
+    <li role="presentation"><a href="#"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+    <li role="presentation"><a href="#"><i class="fa fa-money"></i> Billing overview</a></li>
+  </ul>
+</div>
+
+<div class="row">
+  <%= bootstrap_form_for :user, url: user_path(@user), method: :patch do |f| %>
+
+      <% if @user.errors.any? %>
+          <div class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <%= pluralize(@user.errors.count, "error") %> prohibited
+            this user from being saved:
+            <ul>
+              <% @user.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <!--Basics-->
+      <div class="page-header"><h3>Basics</h3></div>
+
+      <div class="form-group">
+        If applicable, please enter your company name for the billing of invoices. Otherwise leave empty.
+        <%= f.text_field :company, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :addressline1, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :addressline2, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :postalcode, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.text_field :city, :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.select :country, ['Perú', 'United Kingdom', 'France'], :class => 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= link_to 'Back', chefs_path, class: 'btn btn-primary' %>
+        <%= f.submit class: 'btn btn-success' %>
+      </div>
+  <% end %>
+
+</div>
