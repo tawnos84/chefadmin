@@ -40,8 +40,8 @@ class OrdersController < ApplicationController
     @order.chef_id = @menu.chef_id
 
     if @order.save
-      UserMailer.order_mail(@order.email, @menu.id, @order.id).deliver!
-      UserMailer.chef_mail(@order.email, @menu.id, @order.id).deliver!
+      UserMailer.order_request_mail(@order.email, @menu.id, @order.id).deliver!
+      UserMailer.order_chef_action_mail(@order.email, @menu.id, @order.id).deliver!
       redirect_to @order
     else
       render 'new'
@@ -71,6 +71,8 @@ class OrdersController < ApplicationController
   def accept
     @order = Order.find(params[:orderid])
     @order.update(:status => 'ACCEPTED')
+    UserMailer.order_mail(@order.email, @order.menu_id, @order.id).deliver!
+    UserMailer.chef_mail(@order.email, @order.menu_id, @order.id).deliver!
     flash[:success] = "Order accepted"
     redirect_to pending_path
   end
@@ -79,6 +81,7 @@ class OrdersController < ApplicationController
   def decline
     @order = Order.find(params[:orderid])
     @order.update(:status => 'DECLINED')
+    UserMailer.order_reject_mail(@order.email, @order.menu_id, @order.id).deliver!
     flash[:danger] = "Order declined"
     redirect_to pending_path
   end
