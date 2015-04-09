@@ -1,5 +1,5 @@
 <div class="row">
-<h3><i class="fa fa-tachometer"></i> Dashboard</h3>
+<h3><i class="fa fa-tachometer"></i> Dashboard for <%=current_user.name%></h3>
 <ul class="nav nav-tabs">
   <li role="presentation" class="active"><a href="#"><i class="fa fa-tachometer"></i> Dashboard</a></li>
   <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
@@ -9,14 +9,66 @@
   <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
 </ul>
 </div>
-
+<% if @orders.find_by(:status => 'PENDING') %>
+    <p></p>
+    <div class="row">
+    <div class="alert alert-warning" role="alert">
+        <strong><span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+          <a href="<%=pending_path%>">You have pending orders! - Check them out in the "Pending Orders" tab</a></strong>
+      </div>
+    </div>
+    <% end %>
 <div class="row">
   <p></p>
-  <p><%= link_to 'Edit your account', edit_user_path(current_user) %></p>
-  <p>Your chef: <%= @chef.name %> - <%= link_to 'Edit chef', edit_chef_path(@chef) %></p>
-  <p>You have <%= @menus.count %> menus - <%= link_to 'Edit menus', chef_menus_path(@chef) %></p>
-  <p>You have <%= @orders.where(:status => 'PENDING').count %> pending orders - <%= link_to 'View pending', pending_path %></p>
-  <p>You have <%= @orders.count %> total orders - <%= link_to 'View all orders', overview_path %></p>
-  <p>Your revenue so far is S./ 0</p>
-  <p>Your session mode is: <%= session[:admin] %></p>
+  <div class="col-lg-3 col-md-6">
+    <img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive">
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-green">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-cutlery fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= @menus.count %></div>
+            <div>menus on your list</div>
+          </div>
+        </div>
+      </div>
+      <a href="<%=chef_menus_path(@chef)%>">
+        <div class="panel-footer">
+          <span class="pull-left"> View details</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-md-6">
+    <div class="panel panel-red">
+      <div class="panel-heading">
+        <div class="row">
+          <div class="col-xs-3">
+            <i class="fa fa-shopping-cart fa-5x"></i>
+          </div>
+          <div class="col-xs-9 text-right">
+            <div class="huge"><%= @orders.count %></div>
+            <div>received orders</div>
+          </div>
+        </div>
+      </div>
+      <a href="<%= overview_path %>">
+        <div class="panel-footer">
+          <span class="pull-left">View Details</span>
+          <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+          <div class="clearfix"></div>
+        </div>
+      </a>
+    </div>
+  </div>
 </div>
+
+
