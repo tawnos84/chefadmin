@@ -28,6 +28,7 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(current_user.id)
+    @chef = Chef.find_by_email(current_user.email)
   end
 
   def update
