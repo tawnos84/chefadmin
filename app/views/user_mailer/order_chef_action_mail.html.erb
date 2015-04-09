@@ -1,1 +1,32 @@
-<h1>Hi chef, order request!</h1>
+<h1>Order requested</h1>
+
+<p>
+  Hi chef,<br>
+  great news. You have a request to cook for a customer!<br>
+  It is important that you check your availability and accept or decline the request on <a href="losibaritas.com/login">LoSibaritas.com</a>.
+</p>
+<p>
+  The details of the order request are as follows:<br>
+  Selected menu: <%=@menu.name%><br>
+  Guests <%=@order.no_of_guests %><br>
+  Name <%=@order.name %><br>
+  Email <%=@order.email %><br>
+  Phone <%=@order.phone %><br>
+  Street <%=@order.street %><br>
+  City <%=@order.city %><br>
+  Postalcode <%=@order.postalcode %><br>
+  Country <%=@order.country %><br>
+  Remarks for Sibaritas <%=@order.remarks_sibaritas %><br>
+  Remarks for chef <%=@order.remarks_chef %><br>
+  Net price <%=@order.net_price %><br>
+  VAT <%=@order.vat_amount %><br>
+  Currency <%=@order.currency %><br>
+  Date <%=@order.cook_date %><br>
+  Time <%=@order.cook_time %><br>
+  Location <%=@order.cook_location %>
+</p>
+<p>
+  Kindest regards, <br>
+  Your LoSibaritas team!
+</p>
+
