@@ -11,10 +11,21 @@
         <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
       </ul>
     </div>
+
     <div class="row">
-      <%= link_to "Preview chef", chef_path(@chef), target: 'blank' %>
+      <p></p>
+      <div class="alert alert-info " role="alert">
+        <strong><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          On this page you can manage your chef profile that is shown to our customers. It is important to make it look really nice. Do not forget to upload a picture of you! Use the button below to see a preview</strong>
+      </div>
+    </div>
+
+    <div class="row">
+      <p><%= link_to "Preview chef profile", chef_path(@chef), target: 'blank', class: 'btn btn-success' %></p>
     </div>
 <% end %>
+
+
 
 <%= bootstrap_form_for :chef, url: chef_path(@chef), method: :patch do |f| %>
 
@@ -31,18 +42,13 @@
         </div>
 <% end %>
 
-    <!--Basics-->
-    <div class="page-header"><h3>Basics</h3></div>
+
     <div>
       <%= f.text_field :name, :class => 'form-control' %>
     </div>
 
     <div>
       <%= f.email_field :email, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.text_field :age, :class => 'form-control' %>
     </div>
 
     <div class="form-group">
@@ -70,36 +76,28 @@
     </div>
 
     <div class="form-group">
+      If you would like to link customers to your Facebook profile, enter the link of it below.
       <%= f.url_field :facebook, :class => 'form-control' %>
     </div>
     <!--Service-->
-    <div class="page-header"><h3>Services</h3></div>
 
     <div class="form-group">
-      <%= f.check_box :family_dinner%>
-    </div>
-
-    <div class="form-group">
-      <%= f.check_box :informal_reunion%>
-    </div>
-
-    <div class="form-group">
-      <%= f.check_box :last_minute%>
-    </div>
-
-    <div class="form-group">
+      Would you be willing to teach your customers how to cook? If so, check the box!
       <%= f.check_box :teaching%>
     </div>
 
     <div class="form-group">
+      How many helpers (kitchen helpers, waiters, etc.) could you bring to a dinner? If you do not use helpers, just fill in "0".
       <%= f.text_field :number_of_helpers, :class => 'form-control' %>
     </div>
 
     <div class="form-group">
+      What is the minimum party size you feel you could cater for?
       <%= f.text_field :min_size, :class => 'form-control' %>
     </div>
 
     <div class="form-group">
+      What is the maximum party size you feel you could cater for?
       <%= f.text_field :max_size, :class => 'form-control' %>
     </div>
 

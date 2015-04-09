@@ -10,6 +10,15 @@
         <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
       </ul>
     </div>
+
+    <div class="row">
+      <p></p>
+      <div class="alert alert-info " role="alert">
+        <strong><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+          When you create your menu here, make sure that you have at least two pictures uploaded for it. The first will be shown in search results and the second in the menu details.</strong>
+      </div>
+    </div>
+
 <% end %>
 
 <%= bootstrap_form_for :menu, url: chef_menu_path, method: :patch do |f| %>
@@ -28,7 +37,7 @@
     <% end %>
 
     <!--Basics-->
-    <div class="page-header"><h3>Basics</h3></div>
+    <div class="page-header"><h5>Basics</h5></div>
 
     <div class="form-group">
       <%= f.text_field :name, :class => 'form-control' %>
@@ -46,7 +55,7 @@
       <%= f.text_area :description, :class => 'form-control'  %>
     </div>
 
-    <div class="page-header"><h3>Images</h3></div>
+    <div class="page-header"><h5>Images</h5></div>
     <div class="form-group">
       <%= f.file_field :photo1, :class => 'form-control'  %>
     </div>
@@ -64,20 +73,14 @@
     </div>
 
 
-    <div class="page-header"><h3>Additional information</h3></div>
+    <div class="page-header"><h5>Additional information</h5></div>
+
     <div class="form-group">
-      <%= f.check_box :option_alcohol%>
-    </div>
-    <div class="form-group">
-      <%= f.check_box :option_change%>
-    </div>
-    <div class="form-group">
+      Please describe what is your suggested/optimal party size for the menu. Is there a number where you would have to bring a helper with you? Are there other things with regards to the size you can cater to with this menu that your customers should know about?
       <%= f.text_field :partysize, :class => 'form-control'  %>
     </div>
-    <div class="form-group">
-      <%= f.text_field :hashtags, :class => 'form-control'  %>
-    </div>
 
+    <p>We have a list of different cuisine types following. Feel free to check every one that you think your menu can fit into.</p>
     <div class="form-group">
       <%= f.check_box :cuisine_italian%>
     </div>
@@ -136,7 +139,7 @@
       <%= f.check_box :cuisine_brazilian%>
     </div>
     <div class="form-group">
-      <%= link_to 'Back', chef_menus_path, class: "btn btn-primary" %>
+      <% if(!session[:admin]) %><%= link_to 'Back', chef_menus_path, class: "btn btn-primary" %><% end %>
       <%= f.submit class: "btn btn-success" %>
     </div>
 <% end %>

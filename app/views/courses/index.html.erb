@@ -12,7 +12,7 @@
     </div>
 <% end %>
 
-<h1>Courses for menu: <%= @menu.name %></h1>
+<h5>Courses for menu: <%= @menu.name %></h5>
 <p>
 <%= link_to 'Back', chef_menus_path, class: 'btn btn-primary' %>
 <%= link_to 'Add course', new_chef_menu_course_path(@menu.chef_id, @menu), class: 'btn btn-success' %>
