@@ -265,6 +265,12 @@ en:
   #DashboardTitle
   DashboardTitle: Dashboard for
 
+  #OrderReview
+  OrderCustomerReviewMsg: You are reviewing an order from your customer
+  OrderChefName: Chef
+  OrderMenuPrice: Price per menu
+  OrderNetPrice: Total price
+
   date:
     abbr_day_names:
     - Sun

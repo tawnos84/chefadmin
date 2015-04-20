@@ -265,6 +265,18 @@ es:
   #DashboardTitle
   DashboardTitle: Dashboard for
 
+  #Search
+  AnyPrice: Any Price
+  AnyCuisine: Any Cuisine
+  LookingChef: You were looking for a chef in
+  FoundMenus: Matching to your tastes, we found
+
+  #OrderReview
+  OrderCustomerReviewMsg: You are reviewing an order from your customer
+  OrderChefName: Chef
+  OrderMenuPrice: Price per menu
+  OrderNetPrice: Total price
+
   #End translation here
 
   date:

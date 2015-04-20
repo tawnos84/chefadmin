@@ -4,8 +4,8 @@
       <ul class="nav nav-tabs">
         <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
         <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
-        <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
-        <li role="presentation" class="active"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
+        <li role="presentation"><a href="<%= edit_chef_path(@menu.chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
+        <li role="presentation" class="active"><a href="<%= chef_menus_path(@menu.chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
         <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
         <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
       </ul>

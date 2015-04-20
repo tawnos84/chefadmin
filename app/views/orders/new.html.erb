@@ -29,35 +29,56 @@
 
     <div class="form-group">
 
-      <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom']%>
-      <%= f.date_select :cook_date%>
-      <%= f.time_select :cook_time%>
+      <%= f.label t(:OrderCookLocation) %>
+      <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'], hide_label: true %>
 
-      <%= f.select :no_of_guests, [4, 5, 6, 7, 8, 9, 10, 11, 12], :class => 'form-control' %>
+      <%= f.label t(:OrderCookDate) %>
+      <%= f.date_select :cook_date, hide_label: true %>
+
+      <%= f.label t(:OrderCookTime) %>
+      <%= f.time_select :cook_time, hide_label: true %>
+
+      <%= f.label t(:OrderNoOfGuests) %>
+      <%= f.select :no_of_guests, [4, 5, 6, 7, 8, 9, 10, 11, 12], :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="page-header"><h3><%=t :OrderContactInformation%></h3></div>
     <div class="form-group">
-      <%= f.text_field :name, :class => 'form-control' %>
-      <%= f.email_field :email, :class => 'form-control' %>
-      <%= f.telephone_field :phone, :class => 'form-control' %>
+      <%= f.label t(:OrderName) %>
+      <%= f.text_field :name, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderEMail) %>
+      <%= f.email_field :email, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderPhone) %>
+      <%= f.telephone_field :phone, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :street, :class => 'form-control' %>
-      <%= f.text_field :city, :class => 'form-control' %>
-      <%= f.text_field :postalcode, :class => 'form-control' %>
-      <%= f.select :country, ['Peru', 'United Kingdom', 'France'], :class => 'form-control' %>
+      <%= f.label t(:OrderStreet) %>
+      <%= f.text_field :street, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderCity) %>
+      <%= f.text_field :city, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderPostalcode) %>
+      <%= f.text_field :postalcode, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderCountry) %>
+      <%= f.select :country, ['Peru', 'United Kingdom', 'France'], :class => 'form-control', hide_label: true %>
     </div>
 
     <h3><%=t :OrderMessage %></h3>
     <div class="form-group">
-      <%= f.text_area :remarks_chef, :class => 'form-control' %>
-      <%= f.text_area :remarks_sibaritas, :class => 'form-control' %>
+      <%= f.label t(:OrderRemarksChef) %>
+      <%= f.text_area :remarks_chef, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderRemarksSibaritas) %>
+      <%= f.text_area :remarks_sibaritas, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= link_to 'Back', chef_menu_path(@menu.chef, @menu), class: 'btn btn-primary' %>
+      <%= link_to t(:back), chef_menu_path(@menu.chef, @menu), class: 'btn btn-primary' %>
       <%= f.submit class: 'btn btn-success' %>
     </div>
 <% end %>
