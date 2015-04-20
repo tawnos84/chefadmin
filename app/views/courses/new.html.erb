@@ -2,17 +2,17 @@
     <div class="row">
       <h3><i class="fa fa-street-view"></i> Manage your menus</h3>
       <ul class="nav nav-tabs">
-        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
-        <li role="presentation"><a href="<%= edit_chef_path(@menu.chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
-        <li role="presentation" class="active"><a href="<%= chef_menus_path(@menu.chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
-        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
-        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
+        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
+        <li role="presentation"><a href="<%= edit_chef_path(@menu.chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
+        <li role="presentation" class="active"><a href="<%= chef_menus_path(@menu.chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
+        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
+        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
       </ul>
     </div>
 <% end %>
 
-<h1>Add new course</h1>
+<h1><%=t :AdminAddCourse %></h1>
 
 <%= bootstrap_form_for :course, url: chef_menu_courses_path do |f| %>
 
@@ -30,23 +30,27 @@
     <% end %>
 
     <div class="form-group">
-      <%= f.text_field :name, :class => 'form-control' %>
+      <%= f.label t(:AdminCourseName)%>
+      <%= f.text_field :name, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :course_type, :class => 'form-control' %>
+      <%= f.label t(:AdminCourseType)%>
+      <%= f.text_field :course_type, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :position, :class => 'form-control' %>
+      <%= f.label t(:AdminCoursePosition)%>
+      <%= f.text_field :position, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_area :description, :class => 'form-control' %>
+      <%= f.label t(:AdminCourseDescription)%>
+      <%= f.text_area :description, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= link_to 'Back', chef_menu_courses_path, class: "btn btn-primary" %>
+      <%= link_to t(:back), chef_menu_courses_path, class: "btn btn-primary" %>
       <%= f.submit class: "btn btn-success" %>
     </div>
 <% end %>

@@ -82,6 +82,7 @@ es:
   Exotic: Exótica
   German: Alemana
   Brazilian: Brasilera
+  Italian: Italiano
 
   #MenuOverview (Vista general del menú)
   MenuByChef: Por chef
@@ -104,7 +105,7 @@ es:
   OrderPhone: Teléfono
   OrderStreet: Calle
   OrderCity: Ciudad
-  OrderPostalcode: Código Postal (in Perú we don’t use this as much as here)
+  OrderPostalcode: Código Postal
   OrderCountry: País
   OrderMessage: Tu mensaje al chef y a nosotros
   OrderRemarksChef: Comentarios para el chef
@@ -121,7 +122,7 @@ es:
   AdminEmail: Correo electrónico
   AdminAge: Edad
   AdminLocation: Lugar
-  AdminBibliography: Biografía (I guess you meant biography?)
+  AdminBibliography: Biografía
   AdminCulinaryTraining: Formación
   AdminStyles: Estilos
   AdminPicture: Foto
@@ -165,6 +166,105 @@ es:
   AdminCourseDescription: Descripción
   AdminCourseBack: Atrás
   AdminCourseSave: Guardar plato
+  AdminCourseTitle: Courses for menu
+  AdminAddCourse: Add course
+
+  #ApplicationLayout Aplicación
+  IAmAChef: ¡Soy chef!
+  SignUp: Regístrate
+  Login: Iniciar sesión
+  Administration: Administración
+  Greeting: Hola
+  LogOut: Cerrar sesión
+
+  #SignUp
+  SignUpName: Nombre
+  SignUpMail: Correo electrónico
+  SignUpPassword: Contraseña
+  SignUpAsAChef: Regístrate como chef
+  CreateMyAccount: Crear mi cuenta
+  PasswordConfirmation: Confirmación de contraseña
+
+  #Login
+  LogInAsChef: Inicia sesión como chef
+  LoginName: Nombre
+  LoginEmail: Correo electrónico
+  Password: Contraseña
+  PasswordConfirmation: Confirmación de contraseña
+  ForgotPassword: ¿Olvidaste tu contraseña?
+  SignUpNow: ¡Regístrate ahora!
+  CreateAccount: Crear mi cuenta
+  RememberMe: Recordarme en esta computadora
+  NewUser: ¿Nuevo usuario?
+
+  #Dashboard
+  Dashboard: Tablero
+  AccountSettings: Configuración de cuenta
+  ManageYourProfile: Administra tu perfil de chef
+  ManageYourMenus: Administra tus menús
+  PendingOrders: Pedidos pendientes
+  OrderOverview: Resumen del pedido
+  PendingFlashMsg: ¡Tienes órdenes pendientes! - Revísalas en la sección “Pedidos pendientes”
+  MenusOnYourList: Menús en tu lista
+  ReceivedOrders: Pedidos recibidos
+  ViewDetails: Ver detalles
+
+  #Account Settings
+  AccountFlashMsg: En esta página puedes administrar toda la información legal necesaria para generar boletas y facturas.
+  AccountSettingsInfoMsg: Si es aplicable, por favor ingresa la razón social de tu empresa para las boletas y facturas. De lo contrario, déjalo en blanco.
+  SaveUser: Guardar usuario
+  company: Empresa
+  addressline1: Dirección - Línea 1
+  addressline2: Dirección - Línea 2
+  postalcode: Código postal (better use district)
+  city: Ciudad
+  country: País
+  back: Atrás
+  edit: Edit
+
+  #ChefEdit
+  ChefEditFlashMsg: En esta página puedes administrar tu perfil de chef que es mostrado a nuestros usuarios. Es importante hacerlo lo más atractivo posible. ¡No te olvides de incluir una foto! Usa el botón debajo para una vista previa.
+  PreviewChef: Vista previa del perfil de chef
+  FacebookExplanation: Si quisieras vincular usuarios tu perfil de Facebook, copia y pega el link debajo.
+  TeachingExplanation: ¿Estarías dispuesto a enseñar a cocinar a tus clientes? Si es así, ¡haz click aquí!
+  HelpersExplanation: ¿Cuántos ayudantes (de cocina, mozos, etc.) puedes llevar a un evento? Si trabajas sin ayudantes, solo escribe 0.
+  MinExplanation: ¿Cuál es el número mínimo de personas para las cuáles puedes cocinar?
+  MaxExplanation: ¿Cuál es el número máximo de personas para las cuáles puedes cocinar?
+
+  #Manage Menus
+  MenuEditMsg: When you create your menu here, make sure that you have at least two pictures uploaded for it. The first will be shown in search results and the second in the menu details.
+  MenuIndexMsg: Here you can create and modify menus. To create a menu, you first have to create the menu and later add courses to it.
+  AddMenu: Add menu
+  Actions: Actions
+  Details: Details
+  Delete: Delete
+  ManageCourses: Manage courses
+  AdditionalInfoMsg: Please describe what is your suggested/optimal party size for the menu. Is there a number where you would have to bring a helper with you? Are there other things with regards to the size you can cater to with this menu that your customers should know about?
+  CuisineExplMsg: We have a list of different cuisine types following. Feel free to check every one that you think your menu can fit into.
+
+  #Show Menu
+  AdminChefInfo: Chef Info
+
+  #DeleteMessage
+  DeleteMsg: Are you sure?
+
+  #PendingOrders
+  PendingOrdersMsg: You see all the requested orders here. You can accept the order, which means you agree to perform the food experience. If you decline, the customer will be noticed. This is an irrevocable action.
+  PendingOrdersName: Name
+  PendingOrdersGuests: Guests
+  PendingOrdersOrderDate: Order date
+  PendingOrdersEventDate: Event date
+  PendingOrdersStatus: Status
+  PendingOrdersAccept: Accept
+  PendingOrdersDecline: Decline
+  PendingOrdersAmount: Amount
+
+  #OrderOverview
+  OrderOverviewMsg: This page gives you an overview over all previously requested orders of your customers.
+
+  #DashboardTitle
+  DashboardTitle: Dashboard for
+
   #End translation here
 
   date:

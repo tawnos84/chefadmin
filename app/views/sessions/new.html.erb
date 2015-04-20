@@ -3,24 +3,24 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <h1>Log in as a chef</h1><p>
+    <h1><%=t :LogInAsChef %></h1><p>
     <%= form_for(:session, url: login_path) do |f| %>
 
-        <%= f.label :email %>
+        <%= f.label t(:LoginEmail) %>
         <%= f.email_field :email, class: 'form-control' %>
 
-        <%= f.label :password %>
+        <%= f.label t(:Password) %>
         <%= f.password_field :password, class: 'form-control' %>
 
-        <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.label t(:remember_me), class: "checkbox inline" do %>
             <%= f.check_box :remember_me %>
-            <span>Remember me on this computer</span>
+            <span><%=t :RememberMe %></span>
         <% end %>
 
-        <%= f.submit "Log in", class: "btn btn-primary" %>
+        <%= f.submit t(:Login), class: "btn btn-primary" %>
     <% end %></p>
-    <p><%= link_to "Forgot your password?", new_password_reset_path %>
+    <p><%= link_to t(:ForgotPassword), new_password_reset_path %>
     </p>
-    <p>New user? <%= link_to "Sign up now!", signup_path %></p>
+    <p><%=t :NewUser %> <%= link_to t(:SignUpNow), signup_path %></p>
   </div>
 </div>

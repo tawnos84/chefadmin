@@ -1,7 +1,7 @@
 
 <div class="row">
 
-    <h1>Sign up as a chef</h1>
+    <h1><%=t :SignUpAsAChef %></h1>
     <%= bootstrap_form_for(@user) do |f| %>
 
       <% if @user.errors.any? %>
@@ -17,12 +17,19 @@
           </div>
       <% end %>
 
-      <%= f.text_field :name, class: 'form-control' %>
-      <%= f.email_field :email, class: 'form-control' %>
-      <%= f.password_field :password, class: 'form-control' %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.label t(:SignUpName)%>
+      <%= f.text_field :name, class: 'form-control', hide_label: true %>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <%= f.label t(:SignUpMail) %>
+      <%= f.email_field :email, class: 'form-control', hide_label: true %>
+
+      <%= f.label t(:SignUpPassword) %>
+      <%= f.password_field :password, class: 'form-control', hide_label: true %>
+
+      <%= f.label t(:PasswordConfirmation) %>
+      <%= f.password_field :password_confirmation, class: 'form-control', hide_label: true %>
+
+      <%= f.submit t(:CreateMyAccount), class: "btn btn-primary" %>
     <% end %>
 
 </div>

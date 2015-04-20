@@ -6,6 +6,7 @@ class CoursesController < ApplicationController
 
   def new
     @course = Course.new
+    @menu = Menu.find(params[:menu_id])
   end
 
   def edit

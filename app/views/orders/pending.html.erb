@@ -1,12 +1,12 @@
 <div class="row">
-  <h3><i class="fa fa-cart-plus"></i> Pending orders</h3>
+  <h3><i class="fa fa-cart-plus"></i><%=t :PendingOrders%></h3>
   <ul class="nav nav-tabs">
-    <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-    <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
-    <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
-    <li role="presentation"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
-    <li role="presentation" class="active"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
-    <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+    <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
+    <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
+    <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
+    <li role="presentation"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
+    <li role="presentation" class="active"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
+    <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
   </ul>
 </div>
 
@@ -14,7 +14,7 @@
   <p></p>
   <div class="alert alert-info " role="alert">
     <strong><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      You see all the requested orders here. You can accept the order, which means you agree to perform the food experience. If you decline, the customer will be noticed. This is an irrevocable action.</strong>
+      <%=t :PendingOrdersMsg %></strong>
   </div>
 </div>
 
@@ -22,13 +22,13 @@
   <%= will_paginate %>
 <table class="table table-striped">
   <tr>
-    <th>Name</th>
-    <th>Guests</th>
-    <th>Amount</th>
-    <th>Order Date</th>
-    <th>Event Date</th>
-    <th>Status</th>
-    <th colspan="3">Actions</th>
+    <th><%=t :PendingOrdersName %></th>
+    <th><%=t :PendingOrdersGuests %></th>
+    <th><%=t :PendingOrdersAmount %></th>
+    <th><%=t :PendingOrdersOrderDate %> </th>
+    <th><%=t :PendingOrdersEventDate %></th>
+    <th><%=t :PendingOrdersStatus %></th>
+    <th colspan="3"><%=t :Actions %></th>
   </tr>
 
   <% @orders.each do |order| %>
@@ -39,9 +39,9 @@
         <td><%= order.created_at %></td>
         <td><%= order.cook_date %></td>
         <td><%= order.status %></td>
-        <td><%= link_to 'Details', order_path(order), target: 'blank' %></td>
-        <td><%= link_to 'Accept', orders_accept_path(:orderid => order.id) %></td>
-        <td><%= link_to 'Decline', orders_decline_path(:orderid => order.id), data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:Details), order_path(order), target: 'blank' %></td>
+        <td><%= link_to t(:PendingOrdersAccept), orders_accept_path(:orderid => order.id) %></td>
+        <td><%= link_to t(:PendingOrdersDecline), orders_decline_path(:orderid => order.id), data: { confirm: t(:DeleteMsg) } %></td>
       </tr>
 
 

@@ -3,12 +3,12 @@
     <div class="row">
       <h3><i class="fa fa-street-view"></i> Manage your chef profile</h3>
       <ul class="nav nav-tabs">
-        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
-        <li role="presentation" class="active"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
-        <li role="presentation"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
-        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
-        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
+        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
+        <li role="presentation" class="active"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
+        <li role="presentation"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
+        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
+        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
       </ul>
     </div>
 
@@ -16,12 +16,12 @@
       <p></p>
       <div class="alert alert-info " role="alert">
         <strong><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-          On this page you can manage your chef profile that is shown to our customers. It is important to make it look really nice. Do not forget to upload a picture of you! Use the button below to see a preview</strong>
+          <%=t :ChefEditFlashMsg %></strong>
       </div>
     </div>
 
     <div class="row">
-      <p><%= link_to "Preview chef profile", chef_path(@chef), target: 'blank', class: 'btn btn-success' %></p>
+      <p></p><%= link_to t(:PreviewChef), chef_path(@chef), target: 'blank', class: 'btn btn-success' %><p></p>
     </div>
 <% end %>
 
@@ -44,66 +44,82 @@
 
 
     <div>
-      <%= f.text_field :name, :class => 'form-control' %>
+      <%= f.label t(:AdminName) %>
+      <%= f.text_field :name, :class => 'form-control', hide_label: true %>
     </div>
 
     <div>
-      <%= f.email_field :email, :class => 'form-control' %>
+      <%= f.label t(:AdminEmail) %>
+      <%= f.email_field :email, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.select :location, ['Perú', 'United Kingdom', 'France'], :class => 'form-control' %>
+      <%= f.label t(:AdminLocation) %>
+      <%= f.select :location, ['Perú', 'United Kingdom', 'France'], :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_area :biography, :class => 'form-control' %>
+      <%= f.label t(:AdminBibliography) %>
+      <%= f.text_area :biography, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_area :culinarytraining, :class => 'form-control' %>
+      <%= f.label t(:AdminCulinaryTraining) %>
+      <%= f.text_area :culinarytraining, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_area :styles, :class => 'form-control' %>
+      <%= f.label t(:AdminStyles) %>
+      <%= f.text_area :styles, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.file_field :picture, :class => 'form-control' %>
+      <%= f.label t(:AdminPicture) %>
+      <%= f.file_field :picture, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.file_field :video, :class => 'form-control' %>
+      <%= f.label t(:AdminVideo) %>
+      <%= f.file_field :video, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      If you would like to link customers to your Facebook profile, enter the link of it below.
-      <%= f.url_field :facebook, :class => 'form-control' %>
+      <%=t :FacebookExplanation %>
+      <%= f.label t(:AdminFacebook) %>
+      <%= f.url_field :facebook, :class => 'form-control', hide_label: true %>
     </div>
     <!--Service-->
 
     <div class="form-group">
-      Would you be willing to teach your customers how to cook? If so, check the box!
-      <%= f.check_box :teaching%>
+      <%=t :TeachingExplanation %>
+      <%= f.check_box :teaching, hide_label: true %>
+      <%= f.label :teaching, t(:AdminTeaching) %>
+    </div>
+
+
+    <div class="form-group">
+      <%=t :HelpersExplanation %>
+      <%= f.label t(:AdminNumberOfHelpers) %>
+      <%= f.text_field :number_of_helpers, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      How many helpers (kitchen helpers, waiters, etc.) could you bring to a dinner? If you do not use helpers, just fill in "0".
-      <%= f.text_field :number_of_helpers, :class => 'form-control' %>
+      <%=t :MinExplanation %>
+      <%= f.label t(:AdminMinSize) %>
+      <%= f.text_field :min_size, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      What is the minimum party size you feel you could cater for?
-      <%= f.text_field :min_size, :class => 'form-control' %>
+      <%=t :MaxExplanation %>
+      <%= f.label t(:AdminMaxSize) %>
+      <%= f.text_field :max_size, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      What is the maximum party size you feel you could cater for?
-      <%= f.text_field :max_size, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <% if(!session[:admin])%><%= link_to 'Back', chefs_path, class: 'btn btn-primary' %><% end %>
-      <%= f.submit class: 'btn btn-success' %>
+      <% if(!session[:admin])%>
+          <%= link_to t(:back), chefs_path, class: 'btn btn-primary' %>
+      <% end %>
+      <%= f.submit t(:AdminSaveChef), class: 'btn btn-success' %>
     </div>
 <% end %>
 

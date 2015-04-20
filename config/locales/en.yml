@@ -82,6 +82,7 @@ en:
   Exotic: Exotic
   German: German
   Brazilian: Brazilian
+  Italian: Italian
 
   #MenuOverview
   MenuByChef: by chef
@@ -165,6 +166,104 @@ en:
   AdminCourseDescription: Description
   AdminCourseBack: Back
   AdminCourseSave: Save course
+  AdminCourseTitle: Courses for menu
+  AdminAddCourse: Add course
+
+  #ApplicationLayout
+  IAmAChef: I am a chef!
+  SignUp: Sign up
+  Login: Login
+  Administration: Administration
+  Greeting: Hi
+  LogOut: Log out
+
+  #SignUp
+  SignUpName: Name
+  SignUpMail: E-Mail
+  SignUpPassword: Password
+  SignUpAsAChef: Sign up as a chef
+  CreateMyAccount: Create my account
+  PasswordConfirmation: Password confirmation
+
+  #Login
+  LogInAsChef: Log in as a chef
+  LoginName: Name
+  LoginEmail: E-Mail
+  Password: Password
+  PasswordConfirmation: Password confirmation
+  ForgotPassword: Forgot your password?
+  SignUpNow: Sign up now!
+  CreateAccount: Create my account
+  RememberMe: Remember me on this computer
+  NewUser: New user?
+
+  #Dashboard
+  Dashboard: Dashboard
+  AccountSettings: Account Settings
+  ManageYourProfile: Manage your chef profile
+  ManageYourMenus: Manage your menus
+  PendingOrders: Pending orders
+  OrderOverview: Order overview
+  PendingFlashMsg: You have pending orders! - Check them out in the "Pending Orders" tab
+  MenusOnYourList: menus on your list
+  ReceivedOrders: received orders
+  ViewDetails: View details
+
+  #Account Settings
+  AccountFlashMsg: On this page you can manage all legal account information required for invoicing
+  AccountSettingsInfoMsg: If applicable, please enter your company name for the billing of invoices. Otherwise leave empty.
+  SaveUser: Save user
+  company: Company
+  addressline1: Address line 1
+  addressline2: Address line 2
+  postalcode: Postalcode
+  city: City
+  country: Country
+  back: Back
+  edit: Edit
+
+  #ChefEdit
+  ChefEditFlashMsg: On this page you can manage your chef profile that is shown to our customers. It is important to make it look really nice. Do not forget to upload a picture of you! Use the button below to see a preview
+  PreviewChef: Preview chef profile
+  FacebookExplanation: If you would like to link customers to your Facebook profile, enter the link of it below.
+  TeachingExplanation: Would you be willing to teach your customers how to cook? If so, check the box!
+  HelpersExplanation: How many helpers (kitchen helpers, waiters, etc.) could you bring to a dinner? If you do not use helpers, just fill in "0".
+  MinExplanation: What is the minimum party size you feel you could cater for?
+  MaxExplanation: What is the maximum party size you feel you could cater for?
+
+  #Manage Menus
+  MenuEditMsg: When you create your menu here, make sure that you have at least two pictures uploaded for it. The first will be shown in search results and the second in the menu details.
+  MenuIndexMsg: Here you can create and modify menus. To create a menu, you first have to create the menu and later add courses to it.
+  AddMenu: Add menu
+  Actions: Actions
+  Details: Details
+  Delete: Delete
+  ManageCourses: Manage courses
+  AdditionalInfoMsg: Please describe what is your suggested/optimal party size for the menu. Is there a number where you would have to bring a helper with you? Are there other things with regards to the size you can cater to with this menu that your customers should know about?
+  CuisineExplMsg: We have a list of different cuisine types following. Feel free to check every one that you think your menu can fit into.
+
+  #Show Menu
+  AdminChefInfo: Chef Info
+
+  #DeleteMessage
+  DeleteMsg: Are you sure?
+
+  #PendingOrders
+  PendingOrdersMsg: You see all the requested orders here. You can accept the order, which means you agree to perform the food experience. If you decline, the customer will be noticed. This is an irrevocable action.
+  PendingOrdersName: Name
+  PendingOrdersGuests: Guests
+  PendingOrdersOrderDate: Order date
+  PendingOrdersEventDate: Event date
+  PendingOrdersStatus: Status
+  PendingOrdersAccept: Accept
+  PendingOrdersDecline: Decline
+  PendingOrdersAmount: Amount
+
+  #OrderOverview
+  OrderOverviewMsg: This page gives you an overview over all previously requested orders of your customers.
+
+  #DashboardTitle
+  DashboardTitle: Dashboard for
 
   date:
     abbr_day_names:

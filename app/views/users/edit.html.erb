@@ -2,23 +2,22 @@
     <div class="row">
       <h3><i class="fa fa-user"></i> Account Settings</h3>
       <ul class="nav nav-tabs">
-        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <li role="presentation" class="active"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
-        <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
-        <li role="presentation"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
-        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
-        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
+        <li role="presentation" class="active"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
+        <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
+        <li role="presentation"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
+        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
+        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
       </ul>
     </div>
 
 <% end %>
 
-
 <div class="row">
   <p></p>
   <div class="alert alert-info " role="alert">
     <strong><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-      On this page you can manage all legal account information required for invoicing</strong>
+      <%=t :AccountFlashMsg %></strong>
   </div>
 </div>
 
@@ -40,33 +39,40 @@
       <% end %>
 
       <div class="form-group">
-        If applicable, please enter your company name for the billing of invoices. Otherwise leave empty.
-        <%= f.text_field :company, :class => 'form-control' %>
+        <%=t :AccountSettingsInfoMsg %>
+        <%= f.label t(:company) %>
+        <%= f.text_field :company, :class => 'form-control', hide_label: true %>
       </div>
 
       <div class="form-group">
-        <%= f.text_field :addressline1, :class => 'form-control' %>
+        <%= f.label t(:addressline1) %>
+        <%= f.text_field :addressline1, :class => 'form-control', hide_label: true %>
       </div>
 
       <div class="form-group">
-        <%= f.text_field :addressline2, :class => 'form-control' %>
+        <%= f.label t(:addressline2) %>
+        <%= f.text_field :addressline2, :class => 'form-control', hide_label: true %>
       </div>
 
       <div class="form-group">
-        <%= f.text_field :postalcode, :class => 'form-control' %>
+        <%= f.label t(:postalcode) %>
+        <%= f.text_field :postalcode, :class => 'form-control', hide_label: true %>
       </div>
 
       <div class="form-group">
-        <%= f.text_field :city, :class => 'form-control' %>
+        <%= f.label t(:city) %>
+        <%= f.text_field :city, :class => 'form-control', hide_label: true %>
       </div>
 
       <div class="form-group">
-        <%= f.select :country, ['Perú', 'United Kingdom', 'France'], :class => 'form-control' %>
+        <%= f.label t(:country) %>
+        <%= f.select :country, ['Perú', 'United Kingdom', 'France'], :class => 'form-control', hide_label: true %>
       </div>
 
       <div class="form-group">
-        <% if(session[:admin]) %><%= link_to 'Back', chefs_path, class: 'btn btn-primary' %><% end %>
-        <%= f.submit class: 'btn btn-success' %>
+
+        <% if(session[:admin]) %><%= link_to t(:back), chefs_path, class: 'btn btn-primary' %><% end %>
+        <%= f.submit t(:SaveUser), class: 'btn btn-success' %>
       </div>
   <% end %>
 

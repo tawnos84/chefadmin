@@ -2,12 +2,12 @@
     <div class="row">
       <h3><i class="fa fa-street-view"></i> Manage your menus</h3>
       <ul class="nav nav-tabs">
-        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
-        <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
-        <li role="presentation" class="active"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
-        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
-        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
+        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
+        <li role="presentation"><a href="<%= edit_chef_path(@chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
+        <li role="presentation" class="active"><a href="<%= chef_menus_path(@chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
+        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
+        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
       </ul>
     </div>
 
@@ -15,7 +15,7 @@
       <p></p>
       <div class="alert alert-info " role="alert">
         <strong><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
-          When you create your menu here, make sure that you have at least two pictures uploaded for it. The first will be shown in search results and the second in the menu details.</strong>
+          <%=t :MenuEditMsg %></strong>
       </div>
     </div>
 
@@ -40,106 +40,135 @@
     <div class="page-header"><h5>Basics</h5></div>
 
     <div class="form-group">
-      <%= f.text_field :name, :class => 'form-control' %>
+      <%= f.label t(:AdminMenuName) %>
+      <%= f.text_field :name, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.select :currency, ['PEN', 'GBP', 'USD', 'EUR'], :class => 'form-control' %>
+      <%= f.label t(:AdminMenuCurrency) %>
+      <%= f.select :currency, ['PEN', 'GBP', 'USD', 'EUR'], :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :price, :class => 'form-control'  %>
+      <%= f.label t(:AdminMenuPrice) %>
+      <%= f.text_field :price, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_area :description, :class => 'form-control'  %>
+      <%= f.label t(:AdminMenuDescription) %>
+      <%= f.text_area :description, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="page-header"><h5>Images</h5></div>
     <div class="form-group">
-      <%= f.file_field :photo1, :class => 'form-control'  %>
+      <%= f.label t(:AdminMenuPhoto1) %>
+      <%= f.file_field :photo1, :class => 'form-control', hide_label: true %>
     </div>
     <div class="form-group">
-      <%= f.file_field :photo2, :class => 'form-control'  %>
+      <%= f.label t(:AdminMenuPhoto2) %>
+      <%= f.file_field :photo2, :class => 'form-control', hide_label: true %>
     </div>
     <div class="form-group">
-      <%= f.file_field :photo3, :class => 'form-control'  %>
+      <%= f.label t(:AdminMenuPhoto3) %>
+      <%= f.file_field :photo3, :class => 'form-control', hide_label: true %>
     </div>
     <div class="form-group">
-      <%= f.file_field :photo4, :class => 'form-control'  %>
+      <%= f.label t(:AdminMenuPhoto4) %>
+      <%= f.file_field :photo4, :class => 'form-control', hide_label: true %>
     </div>
     <div class="form-group">
-      <%= f.file_field :photo5, :class => 'form-control'  %>
+      <%= f.label t(:AdminMenuPhoto5) %>
+      <%= f.file_field :photo5, :class => 'form-control', hide_label: true %>
     </div>
 
 
     <div class="page-header"><h5>Additional information</h5></div>
 
     <div class="form-group">
-      Please describe what is your suggested/optimal party size for the menu. Is there a number where you would have to bring a helper with you? Are there other things with regards to the size you can cater to with this menu that your customers should know about?
-      <%= f.text_field :partysize, :class => 'form-control'  %>
+      <p><%=t :AdditionalInfoMsg %></p>
+      <%= f.label t(:AdminMenuPartysize) %>
+      <%= f.text_field :partysize, :class => 'form-control', hide_label: true %>
     </div>
 
-    <p>We have a list of different cuisine types following. Feel free to check every one that you think your menu can fit into.</p>
+    <p><%=t :CuisineExplMsg %></p>
     <div class="form-group">
+      <%= f.label t(:Italian) %>
       <%= f.check_box :cuisine_italian%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Peruvian) %>
       <%= f.check_box :cuisine_peruvian %>
     </div>
     <div class="form-group">
+      <%= f.label t(:Mediterranean) %>
       <%= f.check_box :cuisine_mediterranean%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Spanish) %>
       <%= f.check_box :cuisine_spanish%>
     </div>
     <div class="form-group">
+      <%= f.label t(:American) %>
       <%= f.check_box :cuisine_american%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Japanese) %>
       <%= f.check_box :cuisine_japanese%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Fusion) %>
       <%= f.check_box :cuisine_fusion%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Thai) %>
       <%= f.check_box :cuisine_thai%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Vietnamese) %>
       <%= f.check_box :cuisine_vietnamese%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Latinamerican) %>
       <%= f.check_box :cuisine_latinamerican%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Indian) %>
       <%= f.check_box :cuisine_indian%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Persian) %>
       <%= f.check_box :cuisine_persian%>
     </div>
     <div class="form-group">
+      <%= f.label t(:BBQ) %>
       <%= f.check_box :cuisine_bbq%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Argentinian) %>
       <%= f.check_box :cuisine_argentinian%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Anticuchos) %>
       <%= f.check_box :cuisine_anticuchos%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Patisserie) %>
       <%= f.check_box :cuisine_patisserie%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Exotic) %>
       <%= f.check_box :cuisine_exotic%>
     </div>
     <div class="form-group">
+      <%= f.label t(:German) %>
       <%= f.check_box :cuisine_german%>
     </div>
     <div class="form-group">
+      <%= f.label t(:Brazilian) %>
       <%= f.check_box :cuisine_brazilian%>
     </div>
     <div class="form-group">
-      <% if(!session[:admin]) %><%= link_to 'Back', chef_menus_path, class: "btn btn-primary" %><% end %>
+      <% if(!session[:admin]) %><%= link_to t(:back), chef_menus_path, class: "btn btn-primary" %><% end %>
       <%= f.submit class: "btn btn-success" %>
     </div>
 <% end %>

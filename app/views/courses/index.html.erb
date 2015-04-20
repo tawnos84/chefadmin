@@ -2,36 +2,36 @@
     <div class="row">
       <h3><i class="fa fa-street-view"></i> Manage your menus</h3>
       <ul class="nav nav-tabs">
-        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> Dashboard</a></li>
-        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> Account Settings</a></li>
-        <li role="presentation"><a href="<%= edit_chef_path(@menu.chef) %>"><i class="fa fa-street-view"></i> Manage your chef profile</a></li>
-        <li role="presentation" class="active"><a href="<%= chef_menus_path(@menu.chef) %>"><i class="fa fa-cutlery"></i> Manage your menus</a></li>
-        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> Pending orders</a></li>
-        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> Order overview</a></li>
+        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
+        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
+        <li role="presentation"><a href="<%= edit_chef_path(@menu.chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
+        <li role="presentation" class="active"><a href="<%= chef_menus_path(@menu.chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
+        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
+        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
       </ul>
     </div>
 <% end %>
 
-<h5>Courses for menu: <%= @menu.name %></h5>
+<h5><%=t :AdminCourseTitle %>: <%= @menu.name %></h5>
 <p>
-<%= link_to 'Back', chef_menus_path, class: 'btn btn-primary' %>
-<%= link_to 'Add course', new_chef_menu_course_path(@menu.chef_id, @menu), class: 'btn btn-success' %>
+<%= link_to t(:back), chef_menus_path, class: 'btn btn-primary' %>
+<%= link_to t(:AdminAddCourse), new_chef_menu_course_path(@menu.chef_id, @menu), class: 'btn btn-success' %>
 </p>
 
 <table class="table table-striped">
   <tr>
-    <th>Name</th>
-    <th>Position</th>
-    <th>Description</th>
-    <th colspan="3">Actions</th>
+    <th><%=t :AdminCourseName %></th>
+    <th><%=t :AdminCoursePosition %></th>
+    <th><%=t :AdminCourseDescription %></th>
+    <th colspan="3"><%=t :Actions %></th>
   </tr>
   <% @courses.each do |course| %>
       <tr>
         <td><%= course.name %></td>
         <td><%= course.position %></td>
         <td><%= course.description %>
-        <td><%= link_to 'Edit', edit_chef_menu_course_path(@menu.chef_id, @menu, course) %></td>
-        <td><%= link_to 'Delete', chef_menu_course_path(@menu.chef_id, @menu, course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:edit), edit_chef_menu_course_path(@menu.chef_id, @menu, course) %></td>
+        <td><%= link_to t(:Delete), chef_menu_course_path(@menu.chef_id, @menu, course), method: :delete, data: { confirm: t(:DeleteMsg) } %></td>
       </tr>
   <% end %>
 </table>
