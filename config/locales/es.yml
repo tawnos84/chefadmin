@@ -26,7 +26,7 @@ es:
   quote: Un cocinero se convierte en artista cuando tiene cosas que decir a través de sus platos, como un pintor en un cuadro - Joan Miró
 
   WhyLoSibaritasTitle: ¿Por qué escoger ‘LoSibaritas’?
-  WhyLoSibaritasExpl: Un sin número de razones vienen a la mente. Para nosotros la comida es un concepto que incluye un estilo de vida y una experiencia única. Queremos que nuestra pasión por la comida cobre vida. ¿Te ha pasado que quieres organizar una reunión con amigos o familia y de repente algo te detiene? Ir de compras, cocinar y después limpiar… ‘Los Sibaritas’ te da la oportunidad de no preocuparte por los detalles sino solo disfrutar de la reunión. Reserva un chef privado y disfruta la oportunidad de tener una experiencia culinaria única en tu mesa.
+  WhyLoSibaritasExpl: Un sin número de razones vienen a la mente. Para nosotros la comida es un concepto que incluye un estilo de vida y una experiencia única. Queremos que nuestra pasión por la comida cobre vida. ¿Te ha pasado que quieres organizar una reunión con amigos o familia y de repente algo te detiene? Ir de compras, cocinar y después limpiar… ‘Los Sibaritas’ te da la oportunidad de no preocuparte por los detalles y solo disfrutar de la reunión. Reserva un chef privado y disfruta la oportunidad de tener una experiencia culinaria única en tu mesa.
 
   HowDoesItWorkTitle: ¿Cómo funciona?
   HowDoesItWorkExpl: Es un proceso simple. Escoge el lugar, la fecha y la hora. Una selección de chef con sus respectivos menús estarán a tu disposición. Puedes escoger el chef que quieras de acuerdo a tus preferencias y necesidades. Una vez que lo escojas, selecciona el número de invitados y reserva.
@@ -43,8 +43,8 @@ es:
   Location: Lugar
   MaxPrice: Precio máximo
   AnyPrice: Cualquier precio
-  SelectCuisine: Seleccione tipo de cocina
-  AnyCuisine: Cualquier tipo de cocina
+  SelectCuisine: Seleccione tipo de comida
+  AnyCuisine: Cualquier tipo de comida
   Sorting: Ordenar
   SortByPrice: Ordenar por precio
   SortByName: Order por nombre
@@ -82,7 +82,7 @@ es:
   Exotic: Exótica
   German: Alemana
   Brazilian: Brasilera
-  Italian: Italiano
+  Italian: Italiana
 
   #MenuOverview (Vista general del menú)
   MenuByChef: Por chef
@@ -90,7 +90,7 @@ es:
   MenuPartySize: Número de comensales
   MenuGuests: Invitados
   MenuBack: Atrás
-  MenuChefInfos: Perfil del cheff
+  MenuChefInfos: Perfil del chef
   MenuBookNow: Reserva ahora
 
   #OrderForm (Formulario de pedido)
@@ -166,8 +166,8 @@ es:
   AdminCourseDescription: Descripción
   AdminCourseBack: Atrás
   AdminCourseSave: Guardar plato
-  AdminCourseTitle: Courses for menu
-  AdminAddCourse: Add course
+  AdminCourseTitle: Nombre del plato
+  AdminAddCourse: Añade un plato
 
   #ApplicationLayout Aplicación
   IAmAChef: ¡Soy chef!
@@ -216,66 +216,67 @@ es:
   company: Empresa
   addressline1: Dirección - Línea 1
   addressline2: Dirección - Línea 2
-  postalcode: Código postal (better use district)
+  postalcode: Distrito
   city: Ciudad
   country: País
   back: Atrás
-  edit: Edit
+  edit: Editar
 
   #ChefEdit
   ChefEditFlashMsg: En esta página puedes administrar tu perfil de chef que es mostrado a nuestros usuarios. Es importante hacerlo lo más atractivo posible. ¡No te olvides de incluir una foto! Usa el botón debajo para una vista previa.
   PreviewChef: Vista previa del perfil de chef
-  FacebookExplanation: Si quisieras vincular usuarios tu perfil de Facebook, copia y pega el link debajo.
+  FacebookExplanation: Si quisieras vincular usuarios con tu perfil de Facebook, copia y pega el link debajo.
   TeachingExplanation: ¿Estarías dispuesto a enseñar a cocinar a tus clientes? Si es así, ¡haz click aquí!
   HelpersExplanation: ¿Cuántos ayudantes (de cocina, mozos, etc.) puedes llevar a un evento? Si trabajas sin ayudantes, solo escribe 0.
   MinExplanation: ¿Cuál es el número mínimo de personas para las cuáles puedes cocinar?
   MaxExplanation: ¿Cuál es el número máximo de personas para las cuáles puedes cocinar?
 
   #Manage Menus
-  MenuEditMsg: When you create your menu here, make sure that you have at least two pictures uploaded for it. The first will be shown in search results and the second in the menu details.
-  MenuIndexMsg: Here you can create and modify menus. To create a menu, you first have to create the menu and later add courses to it.
-  AddMenu: Add menu
-  Actions: Actions
-  Details: Details
-  Delete: Delete
-  ManageCourses: Manage courses
-  AdditionalInfoMsg: Please describe what is your suggested/optimal party size for the menu. Is there a number where you would have to bring a helper with you? Are there other things with regards to the size you can cater to with this menu that your customers should know about?
-  CuisineExplMsg: We have a list of different cuisine types following. Feel free to check every one that you think your menu can fit into.
+  MenuEditMsg: Cuando armes tu menú aquí, asegúrate de tener por lo menos dos fotos del mismo. El primero será mostrado en los resultados de búsqueda y el segundo en el detalle del menú.
+  MenuIndexMsg: Aquí puedes crear y editar menús. Para crear un menú, primero debes crear el menú y luego los platos del mismo.
+  AddMenu: Añadir menú
+  Actions: Acciones
+  Details: Detalles
+  Delete: Eliminar
+  ManageCourses: Administrar platos
+  AdditionalInfoMsg: Por favor señala el número sugerido de comensales para el menú. ¿Hay un número de comensales a partir del cuál vas a necesitar un ayudante? ¿Hay otras consideraciones que tus clientes deben tomar en cuenta a partir del número de comensales? 
+  CuisineExplMsg: A continuación tenemos una lista predeterminada de tipos de comida. Ten la libertad de escoger todos los tipos de comida que creas corresponden a tu menú.
 
   #Show Menu
-  AdminChefInfo: Chef Info
+  AdminChefInfo: Información del chef
 
   #DeleteMessage
-  DeleteMsg: Are you sure?
+  DeleteMsg: ¿Estás seguro?
 
   #PendingOrders
-  PendingOrdersMsg: You see all the requested orders here. You can accept the order, which means you agree to perform the food experience. If you decline, the customer will be noticed. This is an irrevocable action.
-  PendingOrdersName: Name
-  PendingOrdersGuests: Guests
-  PendingOrdersOrderDate: Order date
-  PendingOrdersEventDate: Event date
-  PendingOrdersStatus: Status
-  PendingOrdersAccept: Accept
-  PendingOrdersDecline: Decline
-  PendingOrdersAmount: Amount
+  PendingOrdersMsg: Aquí puedes ver todas las ordenes pendientes. Puedes aceptar la orden, lo cual implica que aceptas realizar el evento. Si rechazas la orden, el cliente será notificado inmediatamente. Esta acción es irrevocable. 
+
+  PendingOrdersName: Nombre
+  PendingOrdersGuests: Comensales
+  PendingOrdersOrderDate: Fecha de la orden
+  PendingOrdersEventDate: Fecha del evento
+  PendingOrdersStatus: Estado
+  PendingOrdersAccept: Aceptar
+  PendingOrdersDecline: Rechazar
+  PendingOrdersAmount: Monto
 
   #OrderOverview
-  OrderOverviewMsg: This page gives you an overview over all previously requested orders of your customers.
+  OrderOverviewMsg: Esta página te ofrece una vista general de todas las ordenes hechas previamente por tus clientes.
 
   #DashboardTitle
-  DashboardTitle: Dashboard for
+  DashboardTitle: Tablero para
 
   #Search
-  AnyPrice: Any Price
-  AnyCuisine: Any Cuisine
-  LookingChef: You were looking for a chef in
-  FoundMenus: Matching to your tastes, we found
+  AnyPrice: Cualquier precio
+  AnyCuisine: Cualquier tipo de comida
+  LookingChef: Estás buscando un chef en
+  FoundMenus: De acuerdo a tus preferencias, hemos encontrado
 
   #OrderReview
-  OrderCustomerReviewMsg: You are reviewing an order from your customer
+  OrderCustomerReviewMsg: Estás revisando una orden de tu cliente
   OrderChefName: Chef
-  OrderMenuPrice: Price per menu
-  OrderNetPrice: Total price
+  OrderMenuPrice: Precio por menú
+  OrderNetPrice: Precio total
 
   #End translation here
 
@@ -470,3 +471,4 @@ es:
       long: "%d de %B de %Y %H:%M"
       short: "%d de %b %H:%M"
     pm: pm
+
