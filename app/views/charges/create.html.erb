@@ -1,1 +1,5 @@
-<h2>Thanks, you paid <strong>£5.00</strong>!</h2>
+<script type="text/javascript">
+    window.location.href = "<%=orders_show_path(:id => @order.id)%>"
+</script>
+<h2>Thanks, you paid <strong><%=@order.currency%> <%=@order.net_price * @order.no_of_guests%></strong>!</h2>
+If you are not redirected automatically, follow the <a href='<%=orders_show_path(:id => @order.id)%>'>link to your order overview</a>

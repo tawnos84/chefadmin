@@ -84,7 +84,7 @@ Rails.application.configure do
       :address              => "smtp.gmail.com",
       :port                 => 587,
       :user_name            => "sibaritas.chefs@gmail.com",
-      :password             => "losibaritas",
+      :password             => "borussia1909!",
       :authentication       => "plain",
       :enable_starttls_auto => true
   }
@@ -92,6 +92,8 @@ Rails.application.configure do
   #Sending Activation Mails
   host = 'shielded-fortress-9689.herokuapp.com'
   config.action_mailer.default_url_options = { host: host }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default :charset => "utf-8"
 
   #Locales
   config.i18n.available_locales = ['es-PE', :es, :en]

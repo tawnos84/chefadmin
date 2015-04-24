@@ -1,12 +1,16 @@
-<%= form_tag charges_path do %>
+<%= form_tag charges_path, :method => :post do %>
     <article>
       <label class="amount">
-        <span>Amount: £5.00</span>
+        <span>Dear <%=@order.name%>,<br>
+        in order to finalize your order for <%=@order.cook_date%> you have to make a payment of <%=@order.currency%> <%= @totalprice %> using credit card.<br>
+        Simply click the button below to process the payment.</span>
       </label>
     </article>
+
+    <input name="order_id" value="<%=@order.id%>" type="hidden"/>
 
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Your order"
-            data-amount="500"></script>
+            data-amount="<%= @totalprice * 100%>"></script>
 <% end %>
