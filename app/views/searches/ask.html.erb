@@ -10,9 +10,10 @@
 
 
       <%= bootstrap_form_for :search, url: searches_path, layout: :inline do |f| %>
-            <%= f.hidden_field :cook_location, :value => "Perú" %>
-            <%= f.hidden_field :cook_date, :value => "23.08.2015" %>
-            <%= f.hidden_field :cook_time, :value => "19:09" %>
+          <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'], hide_label: true %>
+          <%= f.date_select :cook_date, hide_label: true %>
+          <%= f.time_select :cook_time, hide_label: true %>
+
           <%= f.hidden_field :sort, :value => "name" %>
             <%= f.submit I18n.t :searchsubmit, class: 'btn btn-primary' %>
         <% end %>

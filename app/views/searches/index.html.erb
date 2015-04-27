@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
 <p class="well">
-  <%= link_to 'New Search', searches_ask_path, class: 'btn btn-primary' %>
+  <%= link_to t(:NewSearch), searches_ask_path, class: 'btn btn-primary' %>
     <%=t :LookingChef %> <strong><%= @search.cook_location %></strong>.
 <%=t :FoundMenus%> <strong><%= @menus.count %> menus </strong></p>
 </div>
