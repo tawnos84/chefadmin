@@ -13,4 +13,10 @@
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Your order"
             data-amount="<%= @totalprice * 100%>"></script>
+
 <% end %>
+
+<p></p>
+<p class="alert alert-warning">
+  As we are currently only running credit card charges in test mode, please enter <strong>'4242424242424242'</strong> for Visa or <strong>'5555555555554444'</strong> for Master Card
+</p>
