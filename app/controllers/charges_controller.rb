@@ -23,6 +23,12 @@ class ChargesController < ApplicationController
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
+
+    #If the order was from an event, set it to booked
+    if @order.order_type == 'event'
+      @event = Event.find(@order.event_id)
+      @event.status = 'inactive'
+    end
     redirect_to orders_show_path(@order)
   end
 

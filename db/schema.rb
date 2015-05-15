@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150409114401) do
+ActiveRecord::Schema.define(version: 20150515155527) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(version: 20150409114401) do
   end
 
   add_index "courses", ["menu_id"], name: "index_courses_on_menu_id"
+
+  create_table "events", force: :cascade do |t|
+    t.string   "chef"
+    t.string   "menu"
+    t.string   "date"
+    t.string   "location"
+    t.string   "price"
+    t.string   "persons"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "status",     default: "active"
+  end
 
   create_table "menus", force: :cascade do |t|
     t.string   "name"
@@ -116,6 +128,8 @@ ActiveRecord::Schema.define(version: 20150409114401) do
     t.string   "status",            default: "PENDING"
     t.string   "chefid"
     t.string   "chef_id"
+    t.string   "order_type"
+    t.string   "event_id"
   end
 
   create_table "searches", force: :cascade do |t|

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :events
+
   get 'password_resets/new'
 
   get 'password_resets/edit'
@@ -64,6 +66,8 @@ Rails.application.routes.draw do
 
   get 'welcome/admin'
 
+  get 'events/landing'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :chefs do
@@ -85,7 +89,7 @@ Rails.application.routes.draw do
   resources :charges
 
   # You can have the root of your site routed with "root"
-  root 'searches#ask'
+  root 'events#landing'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

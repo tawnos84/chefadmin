@@ -109,7 +109,7 @@ en:
   OrderCountry: Country
   OrderMessage: Your message to our chefs and us
   OrderRemarksChef: Remarks to chef
-  OrderRemarksSibaritas: Remarks to LoSibaritas.com
+  OrderRemarksSibaritas: Remarks to LoSibaritas
 
   #OrderConfirmation
   OrderConfirmationMessage: Thank you for your order with LoSibaritas! A chef will be in touch with you shortly.

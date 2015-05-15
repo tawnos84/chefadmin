@@ -49,7 +49,7 @@
       <%= link_to t(:back), :back, class: 'btn btn-primary' %>
       <% if(!session[:admin]) %>
       <%= link_to t(:AdminChefInfo), chef_path(@menu.chef), class: 'btn btn-primary' %>
-      <%= link_to t(:MenuBookNow), orders_new_path(menu_id: @menu.id), class: 'btn btn-success' %>
+      <%= link_to t(:MenuBookNow), orders_new_path(menu_id: @menu.id, type: 'dinner'), class: 'btn btn-success' %>
       <% end %>
     </p>
   </div>

@@ -3,15 +3,26 @@
 <div class="col-lg-12"><div class="well text-center">
   <p>
   <h4><strong><%= @menu.name %></strong></h4>
-  <%= @menu.currency %> <%= @menu.price %><br>
+  <%= @menu.currency %> <%= @menu.price %> por persona<br>
+  <% if @order.order_type == 'event' %>
+      <%= t(:OrderCookLocation) %>: <%= @event.location %><br>
+      <%= t(:OrderCookDate) %>: <%= @event.date %>
+  <% end %>
   </p>
 </div></div>
 
 <div class="col-lg-12">
 <%= bootstrap_form_for :order, url: orders_path do |f| %>
-    <input type="hidden" id="menu_id" name="menu_id" value="<%= @menu.id %>">
 
-    <% if @order.errors.any? %>
+      <% if @order.order_type == 'event' %>
+      <input type="hidden" id="cook_location" name="cook_location" value="<%= @event.location %>">
+      <input type="hidden" id="cook_date" name="cook_date" value="<%= @event.date %>">
+      <input type="hidden" id="event_id" name="event_id" value="<%= params[:event_id] %>">
+      <% end %>
+    <input type="hidden" id="menu_id" name="menu_id" value="<%= @menu.id %>">
+    <input type="hidden" id="order_type" name="order_type" value="<%= @order.order_type %>">
+
+      <% if @order.errors.any? %>
 
         <div class="alert alert-danger" role="alert">
           <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
@@ -29,6 +40,7 @@
 
     <div class="form-group">
 
+      <% if @order.order_type == 'dinner'%>
       <%= f.label t(:OrderCookLocation) %>
       <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'], hide_label: true %>
 
@@ -37,6 +49,8 @@
 
       <%= f.label t(:OrderCookTime) %>
       <%= f.time_select :cook_time, hide_label: true %>
+      <% end %>
+
 
       <%= f.label t(:OrderNoOfGuests) %>
       <%= f.select :no_of_guests, [4, 5, 6, 7, 8, 9, 10, 11, 12], :class => 'form-control', hide_label: true %>
@@ -78,7 +92,7 @@
     </div>
 
     <div class="form-group">
-      <%= link_to t(:back), chef_menu_path(@menu.chef, @menu), class: 'btn btn-primary' %>
+      <%= link_to t(:back), :back, class: 'btn btn-primary', style: 'color: #FFF' %>
       <%= f.submit class: 'btn btn-success' %>
     </div>
 <% end %>
