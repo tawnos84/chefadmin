@@ -14,11 +14,11 @@
 <div class="col-lg-12">
 <%= bootstrap_form_for :order, url: orders_path do |f| %>
 
-      <% if @order.order_type == 'event' %>
-      <input type="hidden" id="cook_location" name="cook_location" value="<%= @event.location %>">
-      <input type="hidden" id="cook_date" name="cook_date" value="<%= @event.date %>">
-      <input type="hidden" id="event_id" name="event_id" value="<%= params[:event_id] %>">
-      <% end %>
+          <!-- These three field are required for the event based payment and booking. I removed the standard form elements for date/location selection-->
+          <%= f.hidden_field :cook_date, :value => @event.date %>
+          <%= f.hidden_field :event_id, :value => params[:event_id] %>
+          <%= f.hidden_field :cook_location, :value => @event.location %>
+
     <input type="hidden" id="menu_id" name="menu_id" value="<%= @menu.id %>">
     <input type="hidden" id="order_type" name="order_type" value="<%= @order.order_type %>">
 
@@ -39,17 +39,6 @@
     <!--Menu forms-->
 
     <div class="form-group">
-
-      <% if @order.order_type == 'dinner'%>
-      <%= f.label t(:OrderCookLocation) %>
-      <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'], hide_label: true %>
-
-      <%= f.label t(:OrderCookDate) %>
-      <%= f.date_select :cook_date, hide_label: true %>
-
-      <%= f.label t(:OrderCookTime) %>
-      <%= f.time_select :cook_time, hide_label: true %>
-      <% end %>
 
 
       <%= f.label t(:OrderNoOfGuests) %>

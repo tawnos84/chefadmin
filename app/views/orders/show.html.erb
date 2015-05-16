@@ -71,10 +71,6 @@
             <td><%=t :OrderCookDate %>:</td>
             <td><%= @order.cook_date.to_time.strftime('%e %B %Y') %></td>
           </tr>
-          <tr>
-            <td><%=t :OrderCookTime %>:</td>
-            <td><%= @order.cook_time.to_time.strftime('%H:%M') %></td>
-          </tr>
         </table>
         </p>
       </div>
