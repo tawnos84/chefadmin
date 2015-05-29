@@ -2,7 +2,8 @@
     <article>
       <label class="amount">
         <span>Dear <%=@order.name%>,<br>
-        in order to finalize your order for <%=@order.cook_date%> you have to make a payment of <%=@order.currency%> <%= @totalprice %> using credit card.<br>
+        in order to finalize your order for <%=@order.cook_date%> you have to make a payment of <%=@order.currency%> <%= @order.net_price %> using credit card.<br>
+
         Simply click the button below to process the payment.</span>
       </label>
     </article>
@@ -13,13 +14,10 @@
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
             data-description="Your order"
             data-currency="<%=@order.currency%>"
-            data-amount="<%= @totalprice * 100%>">
+            data-amount="<%= @order.net_price * 100%>">
 
     </script>
 
 <% end %>
 
 <p></p>
-<p class="alert alert-warning">
-  As we are currently only running credit card charges in test mode, please enter <strong>'4242424242424242'</strong> for Visa or <strong>'5555555555554444'</strong> for Master Card
-</p>
