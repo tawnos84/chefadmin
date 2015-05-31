@@ -66,7 +66,7 @@ Rails.application.routes.draw do
 
   get 'welcome/admin'
 
-  get 'events/landing'
+  get 'landing', to: 'events#landing'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -146,5 +146,6 @@ Rails.application.routes.draw do
     resources :chefs
     resources :orders
     resources :searches
+    resources :events
   end
 end

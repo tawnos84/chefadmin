@@ -3,6 +3,11 @@ class EventsController < ApplicationController
   layout "landing", except: [:edit, :index, :new, :show]
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
+  # Show landing page
+  def landing
+
+  end
+
   # GET /events
   # GET /events.json
   def index
@@ -66,10 +71,7 @@ class EventsController < ApplicationController
     end
   end
 
-  # Show landing page
-  def landing
 
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
