@@ -8,7 +8,9 @@ class MenusController < ApplicationController
 
   def new
     @menu = Menu.new
-    @chef = Chef.find_by_email(current_user.email)
+    @chef = Chef.find(params[:chef_id])
+    #@chef = Chef.find_by_email(current_user.email)
+    #Change back when chefs edit themselves!
   end
 
   def edit
