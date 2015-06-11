@@ -76,4 +76,7 @@ gem 'bootstrap-will_paginate', '0.0.10'
 #payments
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+#Google Analytics
+gem 'google-analytics-rails'
+
 

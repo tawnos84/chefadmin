@@ -98,4 +98,6 @@ Rails.application.configure do
   #Locales
   config.i18n.available_locales = ['es-PE', :es, :en]
 
+  # replace this with your tracker code
+  GA.tracker = "UA-58117346-2"
 end
