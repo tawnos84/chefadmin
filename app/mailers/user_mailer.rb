@@ -24,10 +24,18 @@ class UserMailer < ApplicationMailer
   end
 
   #Order Request Confirmation to Customer
-  def order_request_mail(email, menu_id, order_id)
+  def order_request_mail(email, menu_id, order_id, language)
     @menu = Menu.find(menu_id)
     @order = Order.find(order_id)
+
+    if language=='en'
     mail(to: email, subject: 'Thank you for your order at LoSibaritas.com', template_name: 'order_request_mail')
+    end
+
+    if language=='es'
+      mail(to: email, subject: 'Muchas gracias para tu orden con LoSibaritas.com', template_name: 'order_request_mail_es')
+    end
+
   end
 
   #Order Request Call to Action to Chef

@@ -50,7 +50,7 @@ class OrdersController < ApplicationController
     @order.chef_id = @menu.chef_id
 
     if @order.save
-      UserMailer.order_request_mail(@order.email, @menu.id, @order.id).deliver_now!
+      UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
       UserMailer.order_chef_action_mail(@order.email, @menu.id, @order.id).deliver_now!
       redirect_to new_charge_path(:order_id => @order.id)
     else
