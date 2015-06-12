@@ -8,7 +8,7 @@
             <div class="row">
               <div class="col-md-2"></div>
               <div class="col-md-8">
-                <img src="<%=@chef.picture%>" class="img-circle img-responsive">
+                <img src="<%=@chef.picture%>" class="img-circle img-center img-responsive">
               </div>
               <div class="col-md-2"></div>
             </div>
@@ -27,7 +27,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-12 text-center">
+              <div class="col-md-12 hidden-xs hidden-md text-center">
                 <%= link_to t(:MenuBookNow), orders_new_path(menu_id: @menu.id, type: 'event', event_id: @event.id), class: 'btn btn-large btn-primary', style: 'color:#FFF' %>
               </div>
             </div>
@@ -47,7 +47,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row hidden-xs">
           <div class="col-md-12">
             <div class="col-md-12">
               <div class="col-md-12">
@@ -103,29 +103,34 @@
     </div>
   </div>
 </div>
-<div class="section">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-xs-1"></div>
-      <div class="col-xs-2 text-center">
-        <a href="https://instagram.com/losibaritas"><i class="fa fa-5x fa-fw fa-instagram"></i></a>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-primary text-center"><%= t(:LContactUs)%></h1>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-1"></div>
+          <div class="col-md-2 text-center">
+            <a href="https://instagram.com/losibaritas"><i class="fa fa-5x fa-fw fa-instagram"></i></a>
+          </div>
+          <div class="col-md-2">
+            <a href="https://twitter.com/losibaritas"><i class="fa fa-5x fa-fw fa-twitter"></i></a>
+          </div>
+          <div class="col-md-2">
+            <a href="https://www.facebook.com/losibaritas"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
+          </div>
+          <div class="col-md-2">
+            <a href="http://losibaritas.tumblr.com/"><i class="fa fa-5x fa-fw fa-tumblr"></i></a>
+          </div>
+          <div class="col-md-2 text-center">
+            <a href="mailto:sibaritas.chefs@gmail.com"><i class="fa fa-5x fa-fw hub fa-envelope-o"></i></a>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
       </div>
-      <div class="col-xs-2">
-        <a href="https://twitter.com/losibaritas"><i class="fa fa-5x fa-fw fa-twitter"></i></a>
-      </div>
-      <div class="col-xs-2">
-        <a href="https://www.facebook.com/losibaritas"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
-      </div>
-      <div class="col-xs-2">
-        <a href="http://losibaritas.tumblr.com/"><i class="fa fa-5x fa-fw fa-tumblr"></i></a>
-      </div>
-      <div class="col-xs-2 text-center">
-        <a href="mailto:sibaritas.chefs@gmail.com"><i class="fa fa-5x fa-fw hub fa-envelope-o"></i></a>
-      </div>
-      <div class="col-xs-1"></div>
     </div>
-  </div>
-</div>
 <% end %>
 
 <% if @event.status == 'inactive' %>
