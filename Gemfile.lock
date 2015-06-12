@@ -109,7 +109,6 @@ GEM
     formatador (0.2.5)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
-    google-analytics-rails (0.0.6)
     hike (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -243,7 +242,6 @@ DEPENDENCIES
   carrierwave (= 0.10.0)
   coffee-rails (~> 4.1.0)
   fog (= 1.23.0)
-  google-analytics-rails
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick (= 3.8.0)
