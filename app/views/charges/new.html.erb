@@ -1,10 +1,13 @@
 <%= form_tag charges_path, :method => :post do %>
     <article>
       <label class="amount">
-        <span>Dear <%=@order.name%>,<br>
-        in order to finalize your order for <%=@order.cook_date%> you have to make a payment of <%=@order.currency%> <%= @order.net_price %> using credit card.<br>
+        <span><%=t(:Dear)%> <%=@order.name%>,<br>
+          <%=t(:ChargePart1)%> <%=@order.cook_date%> <%=t(:ChargePart2)%>
+          <%if @order.currency == 'PEN'%>S/.<%end%>
+          <%if @order.currency != 'PEN'%><%=@order.currency%><%end%>
+          <%= @order.net_price %>0 <%=t(:ChargePart3)%><br>
 
-        Simply click the button below to process the payment.</span>
+          <%=t(:ChargePart4)%></span>
       </label>
     </article>
 

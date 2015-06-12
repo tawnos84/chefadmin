@@ -20,8 +20,9 @@
                 <table class="table">
                   <tr><td><i class="fa fa-map-marker"></i></td> <td><%=@event.location%></td></tr>
                   <tr><td><i class="fa fa-calendar"></i></td> <td><%=@event.date%></td></tr>
-                  <tr><td><i class="fa fa-money "></i></td> <td><%= @menu.currency %> <%= @menu.price %> por persona</td></tr>
-                  <tr><td><i class="fa fa-users"></i></td> <td><%= @menu.partysize%> personas</td></tr>
+                  <tr><td><i class="fa fa-money "></i></td> <td>
+                    <%=@event.price%> <%=t(:PerPerson)%></td></tr>
+                  <tr><td><i class="fa fa-users"></i></td> <td><%= @menu.partysize%> <%=t(:Persons)%></td></tr>
                 </table>
               </div>
             </div>

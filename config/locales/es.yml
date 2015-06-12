@@ -29,11 +29,13 @@ es:
   WhyLoSibaritasExpl: Un sin número de razones vienen a la mente. Para nosotros la comida es un concepto que incluye un estilo de vida y una experiencia única. Queremos que nuestra pasión por la comida cobre vida. ¿Te ha pasado que quieres organizar una reunión con amigos o familia y de repente algo te detiene? Ir de compras, cocinar y después limpiar… ‘Los Sibaritas’ te da la oportunidad de no preocuparte por los detalles y solo disfrutar de la reunión. Reserva un chef privado y disfruta la oportunidad de tener una experiencia culinaria única en tu mesa.
 
   HowDoesItWorkTitle: ¿Cómo funciona?
-  HowDoesItWorkExpl: Es un proceso simple. Escoge el lugar, la fecha y la hora. Una selección de chef con sus respectivos menús estarán a tu disposición. Puedes escoger el chef que quieras de acuerdo a tus preferencias y necesidades. Una vez que lo escojas, selecciona el número de invitados y reserva.
-  HowDoesItWorkReason1: Selecciona el lugar
-  HowDoesItWorkReason2: Selecciona la fecha y hora
-  HowDoesItWorkReason3: Selecciona al chef
-  HowDoesItWorkReason4: Reserva
+  HowDoesItWorkExpl: El processo es simple.
+  HowDoesItWorkReason1: Nuestro chef profesional te ofrece este exclusivo y único servicio en la fecha indicada.
+  HowDoesItWorkReason2: Disfruta de un menú especializado con ingredientes de calidad en la comodidad de tu casa
+  HowDoesItWorkReason3: Reserva ahora, ingresa tus datos y nuestro chef se pondrá en contacto contigo
+  HowDoesItWorkReason4: Ahora sólo disfruta y vive la experiencia “Sibarita”
+  HowDoesItWorkFooter: No pierdas la oportunidad de
+  HowDoesItWorkFooterLink: reservar ahora
 
   searchsubmit: Hacer pedido
 
@@ -198,6 +200,7 @@ es:
   NewUser: ¿Nuevo usuario?
 
   #Dashboard
+  ComingSoon: Muy pronto...
   Dashboard: Tablero
   AccountSettings: Configuración de cuenta
   ManageYourProfile: Administra tu perfil de chef
@@ -277,6 +280,26 @@ es:
   OrderChefName: Chef
   OrderMenuPrice: Precio por menú
   OrderNetPrice: Precio total
+
+  #Landing Page
+  LContactUs: Contáctenos
+  LTeam: Nuestro Equipo
+  LTitle: cocina en tu casa
+  LCountries: Siete personas, siete países, dos continentes, cinco idiomas -
+  LVision: una vision
+  France: Francia
+  Germany: Alemania
+
+  #Events
+  PerPerson: por persona
+  Persons: personas
+
+  #Charges
+  Dear: Estimado
+  ChargePart1: Para finalizar la reserva para el
+  ChargePart2: necesitas hacer el pago de
+  ChargePart3: a través de tu tarjeta de crédito.
+  ChargePart4: Solo tienes que hacer click debajo para comenzar el pago.
 
   #End translation here
 

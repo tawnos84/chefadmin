@@ -3,8 +3,8 @@
 <div class="col-lg-12"><div class="well text-center">
   <p>
   <h4><strong><%= @menu.name %></strong></h4>
-  <%= @menu.currency %> <%= @menu.price %> por persona<br>
   <% if @order.order_type == 'event' %>
+      <%= @event.price %> <%=t(:PerPerson)%><br>
       <%= t(:OrderCookLocation) %>: <%= @event.location %><br>
       <%= t(:OrderCookDate) %>: <%= @event.date %>
   <% end %>
@@ -12,9 +12,10 @@
 </div></div>
 
 <div class="col-lg-12">
-<%= bootstrap_form_for :order, url: orders_path do |f| %>
+<%= bootstrap_form_for :order, :url => { :action => :create, :type => @order.order_type, :event_id => params[:event_id] } do |f| %>
 
           <!-- These three field are required for the event based payment and booking. I removed the standard form elements for date/location selection-->
+
           <%= f.hidden_field :cook_date, :value => @event.date %>
           <%= f.hidden_field :event_id, :value => params[:event_id] %>
           <%= f.hidden_field :cook_location, :value => @event.location %>

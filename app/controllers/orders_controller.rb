@@ -37,6 +37,11 @@ class OrdersController < ApplicationController
   def create
     @order = Order.new(order_params)
 
+    @order.order_type = params[:type]
+    if @order.order_type == 'event'
+      @event = Event.find(params[:event_id])
+    end
+
     @menu = Menu.find(params[:menu_id])
     @order.net_price = @order.no_of_guests * @menu.price
     @order.currency = @menu.currency

@@ -29,11 +29,13 @@ en:
   WhyLoSibaritasExpl: Many reasons come to mind. For us food is more than a dish, it is a whole concept of lifestyle and unique experience. We want bring our passion for food alive. Has it happened that you want to host a rendez-vous, but something stops you? OH! Grocery shopping, cooking, cleaning. ‘Los Sibaritas’ give you the opportunity to not think about logistic anymore, book your private chef. Give yourself the opportunity to bring a culinary experience at your table.
 
   HowDoesItWorkTitle: How does it work?
-  HowDoesItWorkExpl: It is a simple process; pick your location, date and time. A selection of chefs with their menus will be available. You are free to choose the best fit for you. Once decision has been made, select your party size and review your order.
-  HowDoesItWorkReason1: Select Location
-  HowDoesItWorkReason2: Select Date and time
-  HowDoesItWorkReason3: Select a Chef
-  HowDoesItWorkReason4: Book your chef experience
+  HowDoesItWorkExpl: It is a simple process.
+  HowDoesItWorkReason1: Our professional chef offers you an exclusive and unique service at the indicated time.
+  HowDoesItWorkReason2: Enjoy a special menu with amazing ingredients in the comfort of your own home.
+  HowDoesItWorkReason3: Reserve now, enter your contact details and our chef will get in touch with you.
+  HowDoesItWorkReason4: Now, just sit back and enjoy the "Sibarita" experience
+  HowDoesItWorkFooter: Do not lose this chance and
+  HowDoesItWorkFooterLink: reserve now
 
   searchsubmit: Search
 
@@ -198,6 +200,7 @@ en:
   NewUser: New user?
 
   #Dashboard
+  ComingSoon: Coming soon...
   Dashboard: Dashboard
   AccountSettings: Account Settings
   ManageYourProfile: Manage your chef profile
@@ -276,6 +279,26 @@ en:
   OrderChefName: Chef
   OrderMenuPrice: Price per menu
   OrderNetPrice: Total price
+
+  #Landing Page
+  LContactUs: Contact Us
+  LTeam: Our Team
+  LTitle: cooks at your home
+  LCountries: Seven people, seven countries, two continents, five languages -
+  LVision: one vision
+  France: France
+  Germany: Germany
+
+  #Events
+  PerPerson: per person
+  Persons: persons
+
+  #Charges
+  Dear: Dear
+  ChargePart1: in order to finalize your order for
+  ChargePart2: you have to make a payment of
+  ChargePart3: using credit card.
+  ChargePart4: Simply click the button below to process the payment.
 
   date:
     abbr_day_names:

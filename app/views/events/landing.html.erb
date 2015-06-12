@@ -27,13 +27,13 @@
 
           <% end %>
           <li>
-            <a href="#contact" style="color:#FFF">Contáctenos</a>
+            <a href="#contact" style="color:#FFF"><%= t(:LContactUs)%></a>
           </li>
           <li>
             <a href="http://losibaritas.tumblr.com" target="new" style="color:#FFF">Blog</a>
           </li>
           <li>
-            <a href="#team" style="color:#FFF">Nuestro Equipo</a>
+            <a href="#team" style="color:#FFF"><%= t(:LTeam)%></a>
           </li>
           <li><%=link_to 'English', url_for( :locale => 'en' ), style: "color:#FFF"%></li>
           <li><%=link_to 'Castellano', url_for( :locale => 'es' ), style: "color:#FFF"%></li>
@@ -56,7 +56,7 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-md-12">
-                          <h1 class="text-inverse">Jaime Pesaque cocina en tu casa</h1>
+                          <h1 class="text-inverse">Jaime Pesaque <%= t(:LTitle)%></h1>
                         </div>
                       </div>
                       <div class="row">
@@ -70,7 +70,7 @@
                   </div>
                 </div>
               </div>
-              <p class="text-inverse"><i class="fa fa-map-marker"></i> Lima - <i class="fa fa-calendar"></i> 27 junio 2015 - <i class="fa fa-money "></i> S./ 149 por persona</p>
+              <p class="text-inverse"><i class="fa fa-map-marker"></i> Lima - <i class="fa fa-calendar"></i> 24 junio 2015 - <i class="fa fa-money "></i> S./ 149 por persona</p>
               <br>
               <%= link_to t(:MenuBookNow), event_path(1), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
               <br>
@@ -159,8 +159,8 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <h1 class="text-primary">¿Por qué escoger ‘LoSibaritas’?</h1>
-        <p>Un sin número de razones vienen a la mente. Para nosotros la comida es un concepto que incluye un estilo de vida y una experiencia única. Queremos que nuestra pasión por la comida cobre vida. ¿Te ha pasado que quieres organizar una reunión con amigos o familia y de repente algo te detiene? Ir de compras, cocinar y después limpiar… ‘Los Sibaritas’ te da la oportunidad de no preocuparte por los detalles y solo disfrutar de la reunión. Reserva un chef privado y disfruta la oportunidad de tener una experiencia culinaria única en tu mesa.</p>
+        <h1 class="text-primary"><%= t(:WhyLoSibaritasTitle)%></h1>
+        <p><%= t(:WhyLoSibaritasExpl)%></p>
       </div>
       <div class="col-md-6">
         <div class="embed-responsive embed-responsive-16by9">
@@ -174,14 +174,14 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-primary">¿Cómo functiona?</h1>
-        <h3>El processo es simple.</h3>
+        <h1 class="text-primary"><%=t(:HowDoesItWorkTitle)%></h1>
+        <h3><%=t(:HowDoesItWorkExpl)%></h3>
         <p>
-        <div class="well"><h4>Nuestro chef profesional te ofrece este exclusivo y único servicio en la fecha indicada.</h4></div>
-        <div class="well"><h4>Disfruta de un menú especializado con ingredientes de calidad en la comodidad de tu casa</h4></div>
-        <div class="well"><h4>Reserva ahora, ingresa tus datos  y nuestro chef se pondrá en contacto contigo</h4></div>
-        <div class="well"><h4>Ahora sólo disfruta y vive la experiencia “Sibarita”</h4></div>
-        <h3>No pierdas la oportunidad de <a href="#">reservar ahora</a></h3>
+        <div class="well"><h4><%=t(:HowDoesItWorkReason1)%></h4></div>
+        <div class="well"><h4><%=t(:HowDoesItWorkReason2)%></h4></div>
+        <div class="well"><h4><%=t(:HowDoesItWorkReason3)%></h4></div>
+        <div class="well"><h4><%=t(:HowDoesItWorkReason4)%></h4></div>
+        <h3><%=t(:HowDoesItWorkFooter)%> <a href="#"><%=t(:HowDoesItWorkFooterLink)%></a></h3>
         </p>
       </div>
     </div>
@@ -193,7 +193,7 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="text-primary">Nuestro equipo</h2>
+        <h2 class="text-primary"><%= t(:LTeam)%></h2>
         <h3>Siete personas, siete países, dos continentes, cinco idiomas - <strong>una vision</strong></h3>
       </div>
     </div>
@@ -217,7 +217,7 @@
           </tr>
           <tr>
             <td>Arnaud Baloche</h4></td>
-            <td>France</p></td>
+            <td><%= t(:France)%></p></td>
             <td><a href="https://twitter.com/ArnaudBaloche"><i class="fa fa-twitter"></i></a></td>
             <td><a href="https://www.facebook.com/arnaud.baloche.1"><i class="fa fa-facebook"></i></a></td>
             <td><a href="https://uk.linkedin.com/in/arnaudbaloche"><i class="fa fa-linkedin"></i></a></td>
@@ -242,7 +242,7 @@
         <table class="table">
           <tr>
             <td>Kai Zimmer</h4></td>
-            <td>Alemania</p></td>
+            <td><%= t(:Germany)%></p></td>
             <td><a href="https://twitter.com/Zimmer2020"><i class="fa fa-twitter"></i></a></td>
             <td><a href="https://www.facebook.com/kai.zimmer"><i class="fa fa-facebook"></i></a></td>
             <td><a href="https://uk.linkedin.com/in/zimmerkai"><i class="fa fa-linkedin"></i></a></td>
@@ -272,7 +272,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-        <h1 class="text-primary text-center">Contáctenos</h1>
+        <h1 class="text-primary text-center"><%= t(:LContactUs)%></h1>
       </div>
     </div>
     <div class="row text-center">

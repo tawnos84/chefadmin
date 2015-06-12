@@ -25,6 +25,6 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     session[:admin] = false
-    redirect_to searches_ask_url
+    redirect_to landing_path
   end
 end
