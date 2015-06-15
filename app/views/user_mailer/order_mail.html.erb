@@ -1044,13 +1044,10 @@
                         <td><%= @order.no_of_guests %></td>
                       </tr>
                       <tr>
-                        <td>Price per menu:</td>
+                        <td>Total Price:</td>
                         <td><%=@order.currency%> <%= @order.net_price %></td>
                       </tr>
-                      <tr>
-                        <td>Total Price:</td>
-                        <td><%=@order.currency%> <%= @order.net_price*@order.no_of_guests %></td>
-                      </tr>
+
                     </table>
                   </p>
 
