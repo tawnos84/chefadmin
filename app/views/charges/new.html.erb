@@ -1,17 +1,19 @@
 <%= form_tag charges_path, :method => :post do %>
-    <article>
-      <label class="amount">
-        <span><%=t(:Dear)%> <%=@order.name%>,<br>
+    <div class="row">
+        <div class=""col-md-12>
+
+        <h3 class="center"><%=t(:Dear)%> <%=@order.name%>,<br>
           <%=t(:ChargePart1)%> <%=@order.cook_date%> <%=t(:ChargePart2)%>
           <%if @order.currency == 'PEN'%>S/.<%end%>
           <%if @order.currency != 'PEN'%><%=@order.currency%><%end%>
           <%= @order.net_price %>0 <%=t(:ChargePart3)%><br>
 
-          <%=t(:ChargePart4)%></span>
-      </label>
-    </article>
+          <%=t(:ChargePart4)%></h3>
+          <input name="order_id" value="<%=@order.id%>" type="hidden"/>
+        </div>
 
-    <input name="order_id" value="<%=@order.id%>" type="hidden"/>
+    </div>
+
 
     <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
             data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
