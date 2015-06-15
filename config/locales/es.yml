@@ -118,6 +118,7 @@ es:
   OrderConfirmationMenu: Tu menú
   OrderConfirmationDateTime: Fecha y hora
   OrderConfirmationAddressBilling: Dirección y envío
+  OrderProcessedMessage: Ya procesamos tu pago por
 
   #AdminChef
   AdminName: Nombre

@@ -113,11 +113,13 @@ en:
   OrderRemarksChef: Remarks to chef
   OrderRemarksSibaritas: Remarks to LoSibaritas
 
+
   #OrderConfirmation
   OrderConfirmationMessage: Thank you for your order with LoSibaritas! A chef will be in touch with you shortly.
   OrderConfirmationMenu: Your menu
   OrderConfirmationDateTime: Daten and Time
   OrderConfirmationAddressBilling: Address and Billling
+  OrderProcessedMessage: We processed your payment of
 
   #AdminChef
   AdminName: Name
