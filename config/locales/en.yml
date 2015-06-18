@@ -302,6 +302,9 @@ en:
   ChargePart3: using credit card.
   ChargePart4: Simply click the button below to process the payment.
 
+  #Message
+  SoldOut: Sold out
+
   date:
     abbr_day_names:
     - Sun

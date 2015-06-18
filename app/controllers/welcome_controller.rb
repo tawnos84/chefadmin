@@ -12,6 +12,7 @@ class WelcomeController < ApplicationController
     @chefs = Chef.all
     @menus = Menu.all
     @courses = Course.all
+    @events = Event.all
     @orders = Order.all
   end
 end

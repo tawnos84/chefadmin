@@ -302,6 +302,9 @@ es:
   ChargePart3: a través de tu tarjeta de crédito.
   ChargePart4: Solo tienes que hacer click debajo para comenzar el pago.
 
+  #Message
+  SoldOut: Agotado
+
   #End translation here
 
   date:
