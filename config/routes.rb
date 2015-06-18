@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :subscribers
+
   resources :events
 
   get 'password_resets/new'
@@ -87,6 +89,8 @@ Rails.application.routes.draw do
   resources :password_resets, only: [:new, :create, :edit, :update]
 
   resources :charges
+
+  resources :subscribers
 
   # You can have the root of your site routed with "root"
   root 'events#landing'

@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 
   # Show landing page
   def landing
-
+    @subscriber = Subscriber.new
   end
 
   # GET /events
@@ -81,6 +81,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:chef, :menu, :date, :location, :price, :persons)
+      params.require(:event).permit(:chef, :menu, :date, :location, :price, :persons, :email)
     end
 end

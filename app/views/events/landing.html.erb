@@ -73,7 +73,7 @@
               <p class="text-inverse"><i class="fa fa-map-marker"></i> Lima - <i class="fa fa-calendar"></i> 24 junio 2015 - <i class="fa fa-money "></i> S./ 149 por persona</p>
               <br>
               <!--<%= link_to t(:MenuBookNow), event_path(1), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>-->
-              <div class="btn btn-lg btn-primary" style="color:#FFF"><%=t(:SoldOut)%></div>
+              <a href="#signup" class="btn btn-lg btn-primary" style="color:#FFF"><%=t(:SoldOut)%></a></div>
               <br>
             </div>
           </div>
@@ -156,6 +156,8 @@
 
   </div>
 </div>
+
+
 <div class="section">
   <div class="container">
     <div class="row">
@@ -195,7 +197,7 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2 class="text-primary"><%= t(:LTeam)%></h2>
-        <h3>Siete personas, siete países, dos continentes, cinco idiomas - <strong>una vision</strong></h3>
+        <h3><%=t(:LCountries)%> <strong><%=t(:LVision)%></strong></h3>
       </div>
     </div>
     <div class="row">
@@ -294,6 +296,31 @@
         <a href="mailto:sibaritas.chefs@gmail.com"><i class="fa fa-5x fa-fw hub fa-envelope-o"></i></a>
       </div>
       <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
+
+<a name="signup"></a>
+<div class="section">
+  <div class="container">
+    <div class="col-md-12">
+      <h1 class="text-primary text-center"><%= t(:LKeepUpdated)%></h1>
+      <h3 class="text-center"><%= t(:LLeaveYourMail)%></h3>
+    </div>
+  </div>
+  <div class="row text-center">
+      <div class="col-md-12">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 center-block">
+        <%= bootstrap_form_for :subscriber, url: subscribers_path do |f| %>
+            <div>
+              <%= f.text_field :email, :class => 'form-control' %>
+              <%= f.submit class: 'btn btn-success' %>
+            </div>
+        <% end %>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
     </div>
   </div>
 </div>
