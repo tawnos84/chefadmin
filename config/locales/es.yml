@@ -501,3 +501,6 @@ es:
       short: "%d de %b %H:%M"
     pm: pm
 
+will_paginate:
+    previous_label: "&#8592; Anterior"
+    next_label: "Siguiente &#8594;"

@@ -1,9 +1,5 @@
-<div class="jumbotron">
-  <h1>Administration</h1>
-  <%= link_to 'Manage chefs', chefs_path, class: 'btn btn-primary' %>
-  <%= link_to 'Manage events', events_path, class: 'btn btn-primary' %>
-  <%= link_to 'Manage orders', orders_path, class: 'btn btn-primary' %>
-  <%= link_to 'Go to page', landing_path, class: 'btn btn-primary' %>
+<div class="row">
+  <h1 class="page-header">Dashboard</h1>
 </div>
 
 <div class="row">
@@ -96,3 +92,81 @@
     </div>
   </div>
 </div>
+
+<div class="row">
+  <div class="col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Most recent orders
+      </div>
+      <!-- /.panel-heading -->
+      <div class="panel-body">
+        <div class="table-responsive">
+          <%= will_paginate @orders, :param_name => 'page' %>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Order Date</th>
+              <th>Number of Guests</th>
+              <th>Price</th>
+              <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @orders.each do |order| %>
+            <tr>
+              <td><%= order.name %></td>
+              <td><%= order.no_of_guests %></td>
+              <td><%= order.currency %> <%= order.net_price %></td>
+              <td><%= order.created_at %></td>
+              <td><%= order.status %></td>
+            </tr>
+            <% end %>
+            </tbody>
+          </table>
+
+        </div>
+        <!-- /.table-responsive -->
+      </div>
+      <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+  </div>
+  <!-- /.col-lg-6 -->
+  <div class="col-lg-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Latest chefs
+      </div>
+      <!-- /.panel-heading -->
+      <div class="panel-body">
+        <div class="table-responsive">
+          <%= will_paginate @chefs, :param_name => 'cpage' %>
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Name</th>
+              <th>Location</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @chefs.each do |chef|%>
+            <tr>
+              <td><%=chef.name%></td>
+              <td><%=chef.location%></td>
+            </tr>
+            <% end %>
+            </tbody>
+          </table>
+
+        </div>
+        <!-- /.table-responsive -->
+      </div>
+      <!-- /.panel-body -->
+    </div>
+    <!-- /.panel -->
+  </div>
+  <!-- /.col-lg-6 -->
+</div>
+

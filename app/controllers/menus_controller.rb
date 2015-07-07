@@ -1,5 +1,6 @@
 class MenusController < ApplicationController
   http_basic_authenticate_with name: "admin", password: "borussia", only: :index
+  layout "admin", only: [:index]
 
   def index
     @chef = Chef.find(params[:chef_id])

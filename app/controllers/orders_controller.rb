@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
-
+  layout "admin", only: [:index]
 
   def index
-    @orders = Order.all
+    @orders = Order.all.paginate(page: params[:page], :per_page => 20).order(:created_at).reverse_order
   end
 
   def show

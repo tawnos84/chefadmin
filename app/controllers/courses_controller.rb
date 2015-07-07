@@ -1,4 +1,6 @@
 class CoursesController < ApplicationController
+  layout "admin", only: [:index]
+
   def index
     @menu = Menu.find(params[:menu_id])
     @courses = @menu.courses.all
