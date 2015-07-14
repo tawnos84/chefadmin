@@ -1,6 +1,6 @@
 class ChefsController < ApplicationController
   http_basic_authenticate_with name: "admin", password: "borussia", only: :index
-  layout "admin", only: [:index]
+  layout "admin"
 
   def index
     @chefs = Chef.all

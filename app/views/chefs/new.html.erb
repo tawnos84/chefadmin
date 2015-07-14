@@ -18,79 +18,87 @@
 
 
     <!--Basics-->
-    <div class="page-header"><h3>Basics</h3></div>
+    <!-- Disabled per comment all currently not-required fields -->
     <div>
-      <%= f.text_field :name, :class => 'form-control' %>
+      <%= f.label t(:AdminName) %>
+      <%= f.text_field :name, :class => 'form-control', hide_label: true %>
     </div>
 
     <div>
-      <%= f.email_field :email, :class => 'form-control' %>
+      <%= f.label t(:AdminEmail) %>
+      <%= f.email_field :email, :class => 'form-control', hide_label: true %>
+    </div>
+
+    <!--
+    <div class="form-group">
+      <%= f.label t(:AdminLocation) %>
+    <%= f.select :location, ['Perú', 'United Kingdom', 'France'], :class => 'form-control', hide_label: true %>
+    </div>
+    -->
+    <div class="form-group">
+      <%= f.label t(:AdminBibliography) %>
+      <%= f.text_area :biography, :class => 'form-control', hide_label: true %>
+    </div>
+
+    <!--
+    <div class="form-group">
+      <%= f.label t(:AdminCulinaryTraining) %>
+    <%= f.text_area :culinarytraining, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.text_field :age, :class => 'form-control' %>
+      <%= f.label t(:AdminStyles) %>
+    <%= f.text_area :styles, :class => 'form-control', hide_label: true %>
+    </div>
+    -->
+    <div class="form-group">
+      <%= f.label t(:AdminPicture) %>
+      <%= f.file_field :picture, :class => 'form-control', hide_label: true %>
+    </div>
+    <!--
+    <div class="form-group">
+      <%= f.label t(:AdminVideo) %>
+    <%= f.file_field :video, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.select :location, ['Perú', 'United Kingdom', 'France'], :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.text_area :biography, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.text_area :culinarytraining, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.text_area :styles, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.file_field :picture, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.file_field :video, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.url_field :facebook, :class => 'form-control' %>
-    </div>
+      <%=t :FacebookExplanation %>
+    <%= f.label t(:AdminFacebook) %>
+    <%= f.url_field :facebook, :class => 'form-control', hide_label: true %>
+    </div>-->
     <!--Service-->
-    <div class="page-header"><h3>Services</h3></div>
+    <!--
+    <div class="form-group">
+      <%=t :TeachingExplanation %>
+    <%= f.check_box :teaching, hide_label: true %>
+    <%= f.label :teaching, t(:AdminTeaching) %>
+    </div>
+
 
     <div class="form-group">
-      <%= f.check_box :family_dinner%>
+      <%=t :HelpersExplanation %>
+    <%= f.label t(:AdminNumberOfHelpers) %>
+    <%= f.text_field :number_of_helpers, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.check_box :informal_reunion%>
+      <%=t :MinExplanation %>
+    <%= f.label t(:AdminMinSize) %>
+    <%= f.text_field :min_size, :class => 'form-control', hide_label: true %>
     </div>
 
     <div class="form-group">
-      <%= f.check_box :last_minute%>
+      <%=t :MaxExplanation %>
+    <%= f.label t(:AdminMaxSize) %>
+    <%= f.text_field :max_size, :class => 'form-control', hide_label: true %>
     </div>
-
+-->
     <div class="form-group">
-      <%= f.check_box :teaching%>
+      <% if(!session[:admin])%>
+          <%= link_to t(:back), chefs_path, class: 'btn btn-primary' %>
+      <% end %>
+      <%= f.submit t(:AdminSaveChef), class: 'btn btn-success' %>
     </div>
-
-    <div class="form-group">
-      <%= f.text_field :number_of_helpers, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.text_field :min_size, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.text_field :max_size, :class => 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= link_to 'Back', chefs_path, class: 'btn btn-primary' %>
-      <%= f.submit class: 'btn btn-success' %>
-    </div>
+    <h3>To help you, you can see where your input will show on your events page</h3>
+    <img src="//s3-sa-east-1.amazonaws.com/losibaritas/admin/Event-Chef-View.png" class="img img-responsive img-center">
 <% end %>
