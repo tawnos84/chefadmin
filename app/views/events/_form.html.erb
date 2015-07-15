@@ -40,6 +40,10 @@
     <%= f.text_field :persons %>
     <div class="italic">Text will be shown exactly as entered. E.g. "6-14"</div>
   </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.select :status, ['active', 'inactive'], hide_label: true %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
