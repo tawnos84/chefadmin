@@ -45,8 +45,10 @@
   <div class="container">
     <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="5000">
       <div class="carousel-inner">
-        <div class="item active">
+        <% @events.each_with_index do |event, index| %>
 
+            <% if index==0%><div class="item active"><% end %>
+            <% if index!=0%><div class="item"><% end %>
           <!-- First event -->
           <div class="row">
             <div class="col-md-12 text-center">
@@ -56,13 +58,13 @@
                     <div class="container">
                       <div class="row">
                         <div class="col-md-12">
-                          <h1 class="text-inverse">Jaime Pesaque <%= t(:LTitle)%></h1>
+                          <h1 class="text-inverse"><%=Chef.find(event.chef).name%> <%= t(:LTitle)%></h1>
                         </div>
                       </div>
                       <div class="row">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                          <a href="#signup"><img src="https://s3-sa-east-1.amazonaws.com/losibaritas/Jaime.jpg" class="img-circle img-responsive"></a>
+                          <a href="#signup"><img src="<%=Chef.find(event.chef).picture%>" class="img-circle img-responsive"></a>
                         </div>
                         <div class="col-md-4"></div>
                       </div>
@@ -70,83 +72,22 @@
                   </div>
                 </div>
               </div>
-              <p class="text-inverse"><i class="fa fa-map-marker"></i> Lima - <i class="fa fa-calendar"></i> 24 junio 2015 - <i class="fa fa-money "></i> S./ 149 por persona</p>
+              <p class="text-inverse"><i class="fa fa-map-marker"></i> <%=event.location%> - <i class="fa fa-calendar"></i> <%=event.date%> - <i class="fa fa-money "></i> <%=event.price%> por persona</p>
               <br>
-              <!--<%= link_to t(:MenuBookNow), event_path(1), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>-->
-              <a href="#signup" class="btn btn-lg btn-primary" style="color:#FFF"><%=t(:SoldOut)%></a></div>
+              <% if event.status == 'active' %>
+              <%= link_to t(:MenuBookNow), event_path(1), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
+              <% end %>
+
+              <% if event.status == 'sold_out' %>
+              <a href="#signup" class="btn btn-lg btn-primary" style="color:#FFF"><%=t(:SoldOut)%></a>
+              <% end %>
+             </div>
               <br>
             </div>
           </div>
 
+        <% end %>
 
-        </div>
-        <!-- Next event -->
-        <!--
-        <div class="item">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="section">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <h1 class="text-inverse">Jamie Oliver cooks in your home</h1>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4">
-                          <a href="#"><img src="https://s3-sa-east-1.amazonaws.com/losibaritas/jamieoliver.jpg" class="img-circle img-responsive"></a>
-                        </div>
-                        <div class="col-md-4"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="text-inverse"><i class="fa fa-map-marker"></i> San Francisco - <i class="fa fa-calendar"></i> 17 June 2015 - <i class="fa fa-money "></i> $99 per person</p>
-              <br>
-
-              <br>
-            </div>
-          </div>
-        </div>
-        -->
-
-        <!-- Next event -->
-        <!--
-        <div class="item">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="section">
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-md-12">
-                          <h1 class="text-inverse">Arnaud Baloche cooks in your home</h1>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4">
-                          <a href="#"><img src="https://s3-sa-east-1.amazonaws.com/losibaritas/ArnaudBaloche.jpg" class="img-circle img-responsive"></a>
-                        </div>
-                        <div class="col-md-4"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p class="text-inverse"><i class="fa fa-map-marker"></i> San Francisco - <i class="fa fa-calendar"></i> 17 June 2015 - <i class="fa fa-money "></i> $99 per person</p>
-              <br>
-
-              <br>
-            </div>
-          </div>
-        </div>
-        -->
 
       </div>
       <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>

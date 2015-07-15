@@ -5,8 +5,9 @@ class EventsController < ApplicationController
 
   # Show landing page
   def landing
-    render layout: "landing"
+    @events = Event.all.where.not(:status => 'inactive')
     @subscriber = Subscriber.new
+    render layout: "landing"
   end
 
   # GET /events
@@ -84,6 +85,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:chef, :menu, :date, :location, :price, :persons, :email)
+      params.require(:event).permit(:chef, :menu, :date, :location, :price, :persons, :email, :status)
     end
 end
