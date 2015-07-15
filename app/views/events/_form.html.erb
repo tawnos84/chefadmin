@@ -11,29 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :chef %><br>
-    <%= f.text_field :chef %>
+    <%= f.select :chef, Chef.all.collect {|c| [ c.name, c.id ] }, hide_label: true %>
   </div>
+
   <div class="field">
     <%= f.label :menu %><br>
-    <%= f.text_field :menu %>
+    <%= f.select :menu, Menu.all.collect {|m| [ m.name, m.id ] }, hide_label: true %>
   </div>
   <div class="field">
     <%= f.label :date %><br>
     <%= f.text_field :date %>
+    <div class="italic">Text will be shown exactly as entered. E.g. "24 junio 2015"</div>
   </div>
   <div class="field">
     <%= f.label :location %><br>
     <%= f.text_field :location %>
+    <div class="italic">Text will be shown exactly as entered. E.g. "Lima"</div>
   </div>
   <div class="field">
     <%= f.label :price %><br>
     <%= f.text_field :price %>
+    <div class="italic">Text will be shown exactly as entered with "por persona" added. E.g. "S./ 149" will be shown as "S./ 149 por persona"</div>
   </div>
   <div class="field">
     <%= f.label :persons %><br>
     <%= f.text_field :persons %>
+    <div class="italic">Text will be shown exactly as entered. E.g. "6-14"</div>
   </div>
   <div class="actions">
     <%= f.submit %>

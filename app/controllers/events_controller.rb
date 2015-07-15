@@ -25,11 +25,13 @@ class EventsController < ApplicationController
 
   # GET /events/new
   def new
+    @chefs = Chef.all
     @event = Event.new
   end
 
   # GET /events/1/edit
   def edit
+    @chefs = Chef.all
   end
 
   # POST /events
