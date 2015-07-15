@@ -32,11 +32,11 @@
     <div class="form-group">
       <%= f.text_field :name, :class => 'form-control' %>
     </div>
-
+<!--
     <div class="form-group">
       <%= f.text_field :course_type, :class => 'form-control' %>
     </div>
-
+-->
     <div class="form-group">
       <%= f.text_field :position, :class => 'form-control' %>
     </div>
@@ -49,6 +49,9 @@
       <%= link_to 'Back', chef_menu_courses_path, class: "btn btn-primary" %>
       <%= f.submit class: "btn btn-success" %>
     </div>
+
+    <h3>To help you, you can see where your input will show on your events page</h3>
+    <img src="//s3-sa-east-1.amazonaws.com/losibaritas/admin/Event-Courses-View.png" class="img img-responsive img-center">
 <% end %>
 
 
