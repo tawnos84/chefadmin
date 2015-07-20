@@ -1,4 +1,23 @@
-<%= form_tag charges_path, :method => :post do %>
+<h4></h4>
+<div class="container">
+  <div class="process">
+    <div class="process-row">
+      <div class="process-step">
+        <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-user fa-3x"></i></button>
+        <p>Personal data</p>
+      </div>
+      <div class="process-step">
+        <button type="button" class="btn btn-success btn-circle" disabled="disabled"><i class="fa fa-usd fa-3x"></i></button>
+        <p>Payment</p>
+      </div>
+      <div class="process-step">
+        <button type="button" class="btn btn-default btn-circle" disabled="disabled"><i class="fa fa-thumbs-up fa-3x"></i></button>
+        <p>Confirmation</p>
+      </div>
+    </div>
+  </div>
+
+  <%= form_tag charges_path, :method => :post do %>
     <div class="row">
         <div class="col-md-12">
 
