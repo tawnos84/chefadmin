@@ -29,6 +29,9 @@ class ChargesController < ApplicationController
       @event = Event.find(@order.event_id)
       @event.status = 'inactive'
     end
+
+    #After successful payment -> Set order status do PAID
+    @order.payment_status = 'PAID'
     redirect_to orders_show_path(@order)
   end
 

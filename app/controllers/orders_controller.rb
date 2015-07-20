@@ -8,6 +8,10 @@ class OrdersController < ApplicationController
   def show
     @order = Order.find(params[:id])
     @menu = Menu.find(@order.menu_id)
+
+    if(@order.payment_status == 'PAID')
+      UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
+    end
   end
 
   def new
@@ -50,8 +54,9 @@ class OrdersController < ApplicationController
     @order.chef_id = @menu.chef_id
 
     if @order.save
-      UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
-      UserMailer.order_chef_action_mail(@order.email, @menu.id, @order.id).deliver_now!
+      #Do not send e-mail any more when order is saved
+      #UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
+      #UserMailer.order_chef_action_mail(@order.email, @menu.id, @order.id).deliver_now!
       redirect_to new_charge_path(:order_id => @order.id)
     else
       render 'new'

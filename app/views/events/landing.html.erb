@@ -64,7 +64,13 @@
                       <div class="row">
                         <div class="col-md-4"></div>
                         <div class="col-md-4">
-                          <a href="#signup"><img src="<%=Chef.find(event.chef).picture%>" class="img-circle img-responsive"></a>
+                          <% if event.status == 'active' %>
+                              <a href="<%=event_path(event)%>"><img src="<%=Chef.find(event.chef).picture%>" class="img-circle img-responsive"></a>
+                          <% end %>
+                          <% if event.status == 'sold_out' %>
+                              <a href="#signup"><img src="<%=Chef.find(event.chef).picture%>" class="img-circle img-responsive"></a>
+                          <% end %>
+
                         </div>
                         <div class="col-md-4"></div>
                       </div>
@@ -75,7 +81,7 @@
               <p class="text-inverse"><i class="fa fa-map-marker"></i> <%=event.location%> - <i class="fa fa-calendar"></i> <%=event.date%> - <i class="fa fa-money "></i> <%=event.price%> por persona</p>
               <br>
               <% if event.status == 'active' %>
-              <%= link_to t(:MenuBookNow), event_path(1), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
+              <%= link_to t(:MenuBookNow), event_path(event), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
               <% end %>
 
               <% if event.status == 'sold_out' %>
