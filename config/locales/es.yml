@@ -501,6 +501,18 @@ es:
       short: "%d de %b %H:%M"
     pm: pm
 
-will_paginate:
-    previous_label: "&#8592; Anterior"
-    next_label: "Siguiente &#8594;"
+  will_paginate:
+    next_label: Siguiente →
+    page_entries_info:
+      multi_page: Mostrando %{model} %{from} - %{to} de %{count} en total
+      multi_page_html: Mostrando %{model} <b>%{from}&nbsp;-&nbsp;%{to}</b> de <b>%{count}</b> en total
+      single_page:
+        one: Mostrando 1 %{model}
+        other: Mostrando en total %{count} %{model}
+        zero: No se encontraron %{model}
+      single_page_html:
+        one: Mostrando <b>1</b> %{model}
+        other: Mostrando en <b>total&nbsp;%{count}</b> %{model}
+        zero: No se encontraron %{model}
+    page_gap: "&hellip;"
+    previous_label: "← Atrás"

@@ -1,2 +1,69 @@
-<h1>Orders#edit</h1>
-<p>Find me in app/views/orders/edit.html.erb</p>
+<h1>Edit order</h1>
+<%= bootstrap_form_for :order, url: order_path(@order), method: :patch do |f| %>
+    <% if @order.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+          <ul>
+            <% @order.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="form-group">
+      <%= f.label :status %><br>
+      <%= f.select :status, ['DECLINED', 'ACCEPTED','PENDING'], hide_label: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :payment_status %><br>
+      <%= f.select :payment_status, ['PAID','PENDING'], hide_label: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label t(:OrderNoOfGuests) %>
+      <%= f.select :no_of_guests, [6, 7, 8, 9, 10, 11, 12, 13, 14], :class => 'form-control', hide_label: true %>
+    </div>
+
+    <div class="page-header"><h3><%=t :OrderContactInformation%></h3></div>
+    <div class="form-group">
+      <%= f.label t(:OrderName) %>
+      <%= f.text_field :name, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderEMail) %>
+      <%= f.email_field :email, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderPhone) %>
+      <%= f.telephone_field :phone, :class => 'form-control', hide_label: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label t(:OrderStreet) %>
+      <%= f.text_field :street, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderCity) %>
+      <%= f.text_field :city, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderPostalcode) %>
+      <%= f.text_field :postalcode, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderCountry) %>
+      <%= f.select :country, ['Peru', 'United Kingdom', 'France'], :class => 'form-control', hide_label: true %>
+    </div>
+
+    <h3><%=t :OrderMessage %></h3>
+    <div class="form-group">
+      <%= f.label t(:OrderRemarksChef) %>
+      <%= f.text_area :remarks_chef, :class => 'form-control', hide_label: true %>
+
+      <%= f.label t(:OrderRemarksSibaritas) %>
+      <%= f.text_area :remarks_sibaritas, :class => 'form-control', hide_label: true %>
+    </div>
+
+    <div class="form-group">
+      <%= link_to t(:back), landing_path, class: 'btn btn-primary', style: 'color: #FFF' %>
+      <%= f.submit class: 'btn btn-success' %>
+    </div>
+<% end %>
