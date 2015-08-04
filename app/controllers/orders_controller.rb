@@ -10,7 +10,7 @@ class OrdersController < ApplicationController
     @menu = Menu.find(@order.menu_id)
 
     #if(@order.payment_status == 'PAID')
-      UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
+    #  UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
     #end
   end
 
