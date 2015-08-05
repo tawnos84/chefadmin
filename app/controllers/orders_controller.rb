@@ -108,6 +108,6 @@ class OrdersController < ApplicationController
   def order_params
       params.require(:order).permit(
           :menu_id, :no_of_guests, :name, :email, :phone, :street, :city, :postalcode, :country, :remarks_sibaritas, :remarks_chef,
-          :net_price, :vat_amount, :currency, :cook_date, :cook_time, :cook_location, :order_type, :type, :event_id, :payment_status)
+          :net_price, :vat_amount, :currency, :cook_date, :cook_time, :cook_location, :order_type, :type, :event_id, :payment_status, :email_status)
   end
 end
