@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720180228) do
+ActiveRecord::Schema.define(version: 20150805225032) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
@@ -119,8 +119,8 @@ ActiveRecord::Schema.define(version: 20150720180228) do
     t.text     "remarks_chef"
     t.float    "net_price"
     t.float    "vat_amount"
-    t.datetime "created_at",                            null: false
-    t.datetime "updated_at",                            null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.string   "currency"
     t.date     "cook_date"
     t.time     "cook_time"
@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(version: 20150720180228) do
     t.string   "order_type"
     t.string   "event_id"
     t.string   "payment_status"
+    t.string   "email_status",      default: "NOT_SENT"
   end
 
   create_table "searches", force: :cascade do |t|

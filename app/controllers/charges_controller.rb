@@ -27,11 +27,11 @@ class ChargesController < ApplicationController
     #If the order was from an event, set it to booked
     if @order.order_type == 'event'
       @event = Event.find(@order.event_id)
-      @event.status = 'inactive'
+      @event.update(status: 'inactive')
     end
 
     #After successful payment -> Set order status do PAID
-    @order.payment_status = 'PAID'
+    @order.update(payment_status: 'PAID')
     redirect_to orders_show_path(@order)
   end
 

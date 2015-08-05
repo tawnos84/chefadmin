@@ -9,9 +9,12 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
     @menu = Menu.find(@order.menu_id)
 
-    #if(@order.payment_status == 'PAID')
-    #  UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
-    #end
+    if(@order.payment_status == 'PAID')
+      if(@order.email_status != 'SENT')
+        UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
+        @order.update(email_status: 'SENT')
+      end
+    end
   end
 
   def new
