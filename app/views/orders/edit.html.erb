@@ -19,7 +19,12 @@
 
     <div class="form-group">
       <%= f.label :payment_status %><br>
-      <%= f.select :payment_status, ['PAID','PENDING'], hide_label: true %>
+      <%= f.select :payment_status, ['PAID','NOT_PAID'], hide_label: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :email_status %><br>
+      <%= f.select :email_status, ['SENT','NOT_SENT'], hide_label: true %>
     </div>
 
     <div class="form-group">
