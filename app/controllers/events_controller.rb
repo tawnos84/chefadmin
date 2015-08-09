@@ -5,7 +5,7 @@ class EventsController < ApplicationController
 
   # Show landing page
   def landing
-    @events = Event.all.where.not(:status => 'inactive')
+    @events = Event.all.where.not(:status => 'inactive').order("id DESC")
     @subscriber = Subscriber.new
     render layout: "landing"
   end
