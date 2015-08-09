@@ -53,17 +53,17 @@
               <div class="col-md-12">
                 <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="5000">
                   <div class="carousel-inner">
-                    <%if @menu.photo1 %>
+                    <%if @menu.photo1.present?%>
                     <div class="item active">
                       <img src="<%=@menu.photo1%>">
                     </div>
                     <%end%>
-                    <%if @menu.photo2 %>
+                    <%if @menu.photo2.present? %>
                     <div class="item">
                       <img src="<%=@menu.photo2%>">
                     </div>
                     <% end %>
-                    <%if @menu.photo3 %>
+                    <%if @menu.photo3.present? %>
                     <div class="item">
                       <img src="<%=@menu.photo3%>">
                     </div>
