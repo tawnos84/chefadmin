@@ -66,7 +66,7 @@
               <p class="text-inverse"><i class="fa fa-map-marker"></i> <%=event.location%> - <i class="fa fa-calendar"></i> <%=event.date%> - <i class="fa fa-money "></i> <%=event.price%> por persona</p>
               <br>
               <% if event.status == 'active' %>
-              <%= link_to t(:MenuBookNow), event_path(event), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
+              <%= link_to t(:MenuDiscover), event_path(event), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
               <% end %>
 
               <% if event.status == 'sold_out' %>
