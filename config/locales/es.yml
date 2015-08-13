@@ -284,6 +284,7 @@ es:
   OrderNetPrice: Precio total
 
   #Landing Page
+  LLanguage: Idioma
   LContactUs: Contáctenos
   LTeam: Nuestro Equipo
   LTitle: cocina en tu casa
@@ -291,8 +292,8 @@ es:
   LVision: una visión
   France: Francia
   Germany: Alemania
-  LKeepUpdated: Mantente en contacto
-  LLeaveYourMail: Déjanos tu email y te mantendremos informado sobre nuestros próximos eventos.
+  LKeepUpdated: ¡Súmante a la communidad de LoSibaritas!
+  LLeaveYourMail: Déjanos tu correo y te mantendremos al tanto de nuestras próximas novedades
 
   #Events
   PerPerson: por persona

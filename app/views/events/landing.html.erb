@@ -13,15 +13,15 @@
       <div class="collapse navbar-collapse" id="navbar-ex-collapse">
         <ul class="nav navbar-nav navbar-right">
 
-          <li>
-            <a href="#contact" style="color:#FFF"><%= t(:LContactUs)%></a>
-          </li>
+          <li><a href="#howdoesitwork" style="color:#FFF"><%=t(:HowDoesItWorkTitle)%></a></li>
+          <li><a href="#signup" style="color:#FFF"><%=t(:SignUp)%></a></li>
+
           <li>
             <a href="http://losibaritas.tumblr.com" target="new" style="color:#FFF">Blog</a>
           </li>
-
           <li><%=link_to 'English', url_for( :locale => 'en' ), style: "color:#FFF"%></li>
           <li><%=link_to 'Castellano', url_for( :locale => 'es' ), style: "color:#FFF"%></li>
+
         </ul>
       </div>
     </div>
@@ -65,6 +65,8 @@
               </div>
               <p class="text-inverse"><i class="fa fa-map-marker"></i> <%=event.location%> - <i class="fa fa-calendar"></i> <%=event.date%> - <i class="fa fa-money "></i> <%=event.price%> por persona</p>
               <br>
+
+
               <% if event.status == 'active' %>
               <%= link_to t(:MenuDiscover), event_path(event), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
               <% end %>
@@ -72,8 +74,10 @@
               <% if event.status == 'sold_out' %>
               <a href="#signup" class="btn btn-lg btn-primary" style="color:#FFF"><%=t(:SoldOut)%></a>
               <% end %>
+
              </div>
               <br>
+
             </div>
           </div>
 
@@ -89,7 +93,7 @@
   </div>
 </div>
 
-
+<a name="howdoesitwork"></a>
 <div class="section">
   <div class="container">
     <div class="row">
