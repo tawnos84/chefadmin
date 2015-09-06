@@ -174,7 +174,8 @@ es:
   AdminAddCourse: Añade un plato
 
   #ApplicationLayout Aplicación
-  IAmAChef: ¡Soy chef!
+  IAmClient: ¿Quieres comer?
+  IAmAChef: ¿Eres chef?
   SignUp: Regístrate
   Login: Iniciar sesión
   Administration: Administración
@@ -292,7 +293,7 @@ es:
   LVision: una visión
   France: Francia
   Germany: Alemania
-  LKeepUpdated: ¡Súmante a la communidad de LoSibaritas!
+  LKeepUpdated: ¡Súmate a la communidad de LoSibaritas!
   LLeaveYourMail: Déjanos tu correo y te mantendremos al tanto de nuestras próximas novedades
 
   #Events
@@ -308,6 +309,8 @@ es:
 
   #Message
   SoldOut: Agotado
+  ChefSignUpMsg: ¿Eres chef? Déjanos tu correo para sumarte a la red de LoSibaritas
+
 
   #End translation here
 

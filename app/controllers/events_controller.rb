@@ -10,6 +10,10 @@ class EventsController < ApplicationController
     render layout: "landing"
   end
 
+  def cheflanding
+    render layout: "landing"
+  end
+
   # GET /events
   # GET /events.json
   def index

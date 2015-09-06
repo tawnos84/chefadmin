@@ -175,7 +175,8 @@ en:
   AdminAddCourse: Add course
 
   #ApplicationLayout
-  IAmAChef: I am a chef!
+  IAmClient: Are you hungry?
+  IAmAChef: Are you a chef?
   SignUp: Sign up
   Login: Login
   Administration: Administration
@@ -308,6 +309,7 @@ en:
 
   #Message
   SoldOut: Sold out
+  ChefSignUpMsg: Are you a chef? Sign-Up here to become part of our network of chefs
 
   date:
     abbr_day_names:

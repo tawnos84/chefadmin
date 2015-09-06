@@ -6,12 +6,18 @@ class SubscribersController < ApplicationController
   def create
     @subscriber = Subscriber.new(subscriber_params)
     @subscriber.save
-    redirect_to root_path
+    if(@subscriber.clienttype == "customer")
+      redirect_to root_path
+    end
+    if(@subscriber.clienttype == "chef")
+      flash[:success] = "Gracias por registrarte!"
+      redirect_to cheflanding_path
+    end
   end
 
   private
   def subscriber_params
-    params.require(:subscriber).permit(:email)
+    params.require(:subscriber).permit(:email, :clienttype)
   end
 
 end

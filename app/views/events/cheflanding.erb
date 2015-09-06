@@ -1,0 +1,157 @@
+<div class="cover">
+  <div class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span style="font-family:Handlee; color:#FFF">LoSibaritas</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
+
+          <li><%= link_to t(:IAmClient), root_path, style: 'color:#FFF'%></li>
+          <li>
+            <a href="http://losibaritas.tumblr.com" target="new" style="color:#FFF">Blog</a>
+          </li>
+          <li><%=link_to 'English', url_for( :locale => 'en' ), style: "color:#FFF"%></li>
+          <li><%=link_to 'Castellano', url_for( :locale => 'es' ), style: "color:#FFF"%></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="cover-image" style="background-image : url('https://s3-sa-east-1.amazonaws.com/losibaritas/launchpage.jpg')"></div>
+  <div class="container">
+
+    <div class="section">
+      <div class="container">
+        <div class="col-md-12">
+          <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
+          <h1 class="text-center" style="color:#FFFFFF"><%= t(:LKeepUpdated)%></h1>
+          <h3 class="text-center" style="color:#FFFFFF"><%= t(:ChefSignUpMsg)%></h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <div class="col-md-4"></div>
+          <div class="col-md-4 center-block">
+            <%= bootstrap_form_for :subscriber, url: subscribers_path do |f| %>
+                <div>
+                  <%= f.text_field :email, :class => 'form-control', hide_label: true, placeholder: "Correo electrónico" %>
+                  <%= f.hidden_field :clienttype, :value => "chef" %>
+
+                  <%= f.submit t(:SignUp), class: 'btn btn-success' %>
+                </div>
+            <% end %>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+      <div class="row text-center">
+
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+<!--Quote 1-->
+<div class="section">
+  <div class="container">
+    <div class="row" style="vertical-align: middle">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <h3 class="text-primary"><i>“Es una gran oportunidad para cocineros. Puedes generar ingresos además de exposición ya que los clientes serán en su mayoría potenciales clientes en el futuro”</i><br>Jaime Pesaque
+        </h3>
+      </div>
+      <div class="col-md-4">
+        <img src="//losibaritas.s3.amazonaws.com/uploads/chef/picture/12/Jaime.jpg" class="img-circle img-responsive">
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+
+<!--Quote 2-->
+<div class="section">
+  <div class="container">
+    <div class="row" style="vertical-align: middle">
+      <div class="col-md-2"></div>
+      <div class="col-md-4">
+        <img src="//losibaritas.s3.amazonaws.com/uploads/chef/picture/27/JBA0.jpg" class="img-circle img-responsive">
+      </div>
+      <div class="col-md-4">
+        <h3 class="text-primary"><i>“Solo me tuve que encargar de lo que me gusta, cocinar y atender. El resto, promoción y coordinación, ya estaba todo coordinada a través de la página”
+        </i><br>James Berckemeyer
+        </h3>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+  </div>
+</div>
+
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-primary"><%=t(:HowDoesItWorkTitle)%></h1>
+          <h3>Haz que tu pasión por la cocina sea rentable.</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+          <div class="well"><h4>Arma tu perfil y menús.</h4></div>
+          <div class="well"><h4>Promociónate en la comunidad LoSibaritas.</h4></div>
+          <div class="well"><h4>Cocina para diversos clientes.</h4></div>
+          </p>
+        </div>
+        <div class="col-md-6" style="vertical-align: middle">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/e-gCXSLQ1XQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <a name="contact"></a>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-primary text-center"><%= t(:LContactUs)%></h1>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-1"></div>
+        <div class="col-md-2 text-center">
+          <a href="https://instagram.com/losibaritas"><i class="fa fa-5x fa-fw fa-instagram"></i></a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://twitter.com/losibaritas"><i class="fa fa-5x fa-fw fa-twitter"></i></a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://www.facebook.com/losibaritas"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
+        </div>
+        <div class="col-md-2">
+          <a href="http://losibaritas.tumblr.com/"><i class="fa fa-5x fa-fw fa-tumblr"></i></a>
+        </div>
+        <div class="col-md-2 text-center">
+          <a href="mailto:team@losibaritas.com"><i class="fa fa-5x fa-fw hub fa-envelope-o"></i></a>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
