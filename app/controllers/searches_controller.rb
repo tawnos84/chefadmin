@@ -17,7 +17,7 @@ class SearchesController < ApplicationController
     @search.max_price = params[:max_price]
     @search.cuisine_type = params[:cuisine_type]
 
-    @chefs = Chef.all.where(location: @search.cook_location)
+    @chefs = Chef.all
 
     @chefs.each do |chef|
       @menus_found_chefs -= chef.menus.all

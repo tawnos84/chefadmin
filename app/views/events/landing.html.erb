@@ -69,7 +69,7 @@
 
 
               <% if event.status == 'active' %>
-              <%= link_to t(:MenuDiscover), event_path(event), class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
+              <%= link_to t(:MenuDiscover), searches_path, class: 'btn btn-lg btn-primary', style: 'color:#FFF' %>
               <% end %>
 
               <% if event.status == 'sold_out' %>

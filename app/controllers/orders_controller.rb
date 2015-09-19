@@ -58,9 +58,12 @@ class OrdersController < ApplicationController
 
     if @order.save
       #Do not send e-mail any more when order is saved
-      #UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
+      UserMailer.order_request_mail(@order.email, @menu.id, @order.id, params[:locale]).deliver_now!
       #UserMailer.order_chef_action_mail(@order.email, @menu.id, @order.id).deliver_now!
-      redirect_to new_charge_path(:order_id => @order.id)
+
+      redirect_to orders_show_path(:id => @order.id)
+      #Payment path -> disabled 19 Sep
+      #redirect_to new_charge_path(:order_id => @order.id)
     else
       render 'new'
     end

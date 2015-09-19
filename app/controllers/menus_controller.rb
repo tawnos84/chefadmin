@@ -1,6 +1,6 @@
 class MenusController < ApplicationController
   http_basic_authenticate_with name: "admin", password: "borussia", only: :index
-  layout "admin"
+  layout "admin", except: [:show]
 
   def index
     @chef = Chef.find(params[:chef_id])
@@ -43,6 +43,7 @@ class MenusController < ApplicationController
 
   def show
     @menu = Menu.find(params[:id])
+    @chef = Chef.find(params[:chef_id])
   end
 
   def destroy

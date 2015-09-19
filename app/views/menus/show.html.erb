@@ -1,56 +1,125 @@
-<% if(session[:admin]) %>
-    <div class="row">
-      <h3><i class="fa fa-street-view"></i> Manage your menus</h3>
-      <ul class="nav nav-tabs">
-        <li role="presentation"><a href="<%= welcome_index_path %>"><i class="fa fa-tachometer"></i> <%=t :Dashboard %></a></li>
-        <li role="presentation"><a href="<%= edit_user_path(current_user) %>"><i class="fa fa-user"></i> <%=t :AccountSettings %></a></li>
-        <li role="presentation"><a href="<%= edit_chef_path(@menu.chef) %>"><i class="fa fa-street-view"></i> <%=t :ManageYourProfile %></a></li>
-        <li role="presentation" class="active"><a href="<%= chef_menus_path(@menu.chef) %>"><i class="fa fa-cutlery"></i> <%=t :ManageYourMenus %></a></li>
-        <li role="presentation"><a href="<%= pending_path %>"><i class="fa fa-cart-plus"></i> <%=t :PendingOrders %></a></li>
-        <li role="presentation"><a href="<%= overview_path %>"><i class="fa fa-shopping-cart"></i> <%=t :OrderOverview %></a></li>
-      </ul>
-    </div>
-<% end %>
 
-<div class="jumbotron text-center">
-  <div class="container">
-    <div class="row">
-      <div class="col col-lg-12 col-sm-12">
-        <h1><%= @menu.name %></h1>
-        <p><%=t :MenuByChef %> <%= link_to chef_path(@menu.chef) do %>
-          <%= @menu.chef.name %>
-          <% end %>
-              </p>
-        <img src="<%= @menu.photo2 %>" class="img-responsive img-rounded">
-        <p><strong><%= @menu.description %></strong></p>
-        <p><%=t :MenuPrice %>: <%= @menu.currency %> <%=@menu.price%> - <%=t :MenuPartySize%>: <%= @menu.partysize %> <%=t :MenuGuests %></p>
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-2"></div>
+                  <div class="col-md-8">
+                    <img src="<%=@chef.picture%>" class="img-circle img-center img-responsive">
+                  </div>
+                  <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h1 class="text-center"><%=@chef.name%></h1>
+                    <p><%=@chef.biography%></p>
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12 hidden-xs hidden-md text-center">
+                    <%= link_to t(:MenuBookNow), orders_new_path(menu_id: @menu.id, type: 'enquiry'), class: 'btn btn-large btn-primary', style: 'color:#FFF' %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="row">
+              <div class="col-md-12">
+                <%= link_to t(:MenuBookNow), orders_new_path(menu_id: @menu.id, type: 'enquiry'), class: 'btn btn-large btn-primary center-block', style: 'color:#FFF' %>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-center"><%=@menu.name%></h1>
+              </div>
+            </div>
+
+            <div class="row hidden-xs">
+              <div class="col-md-12">
+                <div class="col-md-12">
+                  <div class="col-md-12">
+                    <div id="carousel-example" class="carousel slide" data-ride="carousel" data-interval="5000">
+                      <div class="carousel-inner">
+                        <%if @menu.photo1.present?%>
+                            <div class="item active">
+                              <img src="<%=@menu.photo1%>">
+                            </div>
+                        <%end%>
+                        <%if @menu.photo2.present? %>
+                            <div class="item">
+                              <img src="<%=@menu.photo2%>">
+                            </div>
+                        <% end %>
+                        <%if @menu.photo3.present? %>
+                            <div class="item">
+                              <img src="<%=@menu.photo3%>">
+                            </div>
+                        <% end %>
+
+                      </div>
+                      <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
+                      <a class="right carousel-control" href="#carousel-example" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <% @menu.courses.each do |course| %>
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2 class="text-center"><%=course.name%></h2>
+                    <p class="text-center"><%=course.description%></p>
+                  </div>
+                </div>
+            <% end %>
+
+
+            <div class="row">
+              <div class="col-md-12">
+                <%= link_to t(:MenuBookNow), orders_new_path(menu_id: @menu.id, type: 'enquiry'), class: 'btn btn-large btn-primary center-block', style: 'color:#FFF' %>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<!-- /header container-->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 class="text-primary text-center"><%= t(:LContactUs)%></h1>
+          </div>
+        </div>
+        <div class="row text-center">
+          <div class="col-md-1"></div>
+          <div class="col-md-2 text-center">
+            <a href="https://instagram.com/losibaritas"><i class="fa fa-5x fa-fw fa-instagram"></i></a>
+          </div>
+          <div class="col-md-2">
+            <a href="https://twitter.com/losibaritas"><i class="fa fa-5x fa-fw fa-twitter"></i></a>
+          </div>
+          <div class="col-md-2">
+            <a href="https://www.facebook.com/losibaritas"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
+          </div>
+          <div class="col-md-2">
+            <a href="http://losibaritas.tumblr.com/"><i class="fa fa-5x fa-fw fa-tumblr"></i></a>
+          </div>
+          <div class="col-md-2 text-center">
+            <a href="mailto:sibaritas.chefs@gmail.com"><i class="fa fa-5x fa-fw hub fa-envelope-o"></i></a>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+    </div>
 
-<!-- CONTENT
-=================================-->
-<div class="container">
-  <% @menu.courses.each do |course| %>
-  <div class="row">
-    <div class="col-lg-12"><div class="well text-center">
-      <p>
-        <h4><strong><%= course.name %></strong></h4>
-        <%= course.course_type %><br>
-        <%= course.description %>
-      </p>
-    </div></div>
-  </div>
-  <% end %>
-  <div class="row">
-    <p class="panel-body text-center">
-      <%= link_to t(:back), :back, class: 'btn btn-primary' %>
-      <% if(!session[:admin]) %>
-      <%= link_to t(:AdminChefInfo), chef_path(@menu.chef), class: 'btn btn-primary' %>
-      <%= link_to t(:MenuBookNow), orders_new_path(menu_id: @menu.id, type: 'dinner'), class: 'btn btn-success' %>
-      <% end %>
-    </p>
-  </div>
-</div>
+
+
+

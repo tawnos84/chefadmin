@@ -1,9 +1,6 @@
 <div class="container">
   <div class="row">
-<p class="well">
-  <%= link_to t(:NewSearch), searches_ask_path, class: 'btn btn-primary' %>
-    <%=t :LookingChef %> <strong><%= @search.cook_location %></strong>.
-<%=t :FoundMenus%> <strong><%= @menus.count %> menus </strong></p>
+<p></p>
 </div>
 
   <div class="row">
@@ -18,17 +15,6 @@
         </div>
         <div class="panel-body">
           <ul class="nav nav-pills nav-stacked">
-            <!-- Filter Location -->
-            <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                <%=t :Location %> <span class="caret"></span>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Perú", :search_location => "Perú", :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "France", :search_location => "France", :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "United Kingdom", :search_location => "United Kingdom", :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-              </ul>
-            </li>
 
             <!-- Filter Price -->
             <li class="dropdown">
@@ -109,8 +95,8 @@
             <h4 class="panel-header"><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h4>
             <small><%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></small>
             <p><%= menu.description[0,100] %></p>
-            <%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %>
-            <%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %>
+            <p><%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %></p>
+            <p><%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %></p>
           </div>
         </div>
       </div>
