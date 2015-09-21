@@ -95,7 +95,7 @@ Rails.application.routes.draw do
   resources :subscribers
 
   # You can have the root of your site routed with "root"
-  root 'events#landing'
+  root 'events#cheflanding'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
