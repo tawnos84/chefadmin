@@ -1,4 +1,6 @@
 class SearchesController < ApplicationController
+  layout "admin", only: [:index, :new, :edit]
+  layout "landing", only: [:ask]
 
   def index
     #The Menus + Menus_found_chefs is used to ensure that only the menus for the selected location are found!
@@ -11,9 +13,9 @@ class SearchesController < ApplicationController
     @search = Search.new
 
 
-    @search.cook_location = params[:search_location]
-    @search.cook_date = params[:search_date]
-    @search.cook_time = params[:search_time]
+    @search.cook_location = "Peru"
+    @search.cook_date = "31 December 2015"
+    @search.cook_time = "20:00"
     @search.max_price = params[:max_price]
     @search.cuisine_type = params[:cuisine_type]
 

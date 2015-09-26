@@ -1,67 +1,174 @@
-
-
-<!-- Full Width Image Header -->
-<header class="header-image">
-  <div class="headline">
+<div class="cover">
+  <div class="navbar navbar-default navbar-static-top">
     <div class="container">
-      <h2 style="font-family: 'Handlee'">LoSibaritas</h2>
-      <p><strong><i><%=t :quote %></i></strong></p>
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#"><span style="font-family:Handlee; color:#FFF">LoSibaritas</span></a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+        <ul class="nav navbar-nav navbar-right">
 
+          <li><%= link_to t(:IAmAChef), searches_ask_path, style: 'color:#FFF'%></li>
+          <li><a href="#howdoesitwork" style="color:#FFF"><%=t(:HowDoesItWorkTitle)%></a></li>
+          <li><a href="#signup" style="color:#FFF"><%=t(:SignUp)%></a></li>
+
+          <li>
+            <a href="http://losibaritas.tumblr.com" target="new" style="color:#FFF">Blog</a>
+          </li>
+          <li><%=link_to 'English', url_for( :locale => 'en' ), style: "color:#FFF"%></li>
+          <li><%=link_to 'Castellano', url_for( :locale => 'es' ), style: "color:#FFF"%></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="cover-image" style="background-image : url('https://s3-sa-east-1.amazonaws.com/losibaritas/background99.jpg')"></div>
+  <div class="container">
+
+    <div class="section">
+      <div class="container">
+        <div class="col-md-12">
+          <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>"><%= value %></div>
+          <% end %>
+          <h1 class="text-center" style="color:#FFFFFF">¿Tienes hambre?</h1>
+          <h3 class="text-center" style="color:#FFFFFF">Discubrir todos los nuestros buenos opciones!</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-12">
+          <div class="col-md-3"></div>
+          <div class="col-md-6 center-block">
 
 
       <%= bootstrap_form_for :search, url: searches_path, layout: :inline do |f| %>
-          <%= f.select :cook_location, ['Perú', 'France', 'United Kingdom'], hide_label: true %>
-          <%= f.date_select :cook_date, hide_label: true %>
-          <%= f.time_select :cook_time, hide_label: true %>
+          <%= f.select :cook_location, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'], hide_label: true %>
+
+          <%= f.select :cook_time, ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'], hide_label: true %>
+          <%= f.select :cook_time, ['2015', '2016'], hide_label: true %>
 
           <%= f.hidden_field :sort, :value => "name" %>
-            <%= f.submit I18n.t :searchsubmit, class: 'btn btn-primary' %>
-        <% end %>
+                <%= f.submit t(:searchsubmit), class: 'btn btn-success' %>
+      <% end %>
+          </div>
+          <div class="col-md-3"></div>
         </div>
-      <p>
-  </div>
-</header>
+      </div>
+      <div class="row text-center">
 
-
-<!-- Page Content -->
-<div class="container">
-
-  <hr class="featurette-divider">
-
-  <!-- First Featurette -->
-  <div class="featurette" id="about">
-    <img class="featurette-image img-circle img-responsive pull-right" src="https://s3-sa-east-1.amazonaws.com/losibaritas/background1.jpg">
-    <h2 class="featurette-heading"><%=t :WhyLoSibaritasTitle %></span>
-    </h2>
-    <p class="lead"><%=t :WhyLoSibaritasExpl %></p>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <!-- Second Featurette -->
-  <div class="featurette" id="services">
-    <img class="featurette-image img-circle img-responsive pull-left" src="https://s3-sa-east-1.amazonaws.com/losibaritas/background2.jpg">
-    <h2 class="featurette-heading"><%=t :HowDoesItWorkTitle %></span>
-    </h2>
-    <p class="lead"><%=t :HowDoesItWorkExpl %><br>
-    <ul>
-      <li><%=t :HowDoesItWorkReason1 %></li>
-      <li><%=t :HowDoesItWorkReason2 %></li>
-      <li><%=t :HowDoesItWorkReason3 %></li>
-      <li><%=t :HowDoesItWorkReason4 %></li>
-    </ul></p>
-  </div>
-
-  <hr class="featurette-divider">
-
-  <!-- Footer -->
-  <footer>
-    <div class="row">
-      <div class="col-lg-12">
-        <p>Copyright &copy; LoSibaritas 2015</p>
       </div>
     </div>
-  </footer>
+  </div>
 
 </div>
-<!-- /.container -->
+
+  <a name="howdoesitwork"></a>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="text-primary"><%= t(:WhyLoSibaritasTitle)%></h1>
+          <p><%= t(:WhyLoSibaritasExpl)%></p>
+        </div>
+        <div class="col-md-6">
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/e-gCXSLQ1XQ?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-primary"><%=t(:HowDoesItWorkTitle)%></h1>
+          <h3><%=t(:HowDoesItWorkExpl)%></h3>
+          <p>
+          <div class="well"><h4><%=t(:HowDoesItWorkReason1)%></h4></div>
+          <div class="well"><h4><%=t(:HowDoesItWorkReason2)%></h4></div>
+          <div class="well"><h4><%=t(:HowDoesItWorkReason3)%></h4></div>
+          <div class="well"><h4><%=t(:HowDoesItWorkReason4)%></h4></div>
+          <h3><%=t(:HowDoesItWorkFooter)%> <a href="#"><%=t(:HowDoesItWorkFooterLink)%></a></h3>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <a name="contact"></a>
+  <div class="section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-primary text-center"><%= t(:LContactUs)%></h1>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-1"></div>
+        <div class="col-md-2 text-center">
+          <a href="https://instagram.com/losibaritas"><i class="fa fa-5x fa-fw fa-instagram"></i></a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://twitter.com/losibaritas"><i class="fa fa-5x fa-fw fa-twitter"></i></a>
+        </div>
+        <div class="col-md-2">
+          <a href="https://www.facebook.com/losibaritas"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
+        </div>
+        <div class="col-md-2">
+          <a href="http://losibaritas.tumblr.com/"><i class="fa fa-5x fa-fw fa-tumblr"></i></a>
+        </div>
+        <div class="col-md-2 text-center">
+          <a href="mailto:team@losibaritas.com"><i class="fa fa-5x fa-fw hub fa-envelope-o"></i></a>
+        </div>
+        <div class="col-md-1"></div>
+      </div>
+    </div>
+  </div>
+
+  <a name="signup"></a>
+  <div class="section">
+    <div class="container">
+      <div class="col-md-12">
+        <h1 class="text-primary text-center"><%= t(:LKeepUpdated)%></h1>
+        <h3 class="text-center"><%= t(:LLeaveYourMail)%></h3>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-12">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 center-block">
+          <%= bootstrap_form_for :subscriber, url: subscribers_path do |f| %>
+              <div>
+                <%= f.text_field :email, :class => 'form-control' %>
+                <%= f.hidden_field :clienttype, :value => "customer" %>
+
+                <%= f.submit t(:SignUp), class: 'btn btn-success' %>
+              </div>
+          <% end %>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
