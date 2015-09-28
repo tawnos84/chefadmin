@@ -25,8 +25,8 @@ es:
   #Start translation here
   quote: Un cocinero se convierte en artista cuando tiene cosas que decir a través de sus platos, como un pintor en un cuadro - Joan Miró
 
-  WhyLoSibaritasTitle: ¿Por qué escoger ‘LoSibaritas’?
-  WhyLoSibaritasExpl: Un sin número de razones vienen a la mente. Para nosotros la comida es un concepto que incluye un estilo de vida y una experiencia única. Queremos que nuestra pasión por la comida cobre vida. ¿Te ha pasado que quieres organizar una reunión con amigos o familia y de repente algo te detiene? Ir de compras, cocinar y después limpiar… ‘Los Sibaritas’ te da la oportunidad de no preocuparte por los detalles y solo disfrutar de la reunión. Reserva un chef privado y disfruta la oportunidad de tener una experiencia culinaria única en tu mesa.
+  WhyLoSibaritasTitle: ¿Qué es LoSibaritas?
+  WhyLoSibaritasExpl: ¿Te ha pasado que quieres organizar una reunión con amigos o familia y de repente algo te detiene? Ir de compras, cocinar y después limpiar… LoSibaritas te da la oportunidad de no preocuparte por los detalles y solo disfrutar de la reunión. Reserva un chef privado y disfruta la oportunidad de tener una experiencia culinaria única en tu mesa.
 
   HowDoesItWorkTitle: ¿Cómo funciona?
   HowDoesItWorkExpl: El Proceso es simple.
@@ -37,7 +37,7 @@ es:
   HowDoesItWorkFooter: No pierdas la oportunidad de
   HowDoesItWorkFooterLink: reservar ahora
 
-  searchsubmit: Hacer pedido
+  searchsubmit: Buscar menús
 
   #Search results
   NewSearch: Nueva búsqueda

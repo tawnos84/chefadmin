@@ -86,7 +86,14 @@
         <div class="panel panel-default panel-card">
           <div class="panel-heading">
             <img src="<%=menu.photo1%>" />
-            <button class="btn btn-primary btn-sm" role="button"><%=menu.currency%> <%=menu.price%></button>
+            <button class="btn btn-primary btn-sm" role="button">
+              <%if menu.currency=="PEN"%>
+                S/.
+              <% end %>
+              <%if menu.currency !="PEN"%>
+                <%=menu.currency%>
+              <% end %>
+              <%=menu.price%></button>
           </div>
           <div class="panel-figure">
             <img class="img-responsive img-circle" src="<%=menu.chef.picture%>" />
@@ -95,8 +102,8 @@
             <h4 class="panel-header"><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h4>
             <small><%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></small>
             <p><%= menu.description[0,100] %></p>
-            <p><%= link_to 'Chef Infos', chef_path(menu.chef), class: 'btn btn-primary' %></p>
-            <p><%= link_to 'Menu Infos', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %></p>
+            <p><%= link_to 'El Chef', chef_path(menu.chef), class: 'btn btn-primary' %></p>
+            <p><%= link_to 'El Menú', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %></p>
           </div>
         </div>
       </div>
