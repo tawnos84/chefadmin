@@ -47,13 +47,13 @@
 
 
       <%= bootstrap_form_for :search, url: searches_path, layout: :inline do |f| %>
-          <%= f.select :cook_location, ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31'], hide_label: true %>
+          <%= f.hidden_field :cook_location, :value => "1"%>
 
-          <%= f.select :cook_time, ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'], hide_label: true %>
-          <%= f.select :cook_time, ['2015', '2016'], hide_label: true %>
+          <%= f.hidden_field :cook_time, :value => "enero"%>
+          <%= f.hidden_field :cook_time, :value => "2015" %>
 
           <%= f.hidden_field :sort, :value => "name" %>
-                <%= f.submit t(:searchsubmit), class: 'btn btn-success' %>
+                <%= f.submit t(:searchsubmit), class: 'btn btn-xl btn-success' %>
       <% end %>
           </div>
           <div class="col-md-3"></div>
@@ -98,13 +98,20 @@
         <div class="col-md-12">
           <h1 class="text-primary"><%=t(:HowDoesItWorkTitle)%></h1>
           <h3><%=t(:HowDoesItWorkExpl)%></h3>
-          <p>
-          <div class="well"><h4><%=t(:HowDoesItWorkReason1)%></h4></div>
-          <div class="well"><h4><%=t(:HowDoesItWorkReason2)%></h4></div>
-          <div class="well"><h4><%=t(:HowDoesItWorkReason3)%></h4></div>
-          <div class="well"><h4><%=t(:HowDoesItWorkReason4)%></h4></div>
+
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 center">
+            <img src="//s3-sa-east-1.amazonaws.com/losibaritas/process1.png" class="img img-responsive">
+            <img src="//s3-sa-east-1.amazonaws.com/losibaritas/process2.png" class="img img-responsive">
+            <img src="//s3-sa-east-1.amazonaws.com/losibaritas/process3.png" class="img img-responsive">
+            </div>
+            <div class="col-md-2"></div>
+          </div>
+          <div class="row">
           <h3><%=t(:HowDoesItWorkFooter)%> <a href="#"><%=t(:HowDoesItWorkFooterLink)%></a></h3>
-          </p>
+          </div>
+
         </div>
       </div>
     </div>
