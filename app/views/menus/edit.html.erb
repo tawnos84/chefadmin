@@ -80,7 +80,7 @@
     <div class="form-group">
       <%= f.label t(:AdminMenuPhoto5) %>
       <%= f.file_field :photo5, :class => 'form-control', hide_label: true %>
-    </div>
+    </div>-->
 
 
     <div class="page-header"><h5>Additional information</h5></div>
@@ -168,7 +168,7 @@
       <%= f.label t(:Brazilian) %>
       <%= f.check_box :cuisine_brazilian%>
     </div>
-    -->
+
     <div class="form-group">
       <% if(!session[:admin]) %><%= link_to t(:back), chef_menus_path, class: "btn btn-primary" %><% end %>
       <%= f.submit class: "btn btn-success" %>

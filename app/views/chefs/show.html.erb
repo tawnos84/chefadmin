@@ -13,24 +13,12 @@
         <%= @chef.styles %>
       <p><strong><%=t :ChefBiography%> </strong> <%= @chef.biography %></p>
 
-      <a class="btn btn-default" data-toggle="collapse" href="#collapseExample_chef_<%=@chef.id%>" aria-expanded="false" aria-controls="collapseExample_chef_<%=@chef.id%>">
-        <%=t :LearnMore %> &raquo;
-      </a>
+      <p><strong><%=t :CulinaryTraining%> </strong> <%= @chef.culinarytraining %></p>
 
-      <div class="collapse" id="collapseExample_chef_<%=@chef.id%>">
-          <p><strong><%=t :CulinaryTraining%> </strong> <%= @chef.culinarytraining %></p>
-      </div>
     </div>
     <div class="col-sm-4 text-center">
       <% if @chef.picture %><img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive"><% end %>
-      <%=t :ChefRatings%>:
-      <ul class="list-inline ratings text-center" title="Ratings">
-        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-        <li><a href="#"><span class="fa fa-star fa-lg"></span></a></li>
-      </ul>
+      
     </div>
   </div>
   <!-- /.row -->
