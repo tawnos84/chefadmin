@@ -160,8 +160,9 @@
                 <td align="center" style="font-size: 32px; font-family: Helvetica, Arial, sans-serif; color: #333333; padding-top: 30px;" class="padding-copy">¡Muchas gracias por tu pedido!</td>
               </tr>
               <tr>
-                <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Tu orden con LoSibaritas está confirmada.
-                  El número de tu cuenta es 2015-<%=@order.id%>.
+                <td align="left" style="padding: 20px 0 0 0; font-size: 16px; line-height: 25px; font-family: Helvetica, Arial, sans-serif; color: #666666;" class="padding-copy">Muchas gracias por tu solicitud y por usar LoSibaritas.com<br>
+                  El chef ha sido informado de tu solicitud y la revisará lo antes posible.<br>
+                  Por el momento, ¡mantente en contacto!<br>
                 </td>
               </tr>
             </table>
@@ -172,121 +173,7 @@
   </tr>
 </table>
 
-<!-- TWO COLUMN SECTION -->
-<table border="0" cellpadding="0" cellspacing="0" width="100%">
-  <tr>
-    <td bgcolor="#ffffff" align="center" style="padding: 15px 15px 15px 15px;" class="section-padding">
-      <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
-        <tr>
-          <td style="padding: 10px 0 0 0; border-top: 1px dashed #aaaaaa;">
-            <!-- TWO COLUMNS -->
-            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-              <tr>
-                <td valign="top" class="mobile-wrapper">
-                  <!-- LEFT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="left">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;">Número de personas</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- RIGHT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="right">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="right" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;"><%=@order.no_of_guests %></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <!-- TWO COLUMNS -->
-            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-              <tr>
-                <td valign="top" style="padding: 0;" class="mobile-wrapper">
-                  <!-- LEFT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="left">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;">Precio por persona</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- RIGHT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="right">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="right" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;"><%=@order.currency %> <%=@menu.price %></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
 
-        <tr>
-          <td style="padding: 10px 0 0px 0; border-top: 1px solid #eaeaea; border-bottom: 1px dashed #aaaaaa;">
-            <!-- TWO COLUMNS -->
-            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-              <tr>
-                <td valign="top" class="mobile-wrapper">
-                  <!-- LEFT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="left">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px; font-weight: bold;">Precio total</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- RIGHT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="right">
-                    <tr>
-                      <td>
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="right" style="font-family: Arial, sans-serif; color: #EE4B28; font-size: 16px; font-weight: bold;"><%=@order.currency%> <%=@order.net_price%></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
 
 <!-- ONE COLUMN SECTION -->
 <table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -301,7 +188,7 @@
                   <!-- COPY -->
                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
-                      <td align="left" style="padding: 0 0 0 0; font-size: 14px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color: #aaaaaa; font-style: italic;" class="padding-copy">Confirmando que ya recibímos tu pago con tarjeta.</td>
+                      <td align="left" style="padding: 0 0 0 0; font-size: 14px; line-height: 18px; font-family: Helvetica, Arial, sans-serif; color: #aaaaaa; font-style: italic;" class="padding-copy"></td>
                     </tr>
                   </table>
                 </td>
@@ -378,76 +265,7 @@
   <tr>
     <td bgcolor="#ffffff" align="center" style="padding: 15px 15px 15px 15px;" class="section-padding">
       <table border="0" cellpadding="0" cellspacing="0" width="500" class="responsive-table">
-        <tr>
-          <td style="padding: 10px 0 0 0; border-top: 1px dashed #aaaaaa;">
-            <!-- TWO COLUMNS -->
-            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-              <tr>
-                <td valign="top" class="mobile-wrapper">
-                  <!-- LEFT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="left">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;">Número de la cuenta</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- RIGHT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="right">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="right" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;">2015-<%=@order.id%></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <!-- TWO COLUMNS -->
-            <table cellspacing="0" cellpadding="0" border="0" width="100%">
-              <tr>
-                <td valign="top" style="padding: 0;" class="mobile-wrapper">
-                  <!-- LEFT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="left">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="left" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;">Fecha de la cuenta</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                  <!-- RIGHT COLUMN -->
-                  <table cellpadding="0" cellspacing="0" border="0" width="47%" style="width: 47%;" align="right">
-                    <tr>
-                      <td style="padding: 0 0 10px 0;">
-                        <table cellpadding="0" cellspacing="0" border="0" width="100%">
-                          <tr>
-                            <td align="right" style="font-family: Arial, sans-serif; color: #333333; font-size: 16px;"><%=@order.created_at.to_time.strftime('%B %e - %l:%M %p')%></td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
+
         <tr>
           <td>
             <!-- TWO COLUMNS -->
