@@ -17,6 +17,12 @@
                     <h1 class="text-center"><%=@chef.name%></h1>
                     <p><%=@chef.biography%></p>
 
+                    <table class="table">
+
+                      <tr><td><i class="fa fa-money "></i></td> <td>
+                        S./ <%=@menu.price%> <%=t(:PerPerson)%></td></tr>
+                      <tr><td><i class="fa fa-users"></i></td> <td><%= @menu.partysize%> <%=t(:Persons)%></td></tr>
+                    </table>
                   </div>
                 </div>
                 <div class="row">
