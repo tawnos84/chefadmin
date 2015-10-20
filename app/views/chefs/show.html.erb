@@ -29,6 +29,7 @@
       <% if @chef.picture %><img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive"><% end %>
       <% if @chef.facebook %>
       <p>
+        <br>
         <a href="<%=@chef.facebook%>"><i class="fa fa-facebook fa-2x"></i></a>
       </p>
       <% end %>
@@ -58,7 +59,9 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-2"></div>
+    <div class="col-md-2">
+      <h2>Comentarios</h2>
+    </div>
     <div class="col-md-8">
       <div class="fb-comments" data-href="https://www.losibaritas.com/chefs/<%=@chef.id%>" data-numposts="5"></div>
     </div>
