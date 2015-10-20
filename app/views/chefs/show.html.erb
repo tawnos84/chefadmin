@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=1564821780431761";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <!-- Page Content -->
 <div class="container">
 
@@ -44,6 +53,8 @@
       </div>
     </div>
   </div>
+
+  <div class="fb-comments" data-href="https://www.losibaritas.com/chefs/" data-numposts="5"></div>
 
   <hr>
   <%= link_to t(:back), :back, class: 'btn btn-primary' %>
