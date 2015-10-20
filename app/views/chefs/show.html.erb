@@ -27,7 +27,11 @@
     </div>
     <div class="col-sm-4 text-center">
       <% if @chef.picture %><img src="<%= @chef.picture %>" alt="" class="center-block img-circle img-thumbnail img-responsive"><% end %>
-
+      <% if @chef.facebook %>
+      <p>
+        <a href="<%=@chef.facebook%>"><i class="fa fa-facebook fa-2x"></i></a>
+      </p>
+      <% end %>
     </div>
   </div>
   <!-- /.row -->
