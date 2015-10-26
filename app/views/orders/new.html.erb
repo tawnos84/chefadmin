@@ -36,9 +36,15 @@
 
           <!-- These three field are required for the event based payment and booking. I removed the standard form elements for date/location selection-->
 
-          <%= f.hidden_field :cook_date, :value => "9999-12-31" %>
+
           <%= f.hidden_field :event_id, :value => "999" %>
           <%= f.hidden_field :cook_location, :value => "Dortmund" %>
+
+            <%= f.label t(:OrderCookDate) %>
+            <%= f.date_select :cook_date, hide_label: true %>
+
+            <%= f.label t(:OrderCookTime) %>
+            <%= f.time_select :cook_time, hide_label: true %>
 
     <input type="hidden" id="menu_id" name="menu_id" value="<%= @menu.id %>">
     <input type="hidden" id="order_type" name="order_type" value="<%= @order.order_type %>">
