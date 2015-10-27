@@ -4195,7 +4195,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     padding: 9px 10px;
     margin-top: 8px;
     margin-bottom: 8px;
-    background-color: transparent;
+    background-color: none;
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
@@ -4211,6 +4211,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-toggle .icon-bar + .icon-bar {
     margin-top: 4px;
+
 }
 @media (min-width: 768px) {
     .navbar-toggle {
@@ -6739,14 +6740,15 @@ body {
     background-color: transparent;
 }
 .cover .navbar .navbar-toggle .icon-bar {
-    background-color: #000000;
+    background-color: #FFFFFF;
 }
 .cover .navbar.navbar-inverse .navbar-toggle {
     border-color: transparent;
 }
 .cover .navbar.navbar-inverse .navbar-toggle:hover,
 .cover .navbar.navbar-inverse .navbar-toggle:focus {
-    background-color: transparent;
+    background-color: #000000;
+
 }
 .cover .navbar.navbar-inverse .navbar-toggle .icon-bar {
     background-color: #ffffff;

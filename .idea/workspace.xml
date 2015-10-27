@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c1b93802-6dd9-4337-9b6b-ad8d4911a0d2" name="Default" comment="Basic functionality:&#10;--&gt; Creating Chefs&#10;--&gt; Creating Menus for chefs&#10;">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/MenuTheme.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/MenuTheme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/kai.css" afterPath="$PROJECT_DIR$/app/assets/stylesheets/kai.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SibaritasChefs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,11 +34,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="kai.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="kai.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/kai.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7632094" vertical-offset="120" max-vertical-offset="7425">
-              <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+            <state vertical-scroll-proportion="-6.296296" vertical-offset="1240" max-vertical-offset="7425">
+              <caret line="94" column="38" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -56,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MenuTheme.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MenuTheme.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/MenuTheme.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="101595">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.33268103" vertical-offset="10930" max-vertical-offset="101625">
+              <caret line="740" column="24" selection-start-line="740" selection-start-column="19" selection-end-line="740" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -126,8 +126,8 @@
         <option value="$PROJECT_DIR$/app/views/user_mailer/order_request_mail_es.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/searches/ask.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/MenuTheme.css" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/kai.css" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/MenuTheme.css" />
       </list>
     </option>
   </component>
@@ -1188,6 +1188,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/kai.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.296296" vertical-offset="1240" max-vertical-offset="7425">
+          <caret line="94" column="38" selection-start-line="94" selection-start-column="36" selection-end-line="94" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/searches/ask.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.4166667" vertical-offset="2" max-vertical-offset="3150">
@@ -1200,16 +1208,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/MenuTheme.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="101595">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/kai.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7632094" vertical-offset="120" max-vertical-offset="7425">
-          <caret line="34" column="22" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.33268103" vertical-offset="10930" max-vertical-offset="101625">
+          <caret line="740" column="24" selection-start-line="740" selection-start-column="19" selection-end-line="740" selection-end-column="24" />
           <folding />
         </state>
       </provider>
