@@ -90,8 +90,10 @@
             <img class="img-responsive img-circle" src="<%=menu.chef.picture%>" />
           </div>
           <div class="panel-body text-center">
-            <h4 class="panel-header"><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h4>
-            <small><%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></small>
+            <div class="visible-sm"><h1><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h1></div>
+            <h4 class="panel-header hidden-sm"><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h4>
+            <small class="hidden-sm"><%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></small>
+            <div class="visible sm"><h2><%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></h2></div>
             <p><%= menu.description[0,100] %></p>
             <p><%= link_to 'El Chef', chef_path(menu.chef), class: 'btn btn-primary' %></p>
             <p><%= link_to 'El Menú', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %></p>
