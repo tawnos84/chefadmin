@@ -1,0 +1,43 @@
+.instagram-wrap {
+    background: #eeeeee;
+}
+
+.instagram-content h3 {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    padding: 50px 0;
+    color: #bbbbbb;
+}
+
+.photo-box {
+    margin: 0 0 30px 0;
+}
+
+.photo-box .image-wrap img {
+    width: 100%;
+}
+
+.photo-box .image-wrap .likes {
+    position: absolute;
+    bottom: 5px;
+    left: 15px;
+    padding: 5px;
+    background: #000;
+    background: rgba(0, 0, 0, 0.4);
+    color: #FFF;
+}
+
+.photo-box .description {
+    font-size: 12px;
+    background: #FFF;
+    color: #9b9b9b;
+    letter-spacing: 1px;
+    padding: 15px;
+    height: 75px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}

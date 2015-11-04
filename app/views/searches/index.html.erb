@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container hidden-sm visible-lg visible-md">
   <div class="row">
 <p></p>
 </div>
@@ -6,7 +6,7 @@
   <div class="row">
 
     <!-- Search filter -->
-    <div class="col-lg-3 hidden-sm">
+    <div class="col-lg-3 hidden-md hidden-sm">
 
       <!-- General filters -->
       <div class="panel panel-primary">
@@ -73,7 +73,7 @@
     <div class="col-lg-9">
 <% @menus.each do |menu| %>
 
-      <div class="col-sm-12 col-md-4 col-lg-3">
+      <div class="col-sm-6 col-md-4 col-lg-3">
         <div class="panel panel-default panel-card">
           <div class="panel-heading">
             <img src="<%=menu.photo1%>" />
@@ -108,4 +108,41 @@
   </div>
   </div>
 </div>
+
+<div class="container hidden-md hidden-lg visible-xs visible-sm">
+  <div class="row">
+    <div class="col-xs-12">
+      <div class="instagram-content">
+        <h3>Menus disponibles</h3>
+        <div class="row photos-wrap">
+          <!-- Instafeed target div -->
+          <div id="instafeed"></div>
+          <!-- The following HTML will be our template inside instafeed -->
+          <% @menus.each do |menu| %>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="photo-box">
+              <div class="image-wrap">
+                <img src="<%=menu.photo1%>"/>
+                <div class="likes"><%if menu.currency=="PEN"%>
+                      S/.
+                  <% end %>
+                  <%if menu.currency !="PEN"%>
+                      <%=menu.currency%>
+                  <% end %>
+                  <%=menu.price%></div>
+              </div>
+              <div class="description">
+                <%=menu.name%> <%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %>
+                <p><%= link_to 'El Chef', chef_path(menu.chef), class: 'btn btn-primary' %></p>
+                <p><%= link_to 'El Menú', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %></p>
+              </div>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
