@@ -111,7 +111,7 @@
 
 <div class="container hidden-md hidden-lg visible-xs visible-sm">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-12">
       <div class="instagram-content">
         <h3>Menus disponibles</h3>
         <div class="row photos-wrap">
@@ -119,7 +119,7 @@
           <div id="instafeed"></div>
           <!-- The following HTML will be our template inside instafeed -->
           <% @menus.each do |menu| %>
-          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
             <div class="photo-box">
               <div class="image-wrap">
                 <img src="<%=menu.photo1%>"/>
