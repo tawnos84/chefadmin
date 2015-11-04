@@ -122,19 +122,13 @@
           <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
             <div class="photo-box">
               <div class="image-wrap">
-                <img src="<%=menu.photo1%>"/>
-                <div class="likes"><%if menu.currency=="PEN"%>
-                      S/.
-                  <% end %>
-                  <%if menu.currency !="PEN"%>
-                      <%=menu.currency%>
-                  <% end %>
-                  <%=menu.price%></div>
+                <img src="<%=menu.photo1%>">
               </div>
-              <div class="description">
-                <%=menu.name%> <%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %>
-                <p><%= link_to 'El Chef', chef_path(menu.chef), class: 'btn btn-primary' %></p>
-                <p><%= link_to 'El Menú', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %></p>
+              <div class="panel-body text-center">
+                <div class="visible-sm hidden-md hidden-lg"><h1><%= link_to chef_menu_path(menu.chef, menu) do %><%=menu.name%><% end %></h1></div>
+                <div class="visible sm hidden-md hidden-lg"><h2><%=t :by %> <%= link_to chef_path(menu.chef) do %><%=menu.chef.name%><% end %></h2></div>
+                <p><%= menu.description[0,100] %></p>
+                <p><%= link_to 'El Chef', chef_path(menu.chef), class: 'btn btn-primary' %> <%= link_to 'El Menú', chef_menu_path(menu.chef, menu), class: 'btn btn-primary' %></p>
               </div>
             </div>
           </div>
