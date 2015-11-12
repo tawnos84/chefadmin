@@ -33,7 +33,7 @@ class UserMailer < ApplicationMailer
     end
 
     if language=='es'
-      mail(to: email, subject: 'Muchas gracias para tu orden con LoSibaritas.com', template_name: 'order_request_mail_es')
+      mail(to: email, subject: 'Muchas gracias por tu pedido con LoSibaritas.com', template_name: 'order_request_mail_es')
     end
 
   end

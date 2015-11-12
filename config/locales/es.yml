@@ -114,6 +114,7 @@ es:
   OrderMessage: Tu mensaje al chef y a nosotros
   OrderRemarksChef: Comentarios para el chef
   OrderRemarksSibaritas: Comentarios para LoSibaritas
+  OrderSubmit: Enviar
 
   #OrderConfirmation (Confirmación de orden)
   OrderConfirmationMessage: Muchas gracias por tu orden con LoSibaritas! El chef se contactará contigo lo antes posible.
