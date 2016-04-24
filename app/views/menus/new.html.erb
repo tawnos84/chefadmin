@@ -53,6 +53,11 @@
       <%= f.text_area :description, :class => 'form-control', hide_label: true %>
     </div>
 
+    <div class="form-group">
+      <%= f.label t(:EventTypeMenus) %>
+      <%= f.select :eventtype, ['Breakfast', 'Brunch', 'Lunch', 'Dinner', 'Appetizers'], :class => 'form-control', hide_label: true %>
+    </div>
+
     <div class="page-header"><h5>Images</h5></div>
     <div class="form-group">
       <%= f.label t(:AdminMenuPhoto1) %>
@@ -75,6 +80,7 @@
       <%= f.label t(:AdminMenuPhoto5) %>
     <%= f.file_field :photo5, :class => 'form-control', hide_label: true %>
     </div>-->
+
 
 
     <div class="page-header"><h5>Additional information</h5></div>

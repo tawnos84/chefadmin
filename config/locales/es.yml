@@ -249,6 +249,7 @@ es:
   ManageCourses: Administrar platos
   AdditionalInfoMsg: Por favor señala el número sugerido de comensales para el menú. ¿Hay un número de comensales a partir del cuál vas a necesitar un ayudante? ¿Hay otras consideraciones que tus clientes deben tomar en cuenta a partir del número de comensales? 
   CuisineExplMsg: A continuación tenemos una lista predeterminada de tipos de comida. Ten la libertad de escoger todos los tipos de comida que creas corresponden a tu menú.
+  EventTypeMenus: Tipo de evento
 
   #Show Menu
   AdminChefInfo: Información del chef
@@ -313,7 +314,14 @@ es:
   SoldOut: Agotado
   ChefSignUpMsg: ¿Eres chef? Déjanos tu correo para sumarte a la red de LoSibaritas
 
-
+  #EventsFilter
+  typeOfEvent: Seleccione tipo de evento
+  AnyEvent: Cualquier tipo de evento
+  EventBreakfast: Desayuno
+  EventBrunch: Brunch
+  EventLunch: Almuerzo
+  EventDinner: Cena
+  EventAppetizer: Bocaditos
   #End translation here
 
   date:

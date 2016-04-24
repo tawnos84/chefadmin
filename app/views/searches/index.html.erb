@@ -24,12 +24,12 @@
               <ul class="dropdown-menu">
                 <li><%= link_to t(:AnyPrice), :max_price => "99999", :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
                 <li class="divider"></li>
-                <li><%= link_to "250", :max_price => "250",  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "200", :max_price => "200",  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "150", :max_price => "150",  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "100", :max_price => "100",  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "50", :max_price => "50",  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to "20", :max_price => "20", :cuisine_type => @search.cuisine_type,  :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "250", :max_price => "250",  :event_type => @search.event_type, :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "200", :max_price => "200",  :event_type => @search.event_type, :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "150", :max_price => "150",  :event_type => @search.event_type, :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "100", :max_price => "100",  :event_type => @search.event_type, :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "50", :max_price => "50",  :event_type => @search.event_type, :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to "20", :max_price => "20", :event_type => @search.event_type, :cuisine_type => @search.cuisine_type,  :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
               </ul>
             </li>
 
@@ -38,14 +38,29 @@
                 <%=t :SelectCuisine %> <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to t(:AnyCuisine), :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:AnyCuisine), :event_type => @search.event_type, :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
                 <li class="divider"></li>
-                <li><%= link_to t(:Italian), :cuisine_type => "cuisine_argentinian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to t(:Anticuchos), :cuisine_type => "cuisine_anticuchos", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to t(:Patisserie), :cuisine_type => "cuisine_patisserie", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to t(:Exotic), :cuisine_type => "cuisine_exotic", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to t(:German), :cuisine_type => "cuisine_german", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
-                <li><%= link_to t(:Brazilian), :cuisine_type => "cuisine_brazilian", :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:Italian), :cuisine_type => "cuisine_argentinian", :event_type => @search.event_type, :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:Anticuchos), :cuisine_type => "cuisine_anticuchos", :event_type => @search.event_type, :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:Patisserie), :cuisine_type => "cuisine_patisserie", :event_type => @search.event_type, :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:Exotic), :cuisine_type => "cuisine_exotic", :event_type => @search.event_type, :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:German), :cuisine_type => "cuisine_german", :event_type => @search.event_type, :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:Brazilian), :cuisine_type => "cuisine_brazilian", :event_type => @search.event_type, :max_price => @search.max_price, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+              </ul>
+            </li>
+
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <%=t :typeOfEvent%> <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li><%= link_to t(:AnyEvent), :max_price => @search.max_price, :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li class="divider"></li>
+                <li><%= link_to t(:EventBreakfast), :event_type => "Breakfast", :max_price => @search.max_price,  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:EventBrunch), :event_type => "Brunch",  :max_price => @search.max_price,  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:EventLunch), :event_type => "Lunch",  :max_price => @search.max_price,  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:EventDinner), :event_type => "Dinner",  :max_price => @search.max_price,  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
+                <li><%= link_to t(:EventAppetizer), :event_type => "Appetizer",  :max_price => @search.max_price,  :cuisine_type => @search.cuisine_type, :search_location => @search.cook_location, :search_date => @search.cook_date, :search_time => @search.cook_time %></li>
               </ul>
             </li>
           </ul>

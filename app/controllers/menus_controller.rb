@@ -87,7 +87,8 @@ class MenusController < ApplicationController
         :photo2,
         :photo3,
         :photo4,
-        :photo5
+        :photo5,
+        :eventtype
     )
   end
 end

@@ -14,10 +14,11 @@ class SearchesController < ApplicationController
 
 
     @search.cook_location = "Peru"
-    @search.cook_date = "31 December 2015"
+    @search.cook_date = "31 December 2016"
     @search.cook_time = "20:00"
     @search.max_price = params[:max_price]
     @search.cuisine_type = params[:cuisine_type]
+    @search.event_type = params[:event_type]
 
     @chefs = Chef.all
 
@@ -34,6 +35,10 @@ class SearchesController < ApplicationController
 
     if @search.cuisine_type.present?
       @menus.select! { |m| m.attributes[@search.cuisine_type] }
+    end
+
+    if @search.event_type.present?
+      @menus.select! { |m| m.eventtype == @search.event_type }
     end
 
   end

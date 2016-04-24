@@ -249,6 +249,7 @@ en:
   ManageCourses: Manage courses
   AdditionalInfoMsg: Please describe what is your suggested/optimal party size for the menu. Is there a number where you would have to bring a helper with you? Are there other things with regards to the size you can cater to with this menu that your customers should know about?
   CuisineExplMsg: We have a list of different cuisine types following. Feel free to check every one that you think your menu can fit into.
+  EventTypeMenus: Type of event
 
   #Show Menu
   AdminChefInfo: Chef Info
@@ -311,6 +312,15 @@ en:
   #Message
   SoldOut: Sold out
   ChefSignUpMsg: Are you a chef? Sign-Up here to become part of our network of chefs
+
+  #EventsFilter
+  typeOfEvent: Type of event
+  AnyEvent: Any event
+  EventBreakfast: Breakfast
+  EventBrunch: Brunch
+  EventLunch: Lunch
+  EventDinner: Dinner
+  EventAppetizer: Appetizer
 
   date:
     abbr_day_names:

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150906182204) do
+ActiveRecord::Schema.define(version: 20160424130615) do
 
   create_table "chefs", force: :cascade do |t|
     t.string   "name"
@@ -101,6 +101,7 @@ ActiveRecord::Schema.define(version: 20150906182204) do
     t.integer  "price"
     t.string   "hashtags"
     t.string   "partysize"
+    t.string   "eventtype"
   end
 
   add_index "menus", ["chef_id"], name: "index_menus_on_chef_id"
@@ -142,6 +143,7 @@ ActiveRecord::Schema.define(version: 20150906182204) do
     t.datetime "updated_at",    null: false
     t.integer  "max_price"
     t.string   "cuisine_type"
+    t.string   "event_type"
   end
 
   create_table "subscribers", force: :cascade do |t|
